@@ -1,0 +1,285 @@
+[2015.12.08 11:09:10][ERROR] RdsDeployer.java(279) - Cannot partially upload or reinstall
+org.eclipse.core.runtime.CoreException: [RDS] Cannot install application
+	at org.tizen.common.rds.RdsDeployer.newCoreException(RdsDeployer.java:708)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:643)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:575)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:277)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:859)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:560)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:240)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -r -t tpk -n org.tizen.dict
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:638)
+	... 10 more
+[2015.12.08 11:10:34][ERROR] RdsDeployer.java(279) - Cannot partially upload or reinstall
+org.eclipse.core.runtime.CoreException: [RDS] Cannot install application
+	at org.tizen.common.rds.RdsDeployer.newCoreException(RdsDeployer.java:708)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:643)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:575)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:277)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:859)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:560)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:240)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -r -t tpk -n org.tizen.dict
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:638)
+	... 10 more
+[2015.12.08 11:11:48][ERROR] RdsDeployer.java(279) - Cannot partially upload or reinstall
+org.eclipse.core.runtime.CoreException: [RDS] Cannot install application
+	at org.tizen.common.rds.RdsDeployer.newCoreException(RdsDeployer.java:708)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:643)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:575)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:277)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:859)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:560)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:240)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -r -t tpk -n org.tizen.dict
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:638)
+	... 10 more
+[2015.12.08 11:17:21][ERROR] RdsDeployer.java(279) - Cannot partially upload or reinstall
+org.eclipse.core.runtime.CoreException: [RDS] Cannot install application
+	at org.tizen.common.rds.RdsDeployer.newCoreException(RdsDeployer.java:708)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:643)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:575)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:277)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:859)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:560)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:240)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -r -t tpk -n org.tizen.dict
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:638)
+	... 10 more
+[2015.12.08 11:19:14][ERROR] RdsDeployer.java(279) - Cannot partially upload or reinstall
+org.eclipse.core.runtime.CoreException: [RDS] Failed to push file(s)
+	at org.tizen.common.rds.RdsDeployer.newCoreException(RdsDeployer.java:708)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:556)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:277)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:859)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:560)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:240)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.tizen.nativecommon.TizenNativeException: The result of executing the command is not equal: unzip -o "/opt/usr/apps/tmp/org.tizen.dict/org.tizen.dict.zip" -d "/opt/usr/apps/tmp/org.tizen.dict"; echo cmd_ret:$?;
+\nSee the error log for more details.
+	at org.tizen.nativecommon.launch.TizenLaunchCommand.runCommand(TizenLaunchCommand.java:115)
+	at org.tizen.nativecommon.launch.TizenLaunchCommand.run(TizenLaunchCommand.java:136)
+	at org.tizen.nativecommon.launch.TizenLaunchCommand.runCommand(TizenLaunchCommand.java:207)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:549)
+	... 9 more
+[2015.12.08 11:19:33][ERROR] RdsDeployer.java(279) - Cannot partially upload or reinstall
+org.eclipse.core.runtime.CoreException: [RDS] Cannot install application
+	at org.tizen.common.rds.RdsDeployer.newCoreException(RdsDeployer.java:708)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:643)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:575)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:277)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:859)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:560)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:240)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -r -t tpk -n org.tizen.dict
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:638)
+	... 10 more
+[2015.12.08 12:30:06][ERROR] ProjectUtil.java(548) - Failed to search a project: LqiI8g3Kbg.Basic
+[2015.12.08 13:40:39][ERROR] RdsDeployer.java(279) - Cannot partially upload or reinstall
+org.eclipse.core.runtime.CoreException: [RDS] Cannot install application
+	at org.tizen.common.rds.RdsDeployer.newCoreException(RdsDeployer.java:708)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:643)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:575)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:277)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:859)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:560)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:240)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -r -t tpk -n org.tizen.dict
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:638)
+	... 10 more
+[2015.12.08 14:11:39][ERROR] RdsDeployer.java(279) - Cannot partially upload or reinstall
+org.eclipse.core.runtime.CoreException: [RDS] Cannot install application
+	at org.tizen.common.rds.RdsDeployer.newCoreException(RdsDeployer.java:708)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:643)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:575)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:277)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:859)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:560)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:240)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -r -t tpk -n org.tizen.dict
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:638)
+	... 10 more
+[2015.12.08 14:13:26][ERROR] RdsDeployer.java(279) - Cannot partially upload or reinstall
+org.eclipse.core.runtime.CoreException: [RDS] Cannot install application
+	at org.tizen.common.rds.RdsDeployer.newCoreException(RdsDeployer.java:708)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:643)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:575)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:277)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:859)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:560)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:240)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -r -t tpk -n org.tizen.dict
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:638)
+	... 10 more
+[2015.12.08 14:16:03][ERROR] RdsDeployer.java(279) - Cannot partially upload or reinstall
+org.eclipse.core.runtime.CoreException: [RDS] Cannot install application
+	at org.tizen.common.rds.RdsDeployer.newCoreException(RdsDeployer.java:708)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:643)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:575)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:277)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:859)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:560)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:240)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -r -t tpk -n org.tizen.dict
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:638)
+	... 10 more
+[2015.12.08 14:23:27][ERROR] RdsDeployer.java(279) - Cannot partially upload or reinstall
+org.eclipse.core.runtime.CoreException: [RDS] Cannot install application
+	at org.tizen.common.rds.RdsDeployer.newCoreException(RdsDeployer.java:708)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:643)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:575)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:277)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:859)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:560)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:240)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -r -t tpk -n org.tizen.dict
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:638)
+	... 10 more
+[2015.12.08 14:24:43][ERROR] RdsDeployer.java(279) - Cannot partially upload or reinstall
+org.eclipse.core.runtime.CoreException: [RDS] Cannot install application
+	at org.tizen.common.rds.RdsDeployer.newCoreException(RdsDeployer.java:708)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:643)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:575)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:277)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:859)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:560)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:240)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -r -t tpk -n org.tizen.dict
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:638)
+	... 10 more

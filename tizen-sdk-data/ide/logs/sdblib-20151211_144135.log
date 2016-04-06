@@ -1,0 +1,66 @@
+02:41:35 E/DeviceMonitor: sending tracking request failed!
+02:41:40 E/DeviceMonitor: sending tracking request failed!
+02:41:40 E/DeviceMonitor: sdb connection Error:Connection reset by peer
+02:41:40 E/DeviceMonitor: Failed to open socket channel
+02:41:40 E/DeviceMonitor: Connection refused
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:458)
+	at sun.nio.ch.Net.connect(Net.java:450)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648)
+	at java.nio.channels.SocketChannel.open(SocketChannel.java:189)
+	at org.tizen.sdblib.SmartDevelopmentBridge.openChannel(SmartDevelopmentBridge.java:152)
+	at org.tizen.sdblib.DeviceMonitor.openSdbConnection(DeviceMonitor.java:168)
+	at org.tizen.sdblib.DeviceMonitor.process(DeviceMonitor.java:389)
+	at org.tizen.sdblib.daemon.AbstractServer.run(AbstractServer.java:242)
+	at java.lang.Thread.run(Thread.java:745)
+
+02:42:05 E/DeviceMonitor: sending tracking request failed!
+02:42:10 E/DeviceMonitor: sending tracking request failed!
+02:42:15 E/DeviceMonitor: sending tracking request failed!
+02:42:20 E/DeviceMonitor: sending tracking request failed!
+02:42:25 E/DeviceMonitor: sending tracking request failed!
+02:42:30 E/DeviceMonitor: sending tracking request failed!
+02:42:36 E/DeviceMonitor: sending tracking request failed!
+02:42:41 E/DeviceMonitor: sending tracking request failed!
+02:42:46 E/DeviceMonitor: sending tracking request failed!
+02:42:49 E/DeviceMonitor: sending tracking request failed!
+02:42:49 E/DeviceMonitor: sdb connection Error:Connection reset by peer
+02:42:49 E/DeviceMonitor: Failed to open socket channel
+02:42:49 E/DeviceMonitor: Connection refused
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:458)
+	at sun.nio.ch.Net.connect(Net.java:450)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648)
+	at java.nio.channels.SocketChannel.open(SocketChannel.java:189)
+	at org.tizen.sdblib.SmartDevelopmentBridge.openChannel(SmartDevelopmentBridge.java:152)
+	at org.tizen.sdblib.DeviceMonitor.openSdbConnection(DeviceMonitor.java:168)
+	at org.tizen.sdblib.DeviceMonitor.process(DeviceMonitor.java:389)
+	at org.tizen.sdblib.daemon.AbstractServer.run(AbstractServer.java:242)
+	at java.lang.Thread.run(Thread.java:745)
+
+02:43:25 E/DeviceMonitor: sending tracking request failed!
+02:43:30 E/DeviceMonitor: sending tracking request failed!
+02:43:35 E/DeviceMonitor: sending tracking request failed!
+02:43:40 E/DeviceMonitor: sending tracking request failed!
+02:43:45 E/DeviceMonitor: sending tracking request failed!
+02:43:50 E/DeviceMonitor: sending tracking request failed!
+02:43:55 E/DeviceMonitor: sending tracking request failed!
+02:44:01 E/DeviceMonitor: sending tracking request failed!
+02:44:06 E/DeviceMonitor: sending tracking request failed!
+02:44:11 E/DeviceMonitor: sending tracking request failed!
+02:44:11 E/DeviceMonitor: Failed to open socket channel
+02:44:11 E/DeviceMonitor: Connection refused
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:458)
+	at sun.nio.ch.Net.connect(Net.java:450)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648)
+	at java.nio.channels.SocketChannel.open(SocketChannel.java:189)
+	at org.tizen.sdblib.SmartDevelopmentBridge.openChannel(SmartDevelopmentBridge.java:152)
+	at org.tizen.sdblib.DeviceMonitor.openSdbConnection(DeviceMonitor.java:168)
+	at org.tizen.sdblib.DeviceMonitor.process(DeviceMonitor.java:389)
+	at org.tizen.sdblib.daemon.AbstractServer.run(AbstractServer.java:242)
+	at java.lang.Thread.run(Thread.java:745)
+

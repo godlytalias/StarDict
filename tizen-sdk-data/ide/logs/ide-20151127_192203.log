@@ -1,0 +1,24 @@
+[2015.11.27 19:25:07][ERROR] RdsDeployer.java(279) - Cannot partially upload or reinstall
+org.eclipse.core.runtime.CoreException: [RDS] Cannot install application
+	at org.tizen.common.rds.RdsDeployer.newCoreException(RdsDeployer.java:708)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:643)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:575)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:277)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:859)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:560)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:240)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -r -t tpk -n org.tizen.dict
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:638)
+	... 10 more

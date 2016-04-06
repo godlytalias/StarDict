@@ -1,0 +1,150 @@
+05:08:58 E/DeviceMonitor: sdb connection Error:null
+05:08:58 E/DeviceMonitor: Failed to open socket channel
+05:08:58 E/DeviceMonitor: Connection refused
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:458)
+	at sun.nio.ch.Net.connect(Net.java:450)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648)
+	at java.nio.channels.SocketChannel.open(SocketChannel.java:189)
+	at org.tizen.sdblib.SmartDevelopmentBridge.openChannel(SmartDevelopmentBridge.java:152)
+	at org.tizen.sdblib.DeviceMonitor.openSdbConnection(DeviceMonitor.java:168)
+	at org.tizen.sdblib.DeviceMonitor.process(DeviceMonitor.java:389)
+	at org.tizen.sdblib.daemon.AbstractServer.run(AbstractServer.java:242)
+	at java.lang.Thread.run(Thread.java:745)
+
+05:09:05 E/DeviceMonitor: sdb connection Error:null
+05:09:05 E/DeviceMonitor: Failed to open socket channel
+05:09:05 E/DeviceMonitor: Connection refused
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:458)
+	at sun.nio.ch.Net.connect(Net.java:450)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648)
+	at java.nio.channels.SocketChannel.open(SocketChannel.java:189)
+	at org.tizen.sdblib.SmartDevelopmentBridge.openChannel(SmartDevelopmentBridge.java:152)
+	at org.tizen.sdblib.DeviceMonitor.openSdbConnection(DeviceMonitor.java:168)
+	at org.tizen.sdblib.DeviceMonitor.process(DeviceMonitor.java:389)
+	at org.tizen.sdblib.daemon.AbstractServer.run(AbstractServer.java:242)
+	at java.lang.Thread.run(Thread.java:745)
+
+06:06:47 E/DeviceMonitor: sdb connection Error:null
+06:06:48 E/DeviceMonitor: Failed to open socket channel
+06:06:48 E/DeviceMonitor: Connection refused
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:458)
+	at sun.nio.ch.Net.connect(Net.java:450)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648)
+	at java.nio.channels.SocketChannel.open(SocketChannel.java:189)
+	at org.tizen.sdblib.SmartDevelopmentBridge.openChannel(SmartDevelopmentBridge.java:152)
+	at org.tizen.sdblib.DeviceMonitor.openSdbConnection(DeviceMonitor.java:168)
+	at org.tizen.sdblib.DeviceMonitor.process(DeviceMonitor.java:389)
+	at org.tizen.sdblib.daemon.AbstractServer.run(AbstractServer.java:242)
+	at java.lang.Thread.run(Thread.java:745)
+
+06:06:54 E/DeviceMonitor: sdb connection Error:null
+06:06:54 E/DeviceMonitor: Failed to open socket channel
+06:06:54 E/DeviceMonitor: Connection refused
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:458)
+	at sun.nio.ch.Net.connect(Net.java:450)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648)
+	at java.nio.channels.SocketChannel.open(SocketChannel.java:189)
+	at org.tizen.sdblib.SmartDevelopmentBridge.openChannel(SmartDevelopmentBridge.java:152)
+	at org.tizen.sdblib.DeviceMonitor.openSdbConnection(DeviceMonitor.java:168)
+	at org.tizen.sdblib.DeviceMonitor.process(DeviceMonitor.java:389)
+	at org.tizen.sdblib.daemon.AbstractServer.run(AbstractServer.java:242)
+	at java.lang.Thread.run(Thread.java:745)
+
+06:54:12 E/DeviceMonitor: sdb connection Error:null
+06:54:12 E/DeviceMonitor: Failed to open socket channel
+06:54:12 E/DeviceMonitor: Connection refused
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:458)
+	at sun.nio.ch.Net.connect(Net.java:450)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648)
+	at java.nio.channels.SocketChannel.open(SocketChannel.java:189)
+	at org.tizen.sdblib.SmartDevelopmentBridge.openChannel(SmartDevelopmentBridge.java:152)
+	at org.tizen.sdblib.DeviceMonitor.openSdbConnection(DeviceMonitor.java:168)
+	at org.tizen.sdblib.DeviceMonitor.process(DeviceMonitor.java:389)
+	at org.tizen.sdblib.daemon.AbstractServer.run(AbstractServer.java:242)
+	at java.lang.Thread.run(Thread.java:745)
+
+07:00:44 E/DeviceMonitor: sdb connection Error:null
+07:00:44 E/DeviceMonitor: Failed to open socket channel
+07:00:44 E/DeviceMonitor: Connection refused
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:458)
+	at sun.nio.ch.Net.connect(Net.java:450)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648)
+	at java.nio.channels.SocketChannel.open(SocketChannel.java:189)
+	at org.tizen.sdblib.SmartDevelopmentBridge.openChannel(SmartDevelopmentBridge.java:152)
+	at org.tizen.sdblib.DeviceMonitor.openSdbConnection(DeviceMonitor.java:168)
+	at org.tizen.sdblib.DeviceMonitor.process(DeviceMonitor.java:389)
+	at org.tizen.sdblib.daemon.AbstractServer.run(AbstractServer.java:242)
+	at java.lang.Thread.run(Thread.java:745)
+
+07:00:49 E/DeviceMonitor: sdb connection Error:null
+07:00:49 E/DeviceMonitor: Failed to open socket channel
+07:00:49 E/DeviceMonitor: Connection refused
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:458)
+	at sun.nio.ch.Net.connect(Net.java:450)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648)
+	at java.nio.channels.SocketChannel.open(SocketChannel.java:189)
+	at org.tizen.sdblib.SmartDevelopmentBridge.openChannel(SmartDevelopmentBridge.java:152)
+	at org.tizen.sdblib.DeviceMonitor.openSdbConnection(DeviceMonitor.java:168)
+	at org.tizen.sdblib.DeviceMonitor.process(DeviceMonitor.java:389)
+	at org.tizen.sdblib.daemon.AbstractServer.run(AbstractServer.java:242)
+	at java.lang.Thread.run(Thread.java:745)
+
+07:00:54 E/DeviceMonitor: sdb connection Error:null
+07:00:54 E/DeviceMonitor: Failed to open socket channel
+07:00:54 E/DeviceMonitor: Connection refused
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:458)
+	at sun.nio.ch.Net.connect(Net.java:450)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648)
+	at java.nio.channels.SocketChannel.open(SocketChannel.java:189)
+	at org.tizen.sdblib.SmartDevelopmentBridge.openChannel(SmartDevelopmentBridge.java:152)
+	at org.tizen.sdblib.DeviceMonitor.openSdbConnection(DeviceMonitor.java:168)
+	at org.tizen.sdblib.DeviceMonitor.process(DeviceMonitor.java:389)
+	at org.tizen.sdblib.daemon.AbstractServer.run(AbstractServer.java:242)
+	at java.lang.Thread.run(Thread.java:745)
+
+07:01:00 E/DeviceMonitor: sdb connection Error:null
+07:01:00 E/DeviceMonitor: Failed to open socket channel
+07:01:00 E/DeviceMonitor: Connection refused
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:458)
+	at sun.nio.ch.Net.connect(Net.java:450)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648)
+	at java.nio.channels.SocketChannel.open(SocketChannel.java:189)
+	at org.tizen.sdblib.SmartDevelopmentBridge.openChannel(SmartDevelopmentBridge.java:152)
+	at org.tizen.sdblib.DeviceMonitor.openSdbConnection(DeviceMonitor.java:168)
+	at org.tizen.sdblib.DeviceMonitor.process(DeviceMonitor.java:389)
+	at org.tizen.sdblib.daemon.AbstractServer.run(AbstractServer.java:242)
+	at java.lang.Thread.run(Thread.java:745)
+
+07:01:05 E/DeviceMonitor: sdb connection Error:null
+07:01:05 E/DeviceMonitor: Failed to open socket channel
+07:01:05 E/DeviceMonitor: Connection refused
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:458)
+	at sun.nio.ch.Net.connect(Net.java:450)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648)
+	at java.nio.channels.SocketChannel.open(SocketChannel.java:189)
+	at org.tizen.sdblib.SmartDevelopmentBridge.openChannel(SmartDevelopmentBridge.java:152)
+	at org.tizen.sdblib.DeviceMonitor.openSdbConnection(DeviceMonitor.java:168)
+	at org.tizen.sdblib.DeviceMonitor.process(DeviceMonitor.java:389)
+	at org.tizen.sdblib.daemon.AbstractServer.run(AbstractServer.java:242)
+	at java.lang.Thread.run(Thread.java:745)
+

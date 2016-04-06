@@ -1,0 +1,648 @@
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 3.12.18 (buildsystem@buildsystem-VBox) (gcc version 4.6.3 (Ubuntu/Linaro 4.6.3-1ubuntu5) ) #1 PREEMPT Thu Jun 11 18:14:51 KST 2015
+[    0.000000] e820: BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000002fffdfff] usable
+[    0.000000] BIOS-e820: [mem 0x000000002fffe000-0x000000002fffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000feffc000-0x00000000feffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+[    0.000000] Notice: NX (Execute Disable) protection missing in CPU!
+[    0.000000] SMBIOS 2.4 present.
+[    0.000000] e820: last_pfn = 0x2fffe max_arch_pfn = 0x100000
+[    0.000000] Scanning 1 areas for low memory corruption
+[    0.000000] init_memory_mapping: [mem 0x00000000-0x000fffff]
+[    0.000000] init_memory_mapping: [mem 0x2f800000-0x2fbfffff]
+[    0.000000] init_memory_mapping: [mem 0x28000000-0x2f7fffff]
+[    0.000000] init_memory_mapping: [mem 0x00100000-0x27ffffff]
+[    0.000000] init_memory_mapping: [mem 0x2fc00000-0x2fffdfff]
+[    0.000000] ACPI: RSDP 000f0920 00014 (v00 BOCHS )
+[    0.000000] ACPI: RSDT 2ffffbcd 00034 (v01 BOCHS  BXPCRSDT 00000001 BXPC 00000001)
+[    0.000000] ACPI: FACP 2ffff1c0 00074 (v01 BOCHS  BXPCFACP 00000001 BXPC 00000001)
+[    0.000000] ACPI: DSDT 2fffe040 01180 (v01 BOCHS  BXPCDSDT 00000001 BXPC 00000001)
+[    0.000000] ACPI: FACS 2fffe000 00040
+[    0.000000] ACPI: SSDT 2ffff234 008E9 (v01 BOCHS  BXPCSSDT 00000001 BXPC 00000001)
+[    0.000000] ACPI: APIC 2ffffb1d 00078 (v01 BOCHS  BXPCAPIC 00000001 BXPC 00000001)
+[    0.000000] ACPI: HPET 2ffffb95 00038 (v01 BOCHS  BXPCHPET 00000001 BXPC 00000001)
+[    0.000000] 0MB HIGHMEM available.
+[    0.000000] 767MB LOWMEM available.
+[    0.000000]   mapped low ram: 0 - 2fffe000
+[    0.000000]   low ram: 0 - 2fffe000
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x00001000-0x00ffffff]
+[    0.000000]   Normal   [mem 0x01000000-0x2fffdfff]
+[    0.000000]   HighMem  empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x00001000-0x0009efff]
+[    0.000000]   node   0: [mem 0x00100000-0x2fffdfff]
+[    0.000000] ACPI: PM-Timer IO Port: 0xb008
+[    0.000000] PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x000a0000-0x000effff]
+[    0.000000] PM: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+[    0.000000] e820: [mem 0x30000000-0xfeffbfff] available for PCI devices
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 194972
+[    0.000000] Kernel command line: vm_name=dict video=LVDS-1:480x800-32@60 dpi=2330 console=ttyS0 host_ip=10.0.2.2 sdb_port=26100, http_proxy= https_proxy= ftp_proxy= socks_proxy= dns1=10.0.2.3 vm_resolution=480x800 yagl=1
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Initializing CPU#0
+[    0.000000] allocated 1572840 bytes of page_cgroup
+[    0.000000] please try 'cgroup_disable=memory' option if you don't want memory cgroups
+[    0.000000] Initializing HighMem for node 0 (00000000:00000000)
+[    0.000000] Memory: 765688K/786032K available (6132K kernel code, 529K rwdata, 2732K rodata, 1632K init, 660K bss, 20344K reserved, 0K highmem)
+[    0.000000] virtual kernel memory layout:
+[    0.000000]     fixmap  : 0xfffe2000 - 0xfffff000   ( 116 kB)
+[    0.000000]     pkmap   : 0xff800000 - 0xffc00000   (4096 kB)
+[    0.000000]     vmalloc : 0xf07fe000 - 0xff7fe000   ( 240 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xefffe000   ( 767 MB)
+[    0.000000]       .init : 0xc192f000 - 0xc1ac7000   (1632 kB)
+[    0.000000]       .data : 0xc15fd70c - 0xc192e640   (3267 kB)
+[    0.000000]       .text : 0xc1000000 - 0xc15fd70c   (6133 kB)
+[    0.000000] Checking if this processor honours the WP bit even in supervisor mode...Ok.
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] Console: colour *CGA 80x25
+[    0.000000] console [ttyS0] enabled
+[    0.000000] tsc: Fast TSC calibration failed
+[    0.000000] tsc: Unable to calibrate against PIT
+[    0.000000] tsc: using PMTIMER reference calibration
+[    0.000000] tsc: Detected 3092.809 MHz processor
+[    0.050003] Calibrating delay loop (skipped), value calculated using timer frequency.. 6185.61 BogoMIPS (lpj=30928090)
+[    0.051921] pid_max: default: 32768 minimum: 301
+[    0.052732] Security Framework initialized
+[    0.053432] Smack:  Initializing.
+[    0.054033] Mount-cache hash table entries: 512
+[    0.055101] Initializing cgroup subsys memory
+[    0.055889] Initializing cgroup subsys devices
+[    0.056632] Initializing cgroup subsys freezer
+[    0.060011] Initializing cgroup subsys net_cls
+[    0.060761] Initializing cgroup subsys blkio
+[    0.061462] Initializing cgroup subsys net_prio
+[    0.062411] Last level iTLB entries: 4KB 0, 2MB 0, 4MB 0
+[    0.062411] Last level dTLB entries: 4KB 0, 2MB 0, 4MB 0
+[    0.062411] tlb_flushall_shift: 6
+[    0.064789] CPU: Intel QEMU Virtual CPU version 2.0.0 (fam: 06, model: 06, stepping: 03)
+[    0.066633] ACPI: Core revision 20130725
+[    0.068646] ACPI: All ACPI Tables successfully acquired
+[    0.069711] ACPI: setting ELCR to 0200 (from 0c00)
+[    0.070040] ftrace: allocating 31871 entries in 63 pages
+[    0.100180] Performance Events: Broken PMU hardware detected, using software events only.
+[    0.101729] Failed to access perfctr msr (MSR c1 is 0)
+[    0.104344] devtmpfs: initialized
+[    0.110023] kworker/u2:0 (14) used greatest stack depth: 7464 bytes left
+[    0.112222] RTC time: 13:13:21, date: 12/21/15
+[    0.113091] NET: Registered protocol family 16
+[    0.114825] kworker/u2:0 (18) used greatest stack depth: 7428 bytes left
+[    0.116529] cpuidle: using governor ladder
+[    0.117301] cpuidle: using governor menu
+[    0.120220] ACPI: bus type PCI registered
+[    0.121079] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.122864] PCI: PCI BIOS revision 2.10 entry at 0xfd3c2, last bus=0
+[    0.124447] PCI: Using configuration type 1 for base access
+[    0.126586] kworker/u2:0 (30) used greatest stack depth: 7052 bytes left
+[    0.150070] bio: create slab <bio-0> at 0
+[    0.151482] ACPI: Added _OSI(Module Device)
+[    0.152332] ACPI: Added _OSI(Processor Device)
+[    0.153197] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.154110] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.158028] ACPI: Interpreter enabled
+[    0.158796] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S1_] (20130725/hwxface-571)
+[    0.161002] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S2_] (20130725/hwxface-571)
+[    0.162682] ACPI: (supports S0 S3 S4 S5)
+[    0.163349] ACPI: Using PIC for interrupt routing
+[    0.164282] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.166460] ACPI: No dock devices found.
+[    0.173762] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.174879] acpi PNP0A03:00: ACPI _OSC support notification failed, disabling PCIe ASPM
+[    0.176302] acpi PNP0A03:00: Unable to request _OSC control (_OSC support mask: 0x08)
+[    0.177828] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+[    0.180553] acpiphp: Slot [2] registered
+[    0.181333] acpiphp: Slot [3] registered
+[    0.182106] acpiphp: Slot [4] registered
+[    0.182890] acpiphp: Slot [5] registered
+[    0.183643] acpiphp: Slot [6] registered
+[    0.184423] acpiphp: Slot [7] registered
+[    0.185250] acpiphp: Slot [8] registered
+[    0.186192] acpiphp: Slot [9] registered
+[    0.186996] acpiphp: Slot [10] registered
+[    0.187834] acpiphp: Slot [11] registered
+[    0.188709] acpiphp: Slot [12] registered
+[    0.189542] acpiphp: Slot [13] registered
+[    0.190207] acpiphp: Slot [14] registered
+[    0.191116] acpiphp: Slot [15] registered
+[    0.191972] acpiphp: Slot [16] registered
+[    0.192814] acpiphp: Slot [17] registered
+[    0.193688] acpiphp: Slot [18] registered
+[    0.194607] acpiphp: Slot [19] registered
+[    0.195456] acpiphp: Slot [20] registered
+[    0.196325] acpiphp: Slot [21] registered
+[    0.197127] acpiphp: Slot [22] registered
+[    0.197931] acpiphp: Slot [23] registered
+[    0.198739] acpiphp: Slot [24] registered
+[    0.199538] acpiphp: Slot [25] registered
+[    0.200132] acpiphp: Slot [26] registered
+[    0.200932] acpiphp: Slot [27] registered
+[    0.201730] acpiphp: Slot [28] registered
+[    0.202636] acpiphp: Slot [29] registered
+[    0.203445] acpiphp: Slot [30] registered
+[    0.204255] acpiphp: Slot [31] registered
+[    0.204994] PCI host bridge to bus 0000:00
+[    0.205738] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.206717] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7]
+[    0.207852] pci_bus 0000:00: root bus resource [io  0x0d00-0xadff]
+[    0.208958] pci_bus 0000:00: root bus resource [io  0xae0f-0xaeff]
+[    0.210060] pci_bus 0000:00: root bus resource [io  0xaf20-0xafdf]
+[    0.211185] pci_bus 0000:00: root bus resource [io  0xafe4-0xffff]
+[    0.212338] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff]
+[    0.213566] pci_bus 0000:00: root bus resource [mem 0x30000000-0xfebfffff]
+[    0.236864] pci 0000:00:01.3: quirk: [io  0xb000-0xb03f] claimed by PIIX4 ACPI
+[    0.238145] pci 0000:00:01.3: quirk: [io  0xb100-0xb10f] claimed by PIIX4 SMB
+[    0.465902] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 *10 11)
+[    0.466764] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 *10 11)
+[    0.467577] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 10 *11)
+[    0.468390] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 10 *11)
+[    0.469284] ACPI: PCI Interrupt Link [LNKS] (IRQs *9)
+[    0.470779] ACPI: Enabled 16 GPEs in block 00 to 0F
+[    0.471821] vgaarb: device added: PCI:0000:00:17.0,decodes=io+mem,owns=io+mem,locks=none
+[    0.472778] vgaarb: loaded
+[    0.473104] vgaarb: bridge control possible 0000:00:17.0
+[    0.474023] SCSI subsystem initialized
+[    0.474801] ACPI: bus type USB registered
+[    0.475402] usbcore: registered new interface driver usbfs
+[    0.476114] usbcore: registered new interface driver hub
+[    0.476923] usbcore: registered new device driver usb
+[    0.477808] Linux video capture interface: v2.00
+[    0.478472] pps_core: LinuxPPS API ver. 1 registered
+[    0.479096] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.480117] PTP clock support registered
+[    0.480749] Advanced Linux Sound Architecture Driver Initialized.
+[    0.481519] PCI: Using ACPI for IRQ routing
+[    0.482783] cfg80211: Calling CRDA to update world regulatory domain
+[    0.483715] NetLabel: Initializing
+[    0.484126] NetLabel:  domain hash size = 128
+[    0.484641] NetLabel:  protocols = UNLABELED CIPSOv4
+[    0.485246] NetLabel:  unlabeled traffic allowed by default
+[    0.486344] Switched to clocksource pit
+[    0.493435] pnp: PnP ACPI init
+[    0.493847] ACPI: bus type PNP registered
+[    0.495123] pnp: PnP ACPI: found 7 devices
+[    0.495621] ACPI: bus type PNP unregistered
+[    0.523165] Switched to clocksource acpi_pm
+[    0.523772] NET: Registered protocol family 2
+[    0.524513] TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.525387] TCP bind hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.526191] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.526990] TCP: reno registered
+[    0.527392] UDP hash table entries: 512 (order: 1, 8192 bytes)
+[    0.528084] UDP-Lite hash table entries: 512 (order: 1, 8192 bytes)
+[    0.528901] NET: Registered protocol family 1
+[    0.529533] RPC: Registered named UNIX socket transport module.
+[    0.530244] RPC: Registered udp transport module.
+[    0.530800] RPC: Registered tcp transport module.
+[    0.531358] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.532122] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    0.532839] pci 0000:00:01.0: PIIX3: Enabling Passive Release
+[    0.533625] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+[    0.534681] ACPI: PCI Interrupt Link [LNKD] enabled at IRQ 11
+[    0.538918] microcode: CPU0 sig=0x663, pf=0x1, revision=0x1
+[    0.539665] microcode: Microcode Update Driver: v2.00 <tigran@aivazian.fsnet.co.uk>, Peter Oruba
+[    0.540717] Scanning for low memory corruption every 60 seconds
+[    0.542034] audit: initializing netlink socket (disabled)
+[    0.542759] type=2000 audit(1450703600.533:1): initialized
+[    0.573881] HugeTLB registered 4 MB page size, pre-allocated 0 pages
+[    0.578029] VFS: Disk quotas dquot_6.5.2
+[    0.578581] Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.580409] NFS: Registering the id_resolver key type
+[    0.581030] Key type id_resolver registered
+[    0.581527] Key type id_legacy registered
+[    0.582298] fuse init (API version 7.22)
+[    0.582949] 9p: Installing v9fs 9p2000 file system support
+[    0.583676] msgmni has been set to 1495
+[    0.584833] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 251)
+[    0.585757] io scheduler noop registered
+[    0.586231] io scheduler deadline registered
+[    0.586798] io scheduler cfq registered (default)
+[    0.587525] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+[    0.588419] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    0.589301] ACPI: Power Button [PWRF]
+[    0.590616] ACPI: PCI Interrupt Link [LNKA] enabled at IRQ 10
+[    0.593016] ACPI: PCI Interrupt Link [LNKB] enabled at IRQ 10
+[    0.595474] ACPI: PCI Interrupt Link [LNKC] enabled at IRQ 11
+[    0.619539] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.645421] 00:04: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    0.791350] hpet_acpi_add: no address or irqs in _CRS
+[    0.792180] Non-volatile memory driver v1.3
+[    0.792763] Linux agpgart interface v0.103
+[    0.793509] Initializing vdpram device driver ...
+[    0.794091] vdpram device major num = 249 
+[    0.794847] [drm] Initialized drm 1.1.0 20060810
+[    0.796063] [TTM] Zone  kernel: Available graphics memory: 382844 kiB
+[    0.796846] [TTM] Initializing pool allocator
+[    0.797535] [drm] Supports vblank timestamp caching Rev 1 (10.10.2010).
+[    0.798362] [drm] No driver support for vblank timestamp query.
+[    0.799356] fbcon: VIGS (fb0) is primary device
+[    0.806247] Console: switching to colour frame buffer device 60x50
+[    0.808683] vigs 0000:00:17.0: fb0: VIGS frame buffer device
+[    0.809367] vigs 0000:00:17.0: registered panic notifier
+[    0.810119] [drm] Initialized vigs 14.0.0 20121102 for 0000:00:17.0 on minor 0
+[    0.813619] yagl: 0000:00:18.0: device added
+[    0.814198] yagl: module loaded
+[    0.816511] brd: module loaded
+[    0.817925] loop: module loaded
+[    0.819054]  vda: unknown partition table
+[    0.823046]  vdb: unknown partition table
+[    0.830332] scsi0 : ata_piix
+[    0.830819] scsi1 : ata_piix
+[    0.831243] ata1: PATA max MWDMA2 cmd 0x1f0 ctl 0x3f6 bmdma 0xcd20 irq 14
+[    0.832101] ata2: PATA max MWDMA2 cmd 0x170 ctl 0x376 bmdma 0xcd28 irq 15
+[    0.837815] e100: Intel(R) PRO/100 Network Driver, 3.5.24-k2-NAPI
+[    0.838569] e100: Copyright(c) 1999-2006 Intel Corporation
+[    0.839264] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+[    0.840186] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    0.841003] e1000e: Intel(R) PRO/1000 Network Driver - 2.3.2-k
+[    0.841890] e1000e: Copyright(c) 1999 - 2013 Intel Corporation.
+[    0.842762] sky2: driver version 1.30
+[    0.843648] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.844500] ehci-pci: EHCI PCI platform driver
+[    0.845176] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    0.845914] ohci-pci: OHCI PCI platform driver
+[    0.846487] uhci_hcd: USB Universal Host Controller Interface driver
+[    0.850454] uhci_hcd 0000:00:01.2: UHCI Host Controller
+[    0.851197] uhci_hcd 0000:00:01.2: new USB bus registered, assigned bus number 1
+[    0.854047] uhci_hcd 0000:00:01.2: detected 2 ports
+[    0.855211] uhci_hcd 0000:00:01.2: irq 11, io base 0x0000cb80
+[    0.856765] usb usb1: New USB device found, idVendor=1d6b, idProduct=0001
+[    0.858406] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.859754] usb usb1: Product: UHCI Host Controller
+[    0.860607] usb usb1: Manufacturer: Linux 3.12.18 uhci_hcd
+[    0.861837] usb usb1: SerialNumber: 0000:00:01.2
+[    0.863129] hub 1-0:1.0: USB hub found
+[    0.863891] hub 1-0:1.0: 2 ports detected
+[    0.865113] usbcore: registered new interface driver usblp
+[    0.866818] usbcore: registered new interface driver usb-storage
+[    0.868738] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+[    0.871252] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    0.872367] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    0.873320] mousedev: PS/2 mouse device common for all mice
+[    0.874823] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input1
+[    0.877977] rtc_cmos 00:00: RTC can wake from S4
+[    0.878918] rtc_cmos 00:00: rtc core: registered rtc_cmos as rtc0
+[    0.879763] rtc_cmos 00:00: alarms up to one day, 114 bytes nvram
+[    0.880891] hidraw: raw HID events driver (C) Jiri Kosina
+[    0.883971] usbcore: registered new interface driver usbhid
+[    0.884836] usbhid: USB HID core driver
+[    0.885559] logger: created 256K log 'log_main'
+[    0.886281] logger: created 256K log 'log_events'
+[    0.886928] logger: created 256K log 'log_radio'
+[    0.887653] logger: created 256K log 'log_system'
+[    0.888600] virtio touchscreen device is initialized
+[    0.889331] virtio touchscreen driver is probed
+[    0.890173] emul resolution : 480x800
+[    0.890727] input: Maru Virtio Touchscreen as /devices/pci0000:00/0000:00:0b.0/virtio5/input/input4
+[    0.897350] [ERR]marucam[marucam_pci_initdev]: pci_resource_start failed!!
+[    0.901370] marucam: probe of 0000:00:09.0 failed with error -5
+[    0.902156] [INFO]marucam[marucam_init]: MARU Camera Driver ver 0.25.1 successfully loaded.
+[    0.907261] marubl: MARU Virtual Backlight driver is loaded.
+[    0.908006] virtio hwkey device is initialized
+[    0.908668] virtio hwkey driver is probed
+[    0.909415] input: Maru Virtio Hwkey as /devices/pci0000:00/0000:00:0e.0/virtio7/input/input5
+[    0.910757] input hwkey device is opened
+[    0.911530] maru_jack: maru_jack: init
+[    0.912401] maru_jack: jack_probe
+[    0.915462] maru_jack: request jack capability
+[    0.916283] maru_jack: jack capability is 13[    0.916840] maru_jack: sysfs_create_file
+[    0.917489] maru-leds maru-leds: maru_led_device is added.
+[    0.918364] virtio-keyboard: driver is initialized.
+[    0.919079] virtio-keyboard: driver is probed
+[    0.919795] input: Maru VirtIO Keyboard as /devices/pci0000:00/0000:00:10.0/virtio9/input/input6
+[    0.921201] NFC: NFC driver initialized.
+[    0.921973] NFC: nfc_probe
+[    0.922527] NFC: NFC Probe completed
+[    0.923400] sensors: Sensor driver initialized.
+[    0.924075] sensors: Sensor probe starts
+[    0.925020] sensors: sensor capability is 3df
+[    0.925621] sensors: maru_accel device init starts.
+[    0.926350] sensors: device creation: accel.
+[    0.927039] sensors: register_sensor_device ends: accel.
+[    0.927867] input: accelerometer_sensor as /devices/virtual/input/input7
+[    0.929076] sensors: maru_accel device init ends.
+[    0.930118] sensors: maru_geo device init starts.
+[    0.930857] sensors: device creation: geo.
+[    0.931517] sensors: register_sensor_device ends: geo.
+[    0.932407] input: geomagnetic_sensor as /devices/virtual/input/input8
+[    0.933495] sensors: maru_geo device init ends.
+[    0.934035] sensors: maru_gyro device init starts.
+[    0.934663] sensors: device creation: gyro.
+[    0.935210] sensors: register_sensor_device ends: gyro.
+[    0.935997] input: gyro_sensor as /devices/virtual/input/input9
+[    0.936915] sensors: maru_gyro device init ends.
+[    0.937614] sensors: maru_light device init starts.
+[    0.938299] sensors: device creation: light.
+[    0.939102] sensors: register_sensor_device ends: light.
+[    0.939940] input: light_sensor as /devices/virtual/input/input10
+[    0.941055] sensors: maru_light device init ends.
+[    0.941788] sensors: maru_proxi device init starts.
+[    0.942403] sensors: device creation: proxi.
+[    0.943143] sensors: register_sensor_device ends: proxi.
+[    0.945573] input: proximity_sensor as /devices/virtual/input/input11
+[    0.947311] sensors: maru_proxi device init ends.
+[    0.948081] sensors: maru_haptic device init starts.
+[    0.949820] input: haptic_sensor as /devices/virtual/input/input12
+[    0.951798] sensors: maru_haptic device init ends.
+[    0.953167] sensors: maru_pressure device init starts.
+[    0.954821] sensors: device creation: pressure.
+[    0.956054] sensors: register_sensor_device ends: pressure.
+[    0.957116] input: pressure_sensor as /devices/virtual/input/input13
+[    0.958188] sensors: maru_pressure device init ends.
+[    0.958955] sensors: maru_uv device init starts.
+[    0.959540] sensors: device creation: ultraviolet.
+[    0.960469] sensors: register_sensor_device ends: ultraviolet.
+[    0.961451] input: uv_sensor as /devices/virtual/input/input14
+[    0.962700] sensors: maru_uv device init ends.
+[    0.963321] sensors: maru_hrm device init starts.
+[    0.963942] sensors: device creation: hrm.
+[    0.964506] sensors: register_sensor_device ends: hrm.
+[    0.965610] input: hrm_lib_sensor as /devices/virtual/input/input15
+[    0.967428] sensors: maru_hrm device init ends.
+[    0.968553] sensors: Sensor probe completes
+[    0.969118] brillcodec: driver is initialized.
+[    0.969960] brillcodec: driver is probed.
+[    0.976044] brillcodec: device version: 2
+[    0.977209] VMODEM: VMODEM driver initialized.
+[    0.978463] VMODEM: vmodem is probed
+[    0.979637] intel8x0: enable KVM optimization
+[    1.557899] tsc: Refined TSC clocksource calibration: 3092.972 MHz
+[    1.558783] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input3
+[    1.650300] intel8x0_measure_ac97_clock: measured 52404 usecs (11788 samples)
+[    1.652251] intel8x0: measured clock 224944 rejected
+[    2.020814] intel8x0_measure_ac97_clock: measured 58136 usecs (11797 samples)
+[    2.023167] intel8x0: measured clock 202920 rejected
+[    2.390328] intel8x0_measure_ac97_clock: measured 58165 usecs (11796 samples)
+[    2.392094] intel8x0: measured clock 202802 rejected
+[    2.392820] intel8x0: clocking to 48000
+[    2.395070] intel8x0: enable KVM optimization
+[    2.550358] Switched to clocksource tsc
+[    2.970244] intel8x0_measure_ac97_clock: measured 59973 usecs (11840 samples)
+[    2.971908] intel8x0: measured clock 197422 rejected
+[    3.340259] intel8x0_measure_ac97_clock: measured 58225 usecs (11815 samples)
+[    3.341810] intel8x0: measured clock 202919 rejected
+[    3.710195] intel8x0_measure_ac97_clock: measured 58522 usecs (11798 samples)
+[    3.711854] intel8x0: measured clock 201599 rejected
+[    3.713025] intel8x0: clocking to 48000
+[    3.736298] oprofile: using timer interrupt.
+[    3.737280] Netfilter messages via NETLINK v0.30.
+[    3.738115] nfnl_acct: registering with nfnetlink.
+[    3.738763] nf_conntrack version 0.5.0 (11963 buckets, 47852 max)
+[    3.739815] ctnetlink v0.93: registering with nfnetlink.
+[    3.740773] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    3.741472] TCP: cubic registered
+[    3.742279] NET: Registered protocol family 10
+[    3.743142] sit: IPv6 over IPv4 tunneling driver
+[    3.745179] NET: Registered protocol family 17
+[    3.746128] Bridge firewalling registered
+[    3.746792] 9pnet: Installing 9P2000 support
+[    3.747410] Key type dns_resolver registered
+[    3.748330] registered taskstats version 1
+[    3.749285]   Magic number: 11:162:231
+[    3.749786] console [netcon0] enabled
+[    3.750286] netconsole: network logging started
+[    3.750884] ALSA device list:
+[    3.751242]   #0: Intel 82801AA-ICH with STAC9700,83,84 at irq 10
+[    3.751956]   #1: Intel 82801AA-ICH with STAC9700,83,84 at irq 11
+[    3.752708]   #2: HDA Intel at 0xfa140000 irq 11
+[    3.754400] Freeing unused kernel memory: 1632K (c192f000 - c1ac7000)
+[    3.755999] Write protecting the kernel text: 6136k
+[    3.757283] Write protecting the kernel read-only data: 2736k
+[1;34mMount proc filesystem[0m
+[1;34mMount emulator image[0m
+[    3.789921] kjournald starting.  Commit interval 5 seconds
+[    3.792381] EXT3-fs (vda): using internal journal
+[    3.793079] EXT3-fs (vda): mounted filesystem with writeback data mode
+[    3.794451] mount (1110) used greatest stack depth: 6492 bytes left
+[1;34mMount dev filesystem[0m
+[1;34mSwitching root[0m
+[    4.472638] sh (1116) used greatest stack depth: 5992 bytes left
+systemd 210 running in system mode. (-PAM -LIBWRAP -AUDIT -SELINUX -IMA -SYSVINIT -LIBCRYPTSETUP -GCRYPT +ACL -XZ -SECCOMP -APPARMOR)
+Detected virtualization 'kvm'.
+Detected architecture 'x86'.
+
+Welcome to [1mTizen Magnolia (2.2.0)[0m!
+
+No hostname configured.
+Set hostname to <localhost>.
+/etc/mtab is not a symlink or not pointing to /proc/self/mounts. This is not supported anymore. Please make sure to replace this file by a symlink to avoid incorrect or misleading mount(8) output.
+Configuration file /usr/lib/systemd/system/auditd.service is marked world-inaccessible. This has no effect as configuration data is accessible via APIs without restrictions. Proceeding anyway.
+Configuration file /usr/lib/systemd/system/smack-rules.service is marked executable. Please remove executable permission bits. Proceeding anyway.
+Configuration file /usr/lib/systemd/system/smack-rules.service is marked world-inaccessible. This has no effect as configuration data is accessible via APIs without restrictions. Proceeding anyway.
+Cannot add dependency job for unit secure-storage.service, ignoring: Unit security-server.socket failed to load: No such file or directory.
+Cannot add dependency job for unit media-server.service, ignoring: Unit icd.service failed to load: No such file or directory.
+Cannot add dependency job for unit tizenid.service, ignoring: Unit opt-usr.mount failed to load: No such file or directory.
+Cannot add dependency job for unit display-manager.service, ignoring: Unit display-manager.service failed to load: No such file or directory.
+         Expecting device dev-ttyS0.device...
+[[32m  OK  [0m] Reached target Timers.
+         Expecting device dev-vdb.device...
+[1;31mFailed to set memory.limit_in_bytes on : Invalid argument[0m
+[[32m  OK  [0m] Created slice Root Slice.
+[[32m  OK  [0m] Listening on udev Control Socket.
+[[32m  OK  [0m] Listening on Journal Socket.
+[[32m  OK  [0m] Listening on /dev/initctl Compatibility Named Pipe.
+[[32m  OK  [0m] Listening on Delayed Shutdown Socket.
+[[32m  OK  [0m] Listening on udev Kernel Socket.
+[[32m  OK  [0m] Created slice System Slice.
+[[32m  OK  [0m] Created slice system-serial\x2dgetty.slice.
+         Starting Dumps dlog logs onto disk...
+[[32m  OK  [0m] Started Dumps dlog logs onto disk.
+         Starting Data Provider daemon...
+[[32m  OK  [0m] Started Data Provider daemon.
+         Starting Generate environment from /etc/profile.d...
+         Starting Audio volume setup on emulator...
+         Starting OpenGL mode check...
+         Starting Mount host directory...
+         Starting prepare device daemon...
+         Starting udev Coldplug all Devices...
+         Mounting Huge Pages File System...
+         Starting Create static device nodes in /dev...
+         Starting Apply Kernel Variables...
+         Starting Journal Service...
+[[32m  OK  [0m] Started Journal Service.
+         Starting tizen debug on...
+         Mounting Debug File System...
+         Mounting POSIX Message Queue File System...
+[    5.619392] mount (1127) used greatest stack depth: 5620 bytes left
+         Mounting FUSE Control File System...
+[[32m  OK  [0m] Created slice system-wrt_launchpad_daemon.slice.
+         Mounting /var...
+[[32m  OK  [0m] Reached target Slices.
+         Mounting Smack filesystem mounting...
+         Mounting /tmp...
+[[32m  OK  [0m] Mounted POSIX Message Queue File System.
+[[32m  OK  [0m] Mounted Debug File System.
+[[32m  OK  [0m] Mounted Huge Pages File System.
+[[32m  OK  [0m] Mounted FUSE Control File System.
+[[32m  OK  [0m] Mounted Smack filesystem mounting.
+[[32m  OK  [0m] Mounted /tmp.
+[[1;31mFAILED[0m] Failed to start Audio volume setup on emulator.
+See 'systemctl status emul-setup-audio-volume.service' for details.
+[[32m  OK  [0m] Started Apply Kernel Variables.
+[[32m  OK  [0m] Mounted /var.
+[[32m  OK  [0m] Reached target Local File Systems.
+[    5.974078] [hbm_show_status] get: 0
+         Starting Security Auditing Service...
+         Starting Run syslog...
+         Starting Create Volatile Files and Directories...
+         Starting Smack...
+[[32m  OK  [0m] Started prepare device daemon.
+[[32m  OK  [0m] Started Run syslog.
+         Starting Run syslog...
+[[32m  OK  [0m] Started Run syslog.
+[[32m  OK  [0m] Started udev Coldplug all Devices.
+[[32m  OK  [0m] Started tizen debug on.
+[[32m  OK  [0m] Started Mount host directory.
+[[32m  OK  [0m] Started Create static device nodes in /dev.
+         Starting udev Kernel Device Manager...
+[[32m  OK  [0m] Started Create Volatile Files and Directories.
+[[32m  OK  [0m] Started Security Auditing Service.
+[[32m  OK  [0m] Started Generate environment from /etc/profile.d.
+[    7.642745] systemd-udevd[1826]: starting version 210
+[[32m  OK  [0m] Started udev Kernel Device Manager.
+[[32m  OK  [0m] Reached target Sound Card.
+[[32m  OK  [0m] Found device /dev/vdb.
+         Activating swap /dev/vdb...
+[[32m  OK  [0m] Found device /dev/ttyS0.
+[    9.844652] Adding 4194300k swap on /dev/vdb.  Priority:-1 extents:1 across:4194300k 
+[[32m  OK  [0m] Activated swap /dev/vdb.
+[[32m  OK  [0m] Reached target Swap.
+[[32m  OK  [0m] Started OpenGL mode check.
+[[32m  OK  [0m] Started Smack.
+         Starting Smack pre labeling...
+[[32m  OK  [0m] Started Smack pre labeling.
+         Starting SMACK rules loading...
+[[32m  OK  [0m] Reached target System Initialization.
+[[32m  OK  [0m] Reached target Paths.
+[[32m  OK  [0m] Listening on central-key-manager-api-ocsp.socket.
+[[32m  OK  [0m] Listening on central-key-manager-api-control.socket.
+[[32m  OK  [0m] Listening on security-server-get-gid.socket.
+[[32m  OK  [0m] Listening on security-server-data-share.socket.
+[[32m  OK  [0m] Listening on security-server-open-for-unprivileged.socket.
+[[32m  OK  [0m] Listening on wrt_launchpad_daemon_2.socket.
+[[32m  OK  [0m] Listening on security-server-app-permissions.socket.
+[[32m  OK  [0m] Listening on Crash manager socket.
+[[32m  OK  [0m] Listening on Calendar Service socket.
+[[32m  OK  [0m] Listening on D-Bus System Message Bus Socket.
+[[32m  OK  [0m] Listening on security-server-password-reset.socket.
+[[32m  OK  [0m] Listening on security-server-app-privilege-by-name.socket.
+[[32m  OK  [0m] Listening on browser-provider.socket.
+[[32m  OK  [0m] Listening on security-server-cookie-check.socket.
+[[32m  OK  [0m] Listening on Wrt Security socket.
+[[32m  OK  [0m] Listening on Contacts Service socket.
+[[32m  OK  [0m] Listening on Sensor daemon socket.
+[[32m  OK  [0m] Listening on ss-server.socket.
+[[32m  OK  [0m] Listening on security-server-password-check.socket.
+[[32m  OK  [0m] Listening on security-server-cookie-get.socket.
+[[32m  OK  [0m] Listening on security-server-open-for-privileged.socket.
+[[32m  OK  [0m] Listening on security-server-privilege-by-pid.socket.
+[[32m  OK  [0m] Listening on security-server-password-set.socket.
+[[32m  OK  [0m] Reached target security-server sockets.
+[[32m  OK  [0m] Listening on Buxton Configuration Service.
+[[32m  OK  [0m] Listening on central-key-manager-api-storage.socket.
+         Starting Start the Central Key Manager...
+[[32m  OK  [0m] Reached target Central Key Manager sockets.
+[[32m  OK  [0m] Listening on wrt_launchpad_daemon_1.socket.
+[[32m  OK  [0m] Listening on download-provider.socket.
+[[32m  OK  [0m] Reached target Sockets.
+         Starting Initialize the VConf storage...
+         Starting xserver...
+[[32m  OK  [0m] Started xserver.
+[[32m  OK  [0m] Started Start the Central Key Manager.
+[[32m  OK  [0m] Started SMACK rules loading.
+         Stopping Data Provider daemon...
+[[32m  OK  [0m] Stopped Data Provider daemon.
+         Starting Data Provider daemon...
+[[32m  OK  [0m] Started Data Provider daemon.
+[[32m  OK  [0m] Started Initialize the VConf storage.
+         Starting Legacy emulator startup script...
+[   13.408887] input touchscreen device is opened
+[[32m  OK  [0m] Started Legacy emulator startup script.
+[[32m  OK  [0m] Reached target Basic System.
+         Starting Serial Getty on ttyS0...
+[[32m  OK  [0m] Started Serial Getty on ttyS0.
+[[32m  OK  [0m] Reached target Login Prompts.
+         Starting Message Port Daemon...
+         Starting pkgmgr recovery...
+[[32m  OK  [0m] Reached target Emulator specified preinit.
+         Starting waiting for window mananger...
+         Starting System device daemon...
+[[32m  OK  [0m] Started System device daemon.
+         Starting Alarm server...
+[[32m  OK  [0m] Started Alarm server.
+         Starting D-Bus System Message Bus...
+[[32m  OK  [0m] Started D-Bus System Message Bus.
+         Starting Start the Access Control server...
+         Starting pulseaudio service...
+         Starting Wrt security daemon...
+         Starting Start the Secure Storage server...
+[[32m  OK  [0m] Started Start the Secure Storage server.
+         Starting Telephony daemon...
+[[32m  OK  [0m] Started Telephony daemon.
+         Starting Start the security server...
+[[32m  OK  [0m] Started pkgmgr recovery.
+[[32m  OK  [0m] Started Message Port Daemon.
+[[32m  OK  [0m] Started Start the Access Control server.
+         Starting Start the Access Control server...
+[[32m  OK  [0m] Started Start the Access Control server.
+[   15.301575] [hbm_show_status] get: 0
+[[32m  OK  [0m] Started Start the security server.
+[[32m  OK  [0m] Started pulseaudio service.
+         Starting Start the sound profile service...
+[[32m  OK  [0m] Started Start the sound profile service.
+[[32m  OK  [0m] Started Wrt security daemon.
+[[32m  OK  [0m] Started Start the sound profile service.
+[menu-daemon start]
+[   19.445137] yagl: 0 opened
+
+
+************************************************************
+*                 SAMSUNG LINUX PLATFORM                   *
+************************************************************
+
+localhost login: [   20.377891] yagl: 1 opened
+[   20.589309] yagl: 2 opened
+[   21.866075] yagl: 3 opened
+[   22.122600] yagl: 4 opened
+[   22.233675] yagl: 0 closed
+[   23.384688] EVDI: send guest connection message to qemu with (1)
+[   23.901103] VMODEM: vmodem_open
+[   23.901508] VMODEM: vmodem info index = 0, cdev dev = 255852544, inode dev = 255852544
+[   23.902449] VMODEM: vmodem is opened
+[   24.048753] yagl: 0 opened
+[   24.310861] warning: `debug_launchpad' uses deprecated v2 capabilities in a way that may be insecure.
+[   24.780113] yagl: 5 opened
+[   24.785903] yagl: 6 opened
+[   25.683569] yagl: 7 opened
+[   26.652450] yagl: 8 opened
+[   29.477793] sdbd (2395): /proc/2395/oom_adj is deprecated, please use /proc/2395/oom_score_adj instead.
+[  388.934125] yagl: 9 opened
+[  394.890862] keycode: 139, event_type: 1, vqidx: 0
+[  396.008154] keycode: 139, event_type: 2, vqidx: 1
+[  397.366212] yagl: 5 closed
+[  397.995459] keycode: 116, event_type: 1, vqidx: 2
+[  399.106718] yagl: 5 opened
+[  400.048872] keycode: 116, event_type: 2, vqidx: 3
+[  402.027107] sensors: called maru_upload_effect. No work to do.
+[  402.027867] sensors: called maru_playback. No work to do.
+[  402.050038] sensors: called maru_playback. No work to do.
+[  402.051832] sensors: called maru_erase_effect. No work to do.
+[  402.092085] yagl: 10 opened
+[  402.329062] [hbm_show_status] get: 0
+[  402.330300] [hbm_show_status] get: 0
+[  402.569744] [hbm_show_status] get: 0
+[  402.651184] systemd-journald[1130]: Received SIGTERM from PID 1 (systemd).
+[  402.659285] yagl: 7 closed
+[  405.532568] yagl: 10 closed
+[  407.672432] ACPI: Preparing to enter system sleep state S5
+[  407.673155] reboot: Power down

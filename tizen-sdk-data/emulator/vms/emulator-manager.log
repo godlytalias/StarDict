@@ -1,0 +1,42 @@
+[2015.12.21 18:42:57][INFO][EMLogger.initLogger] 
+=== Initial Information ===========
+sdk.info file path: /home/div.purohit/tizen-sdk/tools/emulator/bin/../../../sdk.info
+TIZEN_SDK_INSTALLED_PATH: /home/div.purohit/tizen-sdk
+TIZEN_SDK_DATA_PATH: /home/div.purohit/tizen-sdk-data
+Current path: /home/div.purohit/tizen-sdk/tools/emulator/bin
+Tizen sdk path: /home/div.purohit/tizen-sdk
+Tizen sdk data path: /home/div.purohit/tizen-sdk-data
+
+[2015.12.21 18:42:57][INFO][Overseer$1.run] Overseer [StartupPreparations] is starting...
+[2015.12.21 18:42:57][INFO][Overseer$1.run] Overseer [Checkers] is starting...
+[2015.12.21 18:42:57][INFO][CheckVT.work] Support HW virtualization: true
+[2015.12.21 18:42:57][INFO][CheckVT.work] non-UG: false
+[2015.12.21 18:42:57][INFO][HelperClass.runProcess] Try to run external process: /home/div.purohit/tizen-sdk/tools/emulator/bin/check-gl
+[2015.12.21 18:42:57][INFO][About.printSystemInformation] System Information
+JAVA HOME: /usr/lib/jvm/jdk1.8.0_45/jre
+JAVA VENDOR: Oracle Corporation
+JAVA VERSION: 1.8.0_45
+OS ARCH: i386
+OS NAME: Linux
+OS VERSION: 3.13.0-73-generic
+SWT PLATFROM: gtk
+SWT VERSION: 4430
+[2015.12.21 18:42:57][INFO][About.printSystemInformation] EmulatorManager Information
+Version      : 2.4.0b_RC12_Extension
+Build time   : 20150703-1421 (GMT)
+Git version  : afcd901
+Workspace path : /home/div.purohit/tizen-sdk-data/emulator/vms
+[2015.12.21 18:42:57][INFO][Overseer$1.run] Overseer [StartupPreparations] is done...
+[2015.12.21 18:42:58][INFO][CheckGPU.work] Support GPU: true
+[2015.12.21 18:42:58][INFO][CheckGPU.work] Gallium: false
+[2015.12.21 18:42:58][INFO][Overseer$1.run] Overseer [Checkers] is done...
+[2015.12.21 18:42:58][INFO][EmulatorManager.main] Start Emulator Manager!!
+[2015.12.21 18:43:2][WARNING][VMPropertyValue.settingConfigure] Failed to create skin.info.ini file does not exist.
+[2015.12.21 18:43:4][WARNING][VMPropertyValue.settingConfigure] Failed to create skin.info.ini file does not exist.
+[2015.12.21 18:43:15][INFO][Creator.createInternal] Success to create the dict VM
+[2015.12.21 18:43:15][INFO][RefreshWorker.refreshVMConnect] Refresh complete
+[2015.12.21 18:43:18][INFO][VMLauncher.getCommand] Starting Emulator Command : 
+[2015.12.21 18:43:18][INFO][VMLauncher.getCommand] "/home/div.purohit/tizen-sdk/platforms/tizen-2.3/common/emulator/bin/emulator.sh" --conf "/home/div.purohit/tizen-sdk-data/emulator/vms/dict/vm_launch.conf"
+[2015.12.21 18:43:26][INFO][VMSocket.sendMessage] Connected to ECS(port:26103)
+[2015.12.21 18:43:26][INFO][CheckingRunningEmulator.removeEmulator] Try connection #1, result: LAUNCHED_VM_DETECTED
+[2015.12.21 18:43:26][INFO][VMWorker.sendRemoteLog] Launcher log : start

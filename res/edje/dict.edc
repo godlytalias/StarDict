@@ -1,0 +1,320 @@
+collections {
+   base_scale: 2.6;
+   styles {
+      style {
+         name: "title_style";
+         base: "font=Tizen:style=Regular align=center font_size=50 color=#FFFFFFFF wrap=mixed";
+         tag: "br" "\n";
+         tag: "ps" "ps";
+         tag: "hilight" "+ font_weight=Bold";
+         tag: "b" "+ font_weight=Bold";
+         tag: "tab" "\t";
+      }
+   }
+
+   plugins {
+      plugin {
+         name: "touch_sound";
+         source: feedback;
+         param: "FEEDBACK_TYPE_SOUND FEEDBACK_PATTERN_TAP";
+      }
+   }
+   
+   group { name: "applayout";
+      images {
+         image: "splash.png" COMP;
+      }
+      parts {
+         part { name: "base";
+            clip_to: "clipper";
+            type: RECT;
+            scale: 1;
+            description { state: "default" 0.0;
+               rel1.relative: 0.0 0.0;
+               rel2.relative: 1.0 1.0;
+            }
+         }
+         part { name: "elm.header";
+            type: RECT;
+            clip_to: "clipper";
+            scale: 1;
+            description { state: "default" 0.0;
+            min: 720 100;
+            color: 43 130 143 255;
+            fixed: 1 1;
+            rel1.to: "base";
+            rel2.to: "base";
+            rel2.relative: 1.0 0.0;
+            align: 0.0 0.0;
+            }
+         }
+         part { name: "elm.app.name";
+            type: TEXTBLOCK;
+            scale: 1;
+            clip_to: "clipper";
+            description { state: "default" 0.0;
+               rel1.to: "elm.header";
+               rel2.to: "elm.header";
+               text.style: "title_style";
+               text.min: 0 1;
+            }
+         }
+         part { name: "elm.swallow.button";
+            scale: 1;
+            type: SWALLOW;
+            clip_to: "clipper";
+            description { state: "default" 0.0;
+               rel1.to: "elm.header";
+               rel2.to: "elm.header";
+               rel2.relative: 0.0 1.0;
+               align: 0.0 0.5;
+               min: 98 0;
+               fixed: 1 0;
+               visible: 0;
+            }
+            description { state: "show" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+            }
+         } 
+         part { name: "elm.swallow.content";
+            type: SWALLOW;
+            scale: 1;
+            clip_to: "clipper";
+            description { state: "default" 0.0;
+               min: 720 0;
+               fixed: 1 0;
+               rel1.to: "elm.header";
+               rel1.relative: 0.0 1.0;
+               rel2.to: "base";
+            }
+         }
+         part { name: "clipper";
+            type: RECT;
+            scale: 1;
+            description { state: "default" 0.0;
+               color: 0 0 0 0;
+               rel1.to: "base";
+               rel2.to: "base";
+               visible: 1;
+            }
+            description { state: "show" 0.0;
+               inherit: "default" 0.0;
+               color: 255 255 255 255;
+            }
+         }
+         part { name: "splash";
+            type: IMAGE;
+            scale: 1;
+            repeat_events: 1;
+            description { state: "default" 0.0;
+               fixed: 1 1;
+               image.normal: "splash.png";
+               rel1 {relative: 0.5 0.5; to: "base";}
+               rel2 {relative: 0.5 0.5; to: "base";}
+               align: 0.5 0.5;
+               min: 348 348;
+               visible: 1;
+            }
+            description { state: "show" 0.0; ///----goldy reversed the definition of show and hide :)
+               inherit: "default" 0.0;
+               color: 0 0 0 0;
+               visible: 0;
+            }
+         }
+
+         part { name: "events";
+            type: RECT;
+            repeat_events: 1;
+            scale: 1;
+            description { state: "default" 0.0;
+               color: 0 0 0 0;
+               rel1.to: "elm.swallow.content";
+               rel2.to: "elm.swallow.content";
+            }
+         }
+      }
+      programs {
+         program { name: "back_button_show";
+            signal: "elm,dict,back,show";
+            source: "elm";
+            action: STATE_SET "show" 0.0;
+            target: "elm.swallow.button";
+         }
+         program { name: "back_button_hide";
+            signal: "elm,dict,back,hide";
+            source: "elm";
+            action: STATE_SET "default" 0.0;
+            target: "elm.swallow.button";
+         }
+         program { name: "entry_focus";
+            action: SIGNAL_EMIT "elm,dict,splash,finish" "elm";
+         }
+         program { name: "splash,show";
+            signal: "elm,splash,show";
+            source: "elm";
+            in: 1.0 0;
+            transition: SIN_FAC 0.3 1.0;
+            action: STATE_SET "show" 0.0;
+            target: "clipper";
+            target: "splash";
+            after: "entry_focus";
+         }
+      }
+   }
+
+   group { name: "app_standard_layout";
+      parts {
+         part { name: "base";
+            type: SPACER;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 720 0;
+               fixed: 1 0;
+            }
+         }
+         part { name: "top_left_padding";
+            type: SPACER;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 32 32;
+               fixed: 1 1;
+               rel1.to: "base";
+               rel2.to: "base";
+               rel2.relative: 0.0 0.0;
+               align: 0.0 0.0;
+            }
+         }
+         part { name: "right_bottom_padding";
+            type: SPACER;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 32 32;
+               fixed: 1 1;
+               rel1.to: "base";
+               rel1.relative: 1.0 1.0;
+               rel2.to: "base";
+               align: 1.0 1.0;
+            }
+         }
+         part { name: "elm.swallow.content";
+            type: SWALLOW;
+            scale: 1;
+            description { state: "default";
+               min: 656 0;
+               fixed: 1 0;
+               rel1.to: "top_left_padding";
+               rel1.relative: 1.0 1.0;
+               rel2.to: "right_bottom_padding";
+               rel2.relative: 0.0 0.0;
+            }
+         }
+      }
+   }
+
+   group { name: "main";
+      parts {
+         part { name: "base";
+            type: RECT;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 720 0;
+               fixed: 1 0;
+            }
+         }
+         part { name: "elm.swallow.entry";
+            type: SWALLOW;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 672 120;
+               fixed: 1 1;
+               rel1.to: "base";
+               rel1.relative: 0.0 0.0;
+               rel1.offset: 24 0;
+               rel2.to: "base";
+               rel2.relative: 1.0 0.0;
+               rel2.offset: -24 0;
+               align: 0.0 0.0;
+            }
+         }
+         part { name: "elm.entry.underline";
+            type: RECT;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 672 2;
+               fixed: 1 1;
+               rel1.to: "elm.swallow.entry";
+               rel1.relative: 0.0 1.0;
+               rel2.to: "elm.swallow.entry";
+               rel1.offset: 0 -20;
+               rel2.offset: 0 -20;
+               align: 0.5 1.0;
+               color_class: "F059";
+            }
+            description {
+               state: "focus" 0.0;
+               inherit: default 0.0;
+               color_class: "F057";
+            }
+         }
+         part { name: "elm.swallow.result";
+            type: SWALLOW;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 720 0;
+               fixed: 1 0;
+               rel1.to_x: "base";
+               rel1.to_y: "elm.entry.underline";
+               rel1.relative: 0.0 1.0;
+               rel2.to: "base";
+            }
+         }
+         part { name: "elm.swallow.progress";
+            type: SWALLOW;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 720 0;
+               fixed: 1 0;
+               rel1.to_x: "base";
+               rel1.to_y: "elm.swallow.entry";
+               rel2.to_y: "elm.swallow.entry";
+               rel2.to_x: "base";
+               rel2.relative: 1.0 0.0;
+               align: 0.0 0.0;
+               visible:0;
+            }
+            description { state: "show" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+            }
+         }
+      }
+      programs{
+         program { name: "progress_show";
+            signal: "elm,dict,progress,show";
+            source: "elm";
+            action: STATE_SET "show" 0.0;
+            transition: LINEAR 0.5;
+            target: "elm.swallow.progress";
+         }
+         program { name: "progress_hide";
+            signal: "elm,dict,progress,hide";
+            source: "elm";
+            action: STATE_SET "default" 0.0;
+            target: "elm.swallow.progress";
+         }
+         program { name: "entry_focus";
+            signal: "elm,dict,focused";
+            source: "elm";
+            action: STATE_SET "focus" 0.0;
+            target: "elm.entry.underline";
+         }
+         program { name: "entry_unfocus";
+            signal: "elm,dict,unfocused";
+            source: "elm";
+            action: STATE_SET "default" 0.0;
+            target: "elm.entry.underline";
+         }
+      }
+   }
+}

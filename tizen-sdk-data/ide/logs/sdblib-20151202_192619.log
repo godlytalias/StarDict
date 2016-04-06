@@ -1,0 +1,4 @@
+07:26:19 E/command: execute uname -m failed:org.tizen.sdblib.exception.TimeoutException
+07:26:19 E/DeviceMonitor: sdb closed by the other
+07:26:29 E/command: execute uname -m failed:org.tizen.sdblib.exception.TimeoutException
+07:26:29 E/DeviceMonitor: sdb closed by the other

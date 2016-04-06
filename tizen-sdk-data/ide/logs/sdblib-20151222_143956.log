@@ -1,0 +1,15 @@
+02:39:56 E/DeviceMonitor: sdb connection Error:null
+02:39:57 E/DeviceMonitor: Failed to open socket channel
+02:39:57 E/DeviceMonitor: Connection refused
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:458)
+	at sun.nio.ch.Net.connect(Net.java:450)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648)
+	at java.nio.channels.SocketChannel.open(SocketChannel.java:189)
+	at org.tizen.sdblib.SmartDevelopmentBridge.openChannel(SmartDevelopmentBridge.java:152)
+	at org.tizen.sdblib.DeviceMonitor.openSdbConnection(DeviceMonitor.java:168)
+	at org.tizen.sdblib.DeviceMonitor.process(DeviceMonitor.java:389)
+	at org.tizen.sdblib.daemon.AbstractServer.run(AbstractServer.java:242)
+	at java.lang.Thread.run(Thread.java:745)
+

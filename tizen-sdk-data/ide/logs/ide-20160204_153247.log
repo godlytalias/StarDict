@@ -1,0 +1,60 @@
+[2016.02.04 15:42:42][ERROR] NativeCoreConfigurationManager.java(1527) - Failed to resolve build option to String
+org.eclipse.cdt.managedbuilder.core.BuildException: Type of option value is inconsistent with option type
+	at org.eclipse.cdt.managedbuilder.internal.core.Option.getStringValue(Option.java:1542)
+	at org.tizen.nativecore.build.NativeCoreConfigurationManager.resolveToString(NativeCoreConfigurationManager.java:1517)
+	at org.tizen.nativecore.build.NativeCoreConfigurationManager.getEdcCompilerFontDirFullPath(NativeCoreConfigurationManager.java:1511)
+	at org.tizen.nativecore.enventor.Launcher.getOptions(Launcher.java:148)
+	at org.tizen.nativecore.enventor.Launcher.getCommand(Launcher.java:137)
+	at org.tizen.nativecore.enventor.Launcher.access$0(Launcher.java:129)
+	at org.tizen.nativecore.enventor.Launcher$1.run(Launcher.java:79)
+	at java.lang.Thread.run(Thread.java:745)
+[2016.02.04 15:42:42][ERROR] NativeCoreConfigurationManager.java(1527) - Failed to resolve build option to String
+org.eclipse.cdt.managedbuilder.core.BuildException: Type of option value is inconsistent with option type
+	at org.eclipse.cdt.managedbuilder.internal.core.Option.getStringValue(Option.java:1542)
+	at org.tizen.nativecore.build.NativeCoreConfigurationManager.resolveToString(NativeCoreConfigurationManager.java:1517)
+	at org.tizen.nativecore.build.NativeCoreConfigurationManager.getEdcCompilerImageDirFullPath(NativeCoreConfigurationManager.java:1491)
+	at org.tizen.nativecore.enventor.Launcher.getOptions(Launcher.java:149)
+	at org.tizen.nativecore.enventor.Launcher.getCommand(Launcher.java:137)
+	at org.tizen.nativecore.enventor.Launcher.access$0(Launcher.java:129)
+	at org.tizen.nativecore.enventor.Launcher$1.run(Launcher.java:79)
+	at java.lang.Thread.run(Thread.java:745)
+[2016.02.04 15:42:42][ERROR] NativeCoreConfigurationManager.java(1527) - Failed to resolve build option to String
+org.eclipse.cdt.managedbuilder.core.BuildException: Type of option value is inconsistent with option type
+	at org.eclipse.cdt.managedbuilder.internal.core.Option.getStringValue(Option.java:1542)
+	at org.tizen.nativecore.build.NativeCoreConfigurationManager.resolveToString(NativeCoreConfigurationManager.java:1517)
+	at org.tizen.nativecore.build.NativeCoreConfigurationManager.getEdcCompilerSoundDirFullPath(NativeCoreConfigurationManager.java:1501)
+	at org.tizen.nativecore.enventor.Launcher.getOptions(Launcher.java:150)
+	at org.tizen.nativecore.enventor.Launcher.getCommand(Launcher.java:137)
+	at org.tizen.nativecore.enventor.Launcher.access$0(Launcher.java:129)
+	at org.tizen.nativecore.enventor.Launcher$1.run(Launcher.java:79)
+	at java.lang.Thread.run(Thread.java:745)
+[2016.02.04 15:44:17][ERROR] NativeCoreConfigurationManager.java(1527) - Failed to resolve build option to String
+org.eclipse.cdt.managedbuilder.core.BuildException: Type of option value is inconsistent with option type
+	at org.eclipse.cdt.managedbuilder.internal.core.Option.getStringValue(Option.java:1542)
+	at org.tizen.nativecore.build.NativeCoreConfigurationManager.resolveToString(NativeCoreConfigurationManager.java:1517)
+	at org.tizen.nativecore.build.NativeCoreConfigurationManager.getEdcCompilerFontDirFullPath(NativeCoreConfigurationManager.java:1511)
+	at org.tizen.nativecore.enventor.Launcher.getOptions(Launcher.java:148)
+	at org.tizen.nativecore.enventor.Launcher.getCommand(Launcher.java:137)
+	at org.tizen.nativecore.enventor.Launcher.access$0(Launcher.java:129)
+	at org.tizen.nativecore.enventor.Launcher$1.run(Launcher.java:79)
+	at java.lang.Thread.run(Thread.java:745)
+[2016.02.04 15:44:17][ERROR] NativeCoreConfigurationManager.java(1527) - Failed to resolve build option to String
+org.eclipse.cdt.managedbuilder.core.BuildException: Type of option value is inconsistent with option type
+	at org.eclipse.cdt.managedbuilder.internal.core.Option.getStringValue(Option.java:1542)
+	at org.tizen.nativecore.build.NativeCoreConfigurationManager.resolveToString(NativeCoreConfigurationManager.java:1517)
+	at org.tizen.nativecore.build.NativeCoreConfigurationManager.getEdcCompilerImageDirFullPath(NativeCoreConfigurationManager.java:1491)
+	at org.tizen.nativecore.enventor.Launcher.getOptions(Launcher.java:149)
+	at org.tizen.nativecore.enventor.Launcher.getCommand(Launcher.java:137)
+	at org.tizen.nativecore.enventor.Launcher.access$0(Launcher.java:129)
+	at org.tizen.nativecore.enventor.Launcher$1.run(Launcher.java:79)
+	at java.lang.Thread.run(Thread.java:745)
+[2016.02.04 15:44:17][ERROR] NativeCoreConfigurationManager.java(1527) - Failed to resolve build option to String
+org.eclipse.cdt.managedbuilder.core.BuildException: Type of option value is inconsistent with option type
+	at org.eclipse.cdt.managedbuilder.internal.core.Option.getStringValue(Option.java:1542)
+	at org.tizen.nativecore.build.NativeCoreConfigurationManager.resolveToString(NativeCoreConfigurationManager.java:1517)
+	at org.tizen.nativecore.build.NativeCoreConfigurationManager.getEdcCompilerSoundDirFullPath(NativeCoreConfigurationManager.java:1501)
+	at org.tizen.nativecore.enventor.Launcher.getOptions(Launcher.java:150)
+	at org.tizen.nativecore.enventor.Launcher.getCommand(Launcher.java:137)
+	at org.tizen.nativecore.enventor.Launcher.access$0(Launcher.java:129)
+	at org.tizen.nativecore.enventor.Launcher$1.run(Launcher.java:79)
+	at java.lang.Thread.run(Thread.java:745)

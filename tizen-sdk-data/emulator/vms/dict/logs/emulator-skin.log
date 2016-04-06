@@ -1,0 +1,468 @@
+[INFO:20151221-184320:EmulatorSkinMain.main] !!! Start Emualtor Skin !!!
+[INFO:20151221-184320:EmulatorSkinMain.main] java.version : 1.8.0_45
+[INFO:20151221-184320:EmulatorSkinMain.main] java vendor : Oracle Corporation
+[INFO:20151221-184320:EmulatorSkinMain.main] vm version : 25.45-b02
+[INFO:20151221-184320:EmulatorSkinMain.main] vm vendor : Oracle Corporation
+[INFO:20151221-184320:EmulatorSkinMain.main] vm name : Java HotSpot(TM) Server VM
+[INFO:20151221-184320:EmulatorSkinMain.main] os name : Linux
+[INFO:20151221-184320:EmulatorSkinMain.main] os arch : i386
+[INFO:20151221-184320:EmulatorSkinMain.main] os version : 3.13.0-73-generic
+[INFO:20151221-184320:EmulatorSkinMain.main] swt platform : gtk
+[INFO:20151221-184320:EmulatorSkinMain.main] swt version : 4332
+[INFO:20151221-184320:EmulatorSkinMain.main] working directory : /home/div.purohit/tizen-sdk/platforms/tizen-2.3/common/emulator/bin
+[INFO:20151221-184320:EmulatorSkinMain.parseArgs] arg[0] vm.skinport=56445
+[INFO:20151221-184320:EmulatorSkinMain.parseArgs] arg[1] uid=0
+[INFO:20151221-184320:EmulatorSkinMain.parseArgs] arg[2] vm.path=
+[INFO:20151221-184320:EmulatorSkinMain.parseArgs] sinlge argv:vm.path=
+[INFO:20151221-184320:EmulatorSkinMain.parseArgs] arg[3] vm.baseport=26100
+[INFO:20151221-184320:EmulatorSkinMain.parseArgs] arg[4] display.shm=false
+[INFO:20151221-184320:EmulatorSkinMain.parseArgs] arg[5] input.touch=true
+[INFO:20151221-184320:EmulatorSkinMain.parseArgs] arg[6] input.touch.maxpoint=10
+[INFO:20151221-184320:EmulatorSkinMain.parseArgs] arg[7] proxy.addr=
+[INFO:20151221-184320:EmulatorSkinMain.parseArgs] sinlge argv:proxy.addr=
+[INFO:20151221-184320:EmulatorSkinMain.parseArgs] arg[8] proxy.port=
+[INFO:20151221-184320:EmulatorSkinMain.parseArgs] sinlge argv:proxy.port=
+[INFO:20151221-184320:EmulatorSkinMain.parseArgs] arg[9] skin.path=/home/div.purohit/tizen-sdk/platforms/tizen-2.3/mobile/emulator-resources/skins/mobile-general-3btn
+[INFO:20151221-184320:EmulatorSkinMain.parseArgs] arg[10] resolution=480x800
+[INFO:20151221-184320:EmulatorSkinMain.parseArgs] arg[11] vm.path=/home/div.purohit/tizen-sdk-data/emulator/vms/dict
+[INFO:20151221-184320:EmulatorSkinMain.parseArgs] ================= argsMap =====================
+[INFO:20151221-184320:EmulatorSkinMain.parseArgs] {vm.path=/home/div.purohit/tizen-sdk-data/emulator/vms/dict, uid=0, display.shm=false, vm.baseport=26100, input.touch=true, vm.skinport=56445, input.touch.maxpoint=10, skin.path=/home/div.purohit/tizen-sdk/platforms/tizen-2.3/mobile/emulator-resources/skins/mobile-general-3btn, resolution=480x800}
+[INFO:20151221-184320:EmulatorSkinMain.parseArgs] ===============================================
+[INFO:20151221-184320:SkinUtil.loadProperties] load properties file : /home/div.purohit/tizen-sdk/platforms/tizen-2.3/mobile/emulator-resources/skins/mobile-general-3btn/info.ini
+[INFO:20151221-184320:EmulatorSkinMain.main] skin ini : skin.name=General purpose mobile
+[INFO:20151221-184320:EmulatorSkinMain.main] skin ini : resolution.width=all
+[INFO:20151221-184320:EmulatorSkinMain.main] skin ini : resolution.height=all
+[INFO:20151221-184320:EmulatorSkinMain.main] skin ini : manager.priority=2
+[INFO:20151221-184320:SkinUtil.loadProperties] load properties file : /home/div.purohit/tizen-sdk-data/emulator/vms/dict/.skin.properties
+[INFO:20151221-184320:SkinUtil.loadProperties] load properties file : /home/div.purohit/tizen-sdk-data/emulator/vms/dict/.skinconfig.properties
+[INFO:20151221-184320:SkinInformation.<init>] This skin has a general purpose layout
+[INFO:20151221-184320:EmulatorSkinMain.loadXMLForSkin] load dbi file from /home/div.purohit/tizen-sdk/platforms/tizen-2.3/mobile/emulator-resources/skins/mobile-general-3btn/default.dbi
+[INFO:20151221-184320:EmulatorSkinMain.loadXMLForSkin] ============ dbi contents ============
+[INFO:20151221-184320:EmulatorSkinMain.loadXMLForSkin] <?xml version="1.0" encoding="UTF-8"?>
+<EmulatorUI xmlns="http://www.tizen.org/emulator/skin/dbi" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dbi_version>2.2</dbi_version>
+    <rotations>
+        <rotation name="Portrait">
+            <display id="0">
+            </display>
+            <keyMapList>
+                <keyMap>
+                    <eventInfo>
+                        <keyCode>169</keyCode>
+                        <keyName>Menu</keyName>
+                    </eventInfo>
+                    <tooltip>Menu</tooltip>
+                </keyMap>
+                <keyMap>
+                    <eventInfo>
+                        <keyCode>139</keyCode>
+                        <keyName>Home</keyName>
+                    </eventInfo>
+                    <tooltip>Home</tooltip>
+                </keyMap>
+                <keyMap>
+                    <eventInfo>
+                        <keyCode>158</keyCode>
+                        <keyName>Back</keyName>
+                    </eventInfo>
+                    <tooltip>Back</tooltip>
+                </keyMap>
+                <keyMap>
+                    <eventInfo>
+                        <keyCode>116</keyCode>
+                        <keyName>Power</keyName>
+                    </eventInfo>
+                    <tooltip>Power</tooltip>
+                </keyMap>
+                <keyMap>
+                    <eventInfo>
+                        <keyCode>115</keyCode>
+                        <keyName>Volume +</keyName>
+                    </eventInfo>
+                    <tooltip>Volume +</tooltip>
+                </keyMap>
+                <keyMap>
+                    <eventInfo>
+                        <keyCode>114</keyCode>
+                        <keyName>Volume -</keyName>
+                    </eventInfo>
+                    <tooltip>Volume -</tooltip>
+                </keyMap>
+            </keyMapList>
+        </rotation>
+        <rotation name="Landscape">
+            <display id="0">
+            </display>
+        </rotation>
+        <rotation name="Reverse Portrait">
+            <display id="0">
+            </display>
+        </rotation>
+        <rotation name="Reverse Landscape">
+            <display id="0">
+            </display>
+        </rotation>
+    </rotations>
+    <hover>
+        <color B="255" G="255" R="255" />
+    </hover>
+    <popupMenu>
+        <topmostItem visible="true" />
+        <rotateItem visible="true" />
+        <scaleItem visible="true" />
+        <keywindowItem visible="true" />
+        <hostKeyboardItem visible="false" />
+        <ramdumpItem visible="false" />
+        <shellItem visible="true" />
+        <controlPanelItem visible="true" />
+        <forceCloseItem visible="true" />
+        <closeItem visible="true" />
+    </popupMenu>
+    <option>
+        <blankGuide visible="true" />
+    </option>
+</EmulatorUI>
+
+[INFO:20151221-184320:EmulatorSkinMain.loadXMLForSkin] =======================================
+[INFO:20151221-184320:EmulatorSkinMain.main] dbi version : 2.2
+[INFO:20151221-184320:SkinUtil.loadProperties] load properties file : /home/div.purohit/tizen-sdk/platforms/tizen-2.3/common/emulator/bin/../../../sdk.version
+[WARNING:20151221-184320:EmulatorConfig.loadSDKVersion] cannot read version from /home/div.purohit/tizen-sdk/platforms/tizen-2.3/common/emulator/bin/../../../sdk.version
+[INFO:20151221-184320:EmulatorConfig.<init>] SDK version : Undefined
+[INFO:20151221-184320:EmulatorSkinMain.main] maru_sdl
+[INFO:20151221-184320:SocketCommunicator.<init>] socket.isConnected() : true
+[INFO:20151221-184320:EmulatorSkin.initLayout] initialize the skin layout
+[INFO:20151221-184320:PopupMenu.createMenu] create a popup menu
+[INFO:20151221-184320:PopupMenu.addMenuItems] create a predefined Scale menu
+[INFO:20151221-184321:SkinPatches.<init>] patch size : 26x26
+[INFO:20151221-184321:EmulatorConfig.getValidWindowX] current display size : Rectangle {0, 0, 1600, 900}
+[INFO:20151221-184321:EmulatorConfig.getValidWindowX] WINDOW_X = 50
+[INFO:20151221-184321:EmulatorConfig.getValidWindowY] current display size : Rectangle {0, 0, 1600, 900}
+[INFO:20151221-184321:EmulatorConfig.getValidWindowY] WINDOW_Y = 50
+[INFO:20151221-184321:CustomProgressBar.<init>] dual progress bar is created
+[INFO:20151221-184321:GeneralPurposeSkinComposer.arrangeSkin] display bounds : Rectangle {26, 26, 240, 400}
+[INFO:20151221-184321:GeneralPurposeSkinComposer.compose] resolution : Point {480, 800}, scale : 50
+[INFO:20151221-184321:EmulatorSdlSkin.getDisplayHandleId] lcdCanvas.embeddedHandle:83886131
+[INFO:20151221-184321:EmulatorSdlSkin.initSkin] StartData [displayHandleId=83886131, display size 480x800, scale=50, rotation=0, blank guide=true]
+[INFO:20151221-184321:SocketCommunicator.sendInitialData] send startData
+[INFO:20151221-184321:GeneralPurposeSkinComposer$4.paintControl] shell transform was changed
+[INFO:20151221-184321:EmulatorSkin$1.shellActivated] activate
+[INFO:20151221-184321:GeneralPurposeSkinComposer$4.paintControl] shell re-painting is required
+[INFO:20151221-184321:EmulatorSdlSkin.updateDisplay] update display
+[INFO:20151221-184321:KeyWindowKeeper.determineLayout] key window has a general layout
+[INFO:20151221-184321:SkinPatches.<init>] patch size : 10x10
+[INFO:20151221-184321:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184321:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184321:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184321:CustomScrolledComposite.setMinSize] composite minWidth : 122, minHeight : 209
+[INFO:20151221-184321:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184321:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184321:SkinUtil.setTopMost] set Always on Top : false
+[INFO:20151221-184321:SkinUtil.setTopMost] 32bit architecture : i386
+[INFO:20151221-184321:SkinWindow.dock] host monitor display bounds : Rectangle {0, 0, 1600, 900}
+[INFO:20151221-184321:SkinWindow.dock] current parent shell bounds : Rectangle {65, 50, 292, 452}
+[INFO:20151221-184321:SkinWindow.dock] current child shell bounds : Rectangle {0, 0, 142, 174}
+[INFO:20151221-184321:GeneralPurposeSkinComposer.updateSkin] update skin
+[INFO:20151221-184321:EmulatorSkin$10.focusLost] lost focus
+[INFO:20151221-184321:GeneralKeyWindow$3.shellActivated] activate
+[INFO:20151221-184321:GeneralKeyWindow$3.shellDeactivated] deactivate
+[INFO:20151221-184321:EmulatorSkin$1.shellActivated] activate
+[INFO:20151221-184322:SocketCommunicator.increaseHeartbeatCount] HB count : 2
+[INFO:20151221-184323:SocketCommunicator.increaseHeartbeatCount] HB count : 3
+[INFO:20151221-184323:GeneralPurposeSkinComposer$6.mouseDown] mouseDown in Skin
+[INFO:20151221-184323:GeneralPurposeSkinComposer$6.mouseUp] mouseUp in Skin
+[INFO:20151221-184323:SkinWindow.dock] host monitor display bounds : Rectangle {0, 0, 1600, 900}
+[INFO:20151221-184323:SkinWindow.dock] current parent shell bounds : Rectangle {626, 191, 292, 452}
+[INFO:20151221-184323:SkinWindow.dock] current child shell bounds : Rectangle {905, 328, 142, 174}
+[INFO:20151221-184324:SocketCommunicator.increaseHeartbeatCount] HB count : 4
+[INFO:20151221-184325:SocketCommunicator.increaseHeartbeatCount] HB count : 5
+[INFO:20151221-184325:GeneralPurposeSkinComposer$6.mouseDown] mouseDown in Skin
+[INFO:20151221-184325:GeneralPurposeSkinComposer$6.mouseUp] mouseUp in Skin
+[INFO:20151221-184325:SkinWindow.dock] host monitor display bounds : Rectangle {0, 0, 1600, 900}
+[INFO:20151221-184325:SkinWindow.dock] current parent shell bounds : Rectangle {626, 191, 292, 452}
+[INFO:20151221-184325:SkinWindow.dock] current child shell bounds : Rectangle {918, 330, 142, 174}
+[INFO:20151221-184326:SocketCommunicator.increaseHeartbeatCount] HB count : 6
+[INFO:20151221-184326:GeneralKeyWindow$3.shellClosed] General Key Window is closed
+[INFO:20151221-184326:GeneralPurposeSkinComposer.updateSkin] update skin
+[INFO:20151221-184327:KeyWindowKeeper.determineLayout] key window has a general layout
+[INFO:20151221-184327:SkinPatches.<init>] patch size : 10x10
+[INFO:20151221-184327:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184327:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184327:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184327:CustomScrolledComposite.setMinSize] composite minWidth : 122, minHeight : 209
+[INFO:20151221-184327:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184327:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184327:SkinUtil.setTopMost] set Always on Top : false
+[INFO:20151221-184327:SkinUtil.setTopMost] 32bit architecture : i386
+[INFO:20151221-184327:SkinWindow.dock] host monitor display bounds : Rectangle {0, 0, 1600, 900}
+[INFO:20151221-184327:SkinWindow.dock] current parent shell bounds : Rectangle {626, 191, 292, 452}
+[INFO:20151221-184327:SkinWindow.dock] current child shell bounds : Rectangle {0, 0, 142, 174}
+[INFO:20151221-184327:GeneralPurposeSkinComposer.updateSkin] update skin
+[INFO:20151221-184327:EmulatorSkin$10.focusLost] lost focus
+[INFO:20151221-184327:GeneralKeyWindow$3.shellActivated] activate
+[INFO:20151221-184327:GeneralKeyWindow$3.shellDeactivated] deactivate
+[INFO:20151221-184327:EmulatorSkin$1.shellActivated] activate
+[INFO:20151221-184327:SocketCommunicator.increaseHeartbeatCount] HB count : 7
+[INFO:20151221-184328:GeneralKeyWindow$3.shellClosed] General Key Window is closed
+[INFO:20151221-184328:GeneralPurposeSkinComposer.updateSkin] update skin
+[INFO:20151221-184328:SocketCommunicator.increaseHeartbeatCount] HB count : 8
+[INFO:20151221-184328:KeyWindowKeeper.determineLayout] key window has a general layout
+[INFO:20151221-184328:SkinPatches.<init>] patch size : 10x10
+[INFO:20151221-184328:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184328:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184328:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184328:CustomScrolledComposite.setMinSize] composite minWidth : 122, minHeight : 209
+[INFO:20151221-184328:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184328:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184328:SkinUtil.setTopMost] set Always on Top : false
+[INFO:20151221-184328:SkinUtil.setTopMost] 32bit architecture : i386
+[INFO:20151221-184328:SkinWindow.dock] host monitor display bounds : Rectangle {0, 0, 1600, 900}
+[INFO:20151221-184328:SkinWindow.dock] current parent shell bounds : Rectangle {626, 191, 292, 452}
+[INFO:20151221-184328:SkinWindow.dock] current child shell bounds : Rectangle {0, 0, 142, 174}
+[INFO:20151221-184328:GeneralPurposeSkinComposer.updateSkin] update skin
+[INFO:20151221-184328:EmulatorSkin$10.focusLost] lost focus
+[INFO:20151221-184328:GeneralKeyWindow$3.shellActivated] activate
+[INFO:20151221-184328:GeneralKeyWindow$3.shellDeactivated] deactivate
+[INFO:20151221-184328:EmulatorSkin$1.shellActivated] activate
+[INFO:20151221-184329:SocketCommunicator.increaseHeartbeatCount] HB count : 9
+[INFO:20151221-184329:GeneralKeyWindow$3.shellClosed] General Key Window is closed
+[INFO:20151221-184329:GeneralPurposeSkinComposer.updateSkin] update skin
+[INFO:20151221-184329:KeyWindowKeeper.determineLayout] key window has a general layout
+[INFO:20151221-184329:SkinPatches.<init>] patch size : 10x10
+[INFO:20151221-184329:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184329:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184329:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184329:CustomScrolledComposite.setMinSize] composite minWidth : 122, minHeight : 209
+[INFO:20151221-184329:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184329:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184329:SkinUtil.setTopMost] set Always on Top : false
+[INFO:20151221-184329:SkinUtil.setTopMost] 32bit architecture : i386
+[INFO:20151221-184329:SkinWindow.dock] host monitor display bounds : Rectangle {0, 0, 1600, 900}
+[INFO:20151221-184329:SkinWindow.dock] current parent shell bounds : Rectangle {626, 191, 292, 452}
+[INFO:20151221-184329:SkinWindow.dock] current child shell bounds : Rectangle {0, 0, 142, 174}
+[INFO:20151221-184329:GeneralPurposeSkinComposer.updateSkin] update skin
+[INFO:20151221-184329:EmulatorSkin$10.focusLost] lost focus
+[INFO:20151221-184329:GeneralKeyWindow$3.shellActivated] activate
+[INFO:20151221-184330:GeneralKeyWindow$3.shellDeactivated] deactivate
+[INFO:20151221-184330:EmulatorSkin$1.shellActivated] activate
+[INFO:20151221-184330:GeneralKeyWindow$3.shellClosed] General Key Window is closed
+[INFO:20151221-184330:GeneralPurposeSkinComposer.updateSkin] update skin
+[INFO:20151221-184330:KeyWindowKeeper.determineLayout] key window has a general layout
+[INFO:20151221-184330:SkinPatches.<init>] patch size : 10x10
+[INFO:20151221-184330:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184330:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184330:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184330:CustomScrolledComposite.setMinSize] composite minWidth : 122, minHeight : 209
+[INFO:20151221-184330:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184330:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184330:SkinUtil.setTopMost] set Always on Top : false
+[INFO:20151221-184330:SkinUtil.setTopMost] 32bit architecture : i386
+[INFO:20151221-184330:SkinWindow.dock] host monitor display bounds : Rectangle {0, 0, 1600, 900}
+[INFO:20151221-184330:SkinWindow.dock] current parent shell bounds : Rectangle {626, 191, 292, 452}
+[INFO:20151221-184330:SkinWindow.dock] current child shell bounds : Rectangle {0, 0, 142, 174}
+[INFO:20151221-184330:GeneralPurposeSkinComposer.updateSkin] update skin
+[INFO:20151221-184330:EmulatorSkin$10.focusLost] lost focus
+[INFO:20151221-184330:GeneralKeyWindow$3.shellActivated] activate
+[INFO:20151221-184330:GeneralKeyWindow$3.shellDeactivated] deactivate
+[INFO:20151221-184330:EmulatorSkin$1.shellActivated] activate
+[INFO:20151221-184331:SocketCommunicator.increaseHeartbeatCount] HB count : 2
+[INFO:20151221-184331:GeneralKeyWindow$3.shellClosed] General Key Window is closed
+[INFO:20151221-184331:GeneralPurposeSkinComposer.updateSkin] update skin
+[INFO:20151221-184332:KeyWindowKeeper.determineLayout] key window has a general layout
+[INFO:20151221-184332:SkinPatches.<init>] patch size : 10x10
+[INFO:20151221-184332:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184332:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184332:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184332:CustomScrolledComposite.setMinSize] composite minWidth : 122, minHeight : 209
+[INFO:20151221-184332:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184332:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184332:SkinUtil.setTopMost] set Always on Top : false
+[INFO:20151221-184332:SkinUtil.setTopMost] 32bit architecture : i386
+[INFO:20151221-184332:SkinWindow.dock] host monitor display bounds : Rectangle {0, 0, 1600, 900}
+[INFO:20151221-184332:SkinWindow.dock] current parent shell bounds : Rectangle {626, 191, 292, 452}
+[INFO:20151221-184332:SkinWindow.dock] current child shell bounds : Rectangle {0, 0, 142, 174}
+[INFO:20151221-184332:GeneralPurposeSkinComposer.updateSkin] update skin
+[INFO:20151221-184332:EmulatorSkin$10.focusLost] lost focus
+[INFO:20151221-184332:GeneralKeyWindow$3.shellActivated] activate
+[INFO:20151221-184332:GeneralKeyWindow$3.shellDeactivated] deactivate
+[INFO:20151221-184332:EmulatorSkin$1.shellActivated] activate
+[INFO:20151221-184332:EmulatorSkin$10.focusLost] lost focus
+[INFO:20151221-184332:GeneralKeyWindow$3.shellActivated] activate
+[INFO:20151221-184332:GeneralKeyWindow$3.shellDeactivated] deactivate
+[INFO:20151221-184332:EmulatorSkin$1.shellActivated] activate
+[INFO:20151221-184332:SocketCommunicator.increaseHeartbeatCount] HB count : 3
+[INFO:20151221-184333:SocketCommunicator.increaseHeartbeatCount] HB count : 4
+[INFO:20151221-184334:SocketCommunicator.increaseHeartbeatCount] HB count : 5
+[INFO:20151221-184335:SocketCommunicator.increaseHeartbeatCount] HB count : 6
+[INFO:20151221-184336:SocketCommunicator.increaseHeartbeatCount] HB count : 7
+[INFO:20151221-184336:GeneralKeyWindow$3.shellClosed] General Key Window is closed
+[INFO:20151221-184336:GeneralPurposeSkinComposer.updateSkin] update skin
+[INFO:20151221-184337:KeyWindowKeeper.determineLayout] key window has a general layout
+[INFO:20151221-184337:SkinPatches.<init>] patch size : 10x10
+[INFO:20151221-184337:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184337:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184337:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184337:CustomScrolledComposite.setMinSize] composite minWidth : 122, minHeight : 209
+[INFO:20151221-184337:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184337:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184337:SkinUtil.setTopMost] set Always on Top : false
+[INFO:20151221-184337:SkinUtil.setTopMost] 32bit architecture : i386
+[INFO:20151221-184337:SkinWindow.dock] host monitor display bounds : Rectangle {0, 0, 1600, 900}
+[INFO:20151221-184337:SkinWindow.dock] current parent shell bounds : Rectangle {626, 191, 292, 452}
+[INFO:20151221-184337:SkinWindow.dock] current child shell bounds : Rectangle {0, 0, 142, 174}
+[INFO:20151221-184337:GeneralPurposeSkinComposer.updateSkin] update skin
+[INFO:20151221-184337:EmulatorSkin$10.focusLost] lost focus
+[INFO:20151221-184337:GeneralKeyWindow$3.shellActivated] activate
+[INFO:20151221-184337:GeneralKeyWindow$3.shellDeactivated] deactivate
+[INFO:20151221-184337:EmulatorSkin$1.shellActivated] activate
+[INFO:20151221-184337:SocketCommunicator.increaseHeartbeatCount] HB count : 8
+[INFO:20151221-184337:GeneralKeyWindow$3.shellClosed] General Key Window is closed
+[INFO:20151221-184337:GeneralPurposeSkinComposer.updateSkin] update skin
+[INFO:20151221-184338:SocketCommunicator.increaseHeartbeatCount] HB count : 9
+[INFO:20151221-184338:KeyWindowKeeper.determineLayout] key window has a general layout
+[INFO:20151221-184338:SkinPatches.<init>] patch size : 10x10
+[INFO:20151221-184338:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184338:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184338:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184338:CustomScrolledComposite.setMinSize] composite minWidth : 122, minHeight : 209
+[INFO:20151221-184338:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184338:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184338:SkinUtil.setTopMost] set Always on Top : false
+[INFO:20151221-184338:SkinUtil.setTopMost] 32bit architecture : i386
+[INFO:20151221-184338:SkinWindow.dock] host monitor display bounds : Rectangle {0, 0, 1600, 900}
+[INFO:20151221-184338:SkinWindow.dock] current parent shell bounds : Rectangle {626, 191, 292, 452}
+[INFO:20151221-184338:SkinWindow.dock] current child shell bounds : Rectangle {0, 0, 142, 174}
+[INFO:20151221-184338:GeneralPurposeSkinComposer.updateSkin] update skin
+[INFO:20151221-184338:EmulatorSkin$10.focusLost] lost focus
+[INFO:20151221-184338:GeneralKeyWindow$3.shellActivated] activate
+[INFO:20151221-184338:GeneralKeyWindow$3.shellDeactivated] deactivate
+[INFO:20151221-184338:EmulatorSkin$1.shellActivated] activate
+[INFO:20151221-184338:GeneralKeyWindow$3.shellClosed] General Key Window is closed
+[INFO:20151221-184338:GeneralPurposeSkinComposer.updateSkin] update skin
+[INFO:20151221-184339:SocketCommunicator.increaseHeartbeatCount] HB count : 10
+[INFO:20151221-184339:KeyWindowKeeper.determineLayout] key window has a general layout
+[INFO:20151221-184339:SkinPatches.<init>] patch size : 10x10
+[INFO:20151221-184339:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184339:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184339:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184339:CustomScrolledComposite.setMinSize] composite minWidth : 122, minHeight : 209
+[INFO:20151221-184339:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184339:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184339:SkinUtil.setTopMost] set Always on Top : false
+[INFO:20151221-184339:SkinUtil.setTopMost] 32bit architecture : i386
+[INFO:20151221-184339:SkinWindow.dock] host monitor display bounds : Rectangle {0, 0, 1600, 900}
+[INFO:20151221-184339:SkinWindow.dock] current parent shell bounds : Rectangle {626, 191, 292, 452}
+[INFO:20151221-184339:SkinWindow.dock] current child shell bounds : Rectangle {0, 0, 142, 174}
+[INFO:20151221-184339:GeneralPurposeSkinComposer.updateSkin] update skin
+[INFO:20151221-184339:EmulatorSkin$10.focusLost] lost focus
+[INFO:20151221-184339:GeneralKeyWindow$3.shellActivated] activate
+[INFO:20151221-184339:GeneralKeyWindow$3.shellDeactivated] deactivate
+[INFO:20151221-184339:EmulatorSkin$1.shellActivated] activate
+[INFO:20151221-184341:SocketCommunicator.increaseHeartbeatCount] HB count : 2
+[INFO:20151221-184342:SocketCommunicator.increaseHeartbeatCount] HB count : 3
+[INFO:20151221-184343:SocketCommunicator.increaseHeartbeatCount] HB count : 4
+[INFO:20151221-184344:SocketCommunicator.increaseHeartbeatCount] HB count : 5
+[INFO:20151221-184345:SocketCommunicator.increaseHeartbeatCount] HB count : 6
+[INFO:20151221-184346:EmulatorSkin.mouseDownDelivery] mouseDown in display x:288 y:664
+[INFO:20151221-184346:SocketCommunicator.increaseHeartbeatCount] HB count : 7
+[INFO:20151221-184346:EmulatorSkin.mouseUpDelivery] mouseUp in display x:222 y:128
+[INFO:20151221-184347:SocketCommunicator.increaseHeartbeatCount] HB count : 8
+[INFO:20151221-184348:SocketCommunicator.increaseHeartbeatCount] HB count : 9
+[INFO:20151221-184348:SocketCommunicator.run] received SDBD_STARTED from QEMU
+[INFO:20151221-184348:SocketCommunicator.run] received SDBD_STARTED from QEMU
+[INFO:20151221-184349:SocketCommunicator.increaseHeartbeatCount] HB count : 10
+[INFO:20151221-184349:EmulatorSkin$10.focusLost] lost focus
+[INFO:20151221-184350:EmulatorSkin$1.shellActivated] activate
+[INFO:20151221-184351:EmulatorSkin$10.focusLost] lost focus
+[INFO:20151221-184351:SocketCommunicator.increaseHeartbeatCount] HB count : 2
+[INFO:20151221-184352:SocketCommunicator.increaseHeartbeatCount] HB count : 3
+[INFO:20151221-184353:SocketCommunicator.increaseHeartbeatCount] HB count : 4
+[INFO:20151221-184354:SocketCommunicator.increaseHeartbeatCount] HB count : 5
+[INFO:20151221-184354:EmulatorSkin.mouseUpDelivery] mouseUp in display x:172 y:620
+[INFO:20151221-184355:SocketCommunicator.increaseHeartbeatCount] HB count : 6
+[INFO:20151221-184355:EmulatorSkin$10.focusLost] lost focus
+[INFO:20151221-184356:SocketCommunicator.increaseHeartbeatCount] HB count : 7
+[INFO:20151221-184356:EmulatorSkin.mouseUpDelivery] mouseUp in display x:128 y:350
+[INFO:20151221-184357:GeneralKeyWindow$3.shellClosed] General Key Window is closed
+[INFO:20151221-184357:GeneralPurposeSkinComposer.updateSkin] update skin
+[INFO:20151221-184357:SocketCommunicator.increaseHeartbeatCount] HB count : 8
+[INFO:20151221-184358:SocketCommunicator.increaseHeartbeatCount] HB count : 9
+[INFO:20151221-184359:SocketCommunicator.increaseHeartbeatCount] HB count : 10
+[INFO:20151221-184359:EmulatorSkin$10.focusLost] lost focus
+[INFO:20151221-184401:SocketCommunicator.increaseHeartbeatCount] HB count : 2
+[INFO:20151221-184402:SocketCommunicator.increaseHeartbeatCount] HB count : 3
+[INFO:20151221-184403:SocketCommunicator.increaseHeartbeatCount] HB count : 4
+[INFO:20151221-184404:SocketCommunicator.increaseHeartbeatCount] HB count : 5
+[INFO:20151221-184405:SocketCommunicator.increaseHeartbeatCount] HB count : 6
+[INFO:20151221-184406:SocketCommunicator.increaseHeartbeatCount] HB count : 7
+[INFO:20151221-184407:SocketCommunicator.increaseHeartbeatCount] HB count : 8
+[INFO:20151221-184408:SocketCommunicator.increaseHeartbeatCount] HB count : 9
+[INFO:20151221-184409:SocketCommunicator.increaseHeartbeatCount] HB count : 10
+[INFO:20151221-184423:EmulatorSkin$1.shellActivated] activate
+[INFO:20151221-184424:EmulatorSkin$10.focusLost] lost focus
+[INFO:20151221-184648:EmulatorSkin$1.shellActivated] activate
+[INFO:20151221-184649:EmulatorSkin$10.focusLost] lost focus
+[INFO:20151221-184654:EmulatorSkin$1.shellActivated] activate
+[INFO:20151221-184655:EmulatorSkin$10.focusLost] lost focus
+[INFO:20151221-184947:EmulatorSkin$1.shellActivated] activate
+[INFO:20151221-184948:EmulatorSkin.mouseDownDelivery] mouseDown in display x:52 y:178
+[INFO:20151221-184949:EmulatorSkin.mouseUpDelivery] mouseUp in display x:52 y:178
+[INFO:20151221-184949:EmulatorSkin.mouseDownDelivery] mouseDown in display x:52 y:178
+[INFO:20151221-184949:EmulatorSkin.mouseUpDelivery] mouseUp in display x:52 y:178
+[INFO:20151221-184951:EmulatorSkin$10.focusLost] lost focus
+[INFO:20151221-184953:EmulatorSkin$1.shellActivated] activate
+[INFO:20151221-184954:GeneralPurposeSkinComposer$6.mouseDown] mouseDown in Skin
+[INFO:20151221-184955:GeneralPurposeSkinComposer$6.mouseUp] mouseUp in Skin
+[INFO:20151221-184955:GeneralPurposeSkinComposer$6.mouseDown] mouseDown in Skin
+[INFO:20151221-184955:GeneralPurposeSkinComposer$6.mouseUp] mouseUp in Skin
+[INFO:20151221-184955:KeyWindowKeeper.determineLayout] key window has a general layout
+[INFO:20151221-184955:SkinPatches.<init>] patch size : 10x10
+[INFO:20151221-184955:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184955:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184955:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184955:CustomScrolledComposite.setMinSize] composite minWidth : 122, minHeight : 209
+[INFO:20151221-184955:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184955:ScrolledCompositeLayout.layout] layouting
+[INFO:20151221-184955:SkinUtil.setTopMost] set Always on Top : false
+[INFO:20151221-184955:SkinUtil.setTopMost] 32bit architecture : i386
+[INFO:20151221-184955:SkinWindow.dock] host monitor display bounds : Rectangle {0, 0, 1600, 900}
+[INFO:20151221-184955:SkinWindow.dock] current parent shell bounds : Rectangle {626, 191, 292, 452}
+[INFO:20151221-184955:SkinWindow.dock] current child shell bounds : Rectangle {0, 0, 142, 174}
+[INFO:20151221-184955:GeneralPurposeSkinComposer.updateSkin] update skin
+[INFO:20151221-184955:EmulatorSkin$10.focusLost] lost focus
+[INFO:20151221-184955:GeneralKeyWindow$3.shellActivated] activate
+[INFO:20151221-184955:GeneralKeyWindow$3.shellDeactivated] deactivate
+[INFO:20151221-184955:EmulatorSkin$1.shellActivated] activate
+[INFO:20151221-184956:EmulatorSkin$10.focusLost] lost focus
+[INFO:20151221-184956:GeneralKeyWindow$3.shellActivated] activate
+[INFO:20151221-184956:GeneralKeyWindow$1.mouseDown] Home key is pressed
+[INFO:20151221-184956:GeneralKeyWindow$3.shellDeactivated] deactivate
+[INFO:20151221-184956:EmulatorSkin$1.shellActivated] activate
+[INFO:20151221-184957:GeneralKeyWindow$1.mouseUp] Home key is released
+[INFO:20151221-184958:EmulatorSkin.mouseDownDelivery] mouseDown in display x:248 y:636
+[INFO:20151221-184958:EmulatorSkin.mouseUpDelivery] mouseUp in display x:248 y:636
+[INFO:20151221-184959:EmulatorSkin$10.focusLost] lost focus
+[INFO:20151221-184959:GeneralKeyWindow$3.shellActivated] activate
+[INFO:20151221-184959:GeneralKeyWindow$1.mouseDown] Power key is pressed
+[INFO:20151221-184959:GeneralKeyWindow$3.shellDeactivated] deactivate
+[INFO:20151221-184959:EmulatorSkin$1.shellActivated] activate
+[INFO:20151221-185001:GeneralKeyWindow$1.mouseUp] Power key is released
+[INFO:20151221-185002:EmulatorSkin.mouseDownDelivery] mouseDown in display x:124 y:552
+[INFO:20151221-185002:EmulatorSkin.mouseUpDelivery] mouseUp in display x:124 y:552
+[INFO:20151221-185003:EmulatorSkin.mouseDownDelivery] mouseDown in display x:352 y:756
+[INFO:20151221-185003:EmulatorSkin.mouseUpDelivery] mouseUp in display x:352 y:756
+[INFO:20151221-185006:SocketCommunicator.readData] finished reading stream. read : 2
+[INFO:20151221-185006:SocketCommunicator.receiveData] finished receiving data from QEMU.
+[INFO:20151221-185006:EmulatorSkin.displayOff] display off
+[INFO:20151221-185009:SocketCommunicator.run] received EMUL_SHUTDOWN from QEMU
+[INFO:20151221-185009:SocketCommunicator.terminate] terminated
+[INFO:20151221-185009:EmulatorSkin.shutdown] shutdown the skin process
+[INFO:20151221-185009:SocketCommunicator.run] communicatorThread is stopped
+[INFO:20151221-185009:EmulatorSkin$1.shellClosed] Main Window is closed
+[INFO:20151221-185009:GeneralKeyWindow$3.shellClosed] General Key Window is closed
+[INFO:20151221-185009:GeneralPurposeSkinComposer.updateSkin] update skin
+[INFO:20151221-185009:GeneralKeyWindowImageRegistry.dispose] dispose
+[INFO:20151221-185009:EmulatorSkin.skinFinalize] skinFinalize
+[INFO:20151221-185009:GeneralSkinImageRegistry.dispose] dispose
+[INFO:20151221-185009:CustomProgressBar$3.widgetDisposed] progress bar is disposed
+[INFO:20151221-185009:EmulatorShutdownhook.run] EmulatorShutdownhook run by a signal.
+[INFO:20151221-185009:SocketCommunicator.terminate] has been terminated

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<EmulatorConfiguration xmlns="http://www.tizen.org/em">
+    <baseInformation>
+        <name>dict</name>
+        <architecture>x86</architecture>
+        <diskImage profile="mobile" type="standard" base="2.3-mobile" version="2.3">
+            <baseDiskImage format="qcow2" version="3.0.20">/home/div.purohit/tizen-sdk/platforms/tizen-2.3/mobile/emulator-images/2.3-mobile/emulimg-2.3.x86</baseDiskImage>
+            <currentDiskImage format="qcow2">/home/div.purohit/tizen-sdk-data/emulator/vms/dict/emulimg-dict.x86</currentDiskImage>
+            <swapDiskImage format="qcow2">/home/div.purohit/tizen-sdk-data/emulator/vms/dict/swap-dict.img</swapDiskImage>
+        </diskImage>
+    </baseInformation>
+    <usability>
+        <logging>
+            <level>NONE</level>
+        </logging>
+        <fileSharing/>
+        <hwVirtualization>true</hwVirtualization>
+        <hwGLAcceleration>true</hwGLAcceleration>
+        <SupportSuspend>false</SupportSuspend>
+    </usability>
+    <device>
+        <display>
+            <resolution>
+                <width>480</width>
+                <height>800</height>
+            </resolution>
+            <density unit="dpi">233</density>
+            <skinPath>
+                <path>/home/div.purohit/tizen-sdk/platforms/tizen-2.3/mobile/emulator-resources/skins/mobile-general-3btn</path>
+            </skinPath>
+        </display>
+        <CPU>
+            <value unit="cpu">4</value>
+        </CPU>
+        <RAM>
+            <size unit="MiB">768</size>
+        </RAM>
+        <touch maxTouchPoint="10"/>
+    </device>
+    <advancedOption>
+        <option name="device">
+            <subOption name="camera" value="on"/>
+            <subOption name="battery" value="on"/>
+        </option>
+        <option name="jack">
+            <subOption name="earjack" value="on"/>
+            <subOption name="charger" value="on"/>
+            <subOption name="usb" value="on"/>
+        </option>
+        <option name="sensor">
+            <subOption name="accel" value="on"/>
+            <subOption name="gyro" value="on"/>
+            <subOption name="geo" value="on"/>
+            <subOption name="proxi" value="on"/>
+            <subOption name="light" value="on"/>
+            <subOption name="haptic" value="on"/>
+            <subOption name="press" value="on"/>
+            <subOption name="uv" value="on"/>
+            <subOption name="hrm" value="on"/>
+        </option>
+        <option name="device">
+            <subOption name="camera" value="on"/>
+            <subOption name="battery" value="on"/>
+        </option>
+        <option name="jack">
+            <subOption name="earjack" value="on"/>
+            <subOption name="charger" value="on"/>
+            <subOption name="usb" value="on"/>
+        </option>
+        <option name="sensor">
+            <subOption name="accel" value="on"/>
+            <subOption name="gyro" value="on"/>
+            <subOption name="geo" value="on"/>
+            <subOption name="light" value="on"/>
+            <subOption name="proxi" value="on"/>
+            <subOption name="haptic" value="on"/>
+            <subOption name="press" value="on"/>
+            <subOption name="uv" value="on"/>
+            <subOption name="hrm" value="on"/>
+        </option>
+    </advancedOption>
+</EmulatorConfiguration>

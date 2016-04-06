@@ -1,0 +1,215 @@
+18:43:19.062816(23877) [INFO:emul_state] emulator graphic resolution : 480x800
+18:43:19.069473(23877) [INFO:main] Start emulator...
+18:43:19.076674(23877) [INFO:main] * Board name : Maru
+18:43:19.076714(23877) [INFO:main] * Package Version: 2.1.16
+18:43:19.076722(23877) [INFO:main] * Package Maintainer: Yeong-Kyoon Lee<yeongkyoon.lee@samsung.com>
+18:43:19.076728(23877) [INFO:main] * Git Head : db93811902a5b90ec294e72612edba91abaf1b7a
+18:43:19.076734(23877) [INFO:main] * Latest Git Tag : tizen_2.3.1_eap2 (tizen_2.3.1_eap2)
+18:43:19.077153(23877) [INFO:main] * User name : 
+18:43:19.077169(23877) [INFO:main] * Host name : divpurohit-ubuntu
+18:43:19.077176(23877) [INFO:main] * Build date : 2015-06-24 17:27:05 KST
+18:43:19.077186(23877) [INFO:main] * Current time : 2015-12-21 18:43:19
+18:43:19.077193(23877) [INFO:main] * Host sdl version : (1, 2, 15)
+18:43:19.077199(23877) [INFO:osutil] * Linux
+18:43:19.077205(23877) [INFO:osutil] * LibPNG Version : 1.2.46
+18:43:19.077213(23877) [INFO:osutil] * QEMU build machine linux kernel version : (3, 2, 62)
+18:43:19.077221(23877) [INFO:osutil] * Host machine uname : Linux divpurohit-ubuntu 3.13.0-73-generic #116-Ubuntu SMP Fri Dec 4 15:33:02 UTC 2015 i686
+18:43:19.077233(23877) [INFO:osutil] * Total Ram : 4038724 kB, Free: 274008 kB
+18:43:19.077240(23877) [INFO:osutil] * Linux distribution infomation :
+Description:	Ubuntu 14.04.3 LTS
+Release:	14.04
+Codename:	trusty
+18:43:19.139627(23877) [INFO:osutil] * Host PCI devices :
+00:00.0 Host bridge: Intel Corporation 2nd Generation Core Processor Family DRAM Controller (rev 09)
+00:02.0 VGA compatible controller: Intel Corporation 2nd Generation Core Processor Family Integrated Graphics Controller (rev 09)
+00:16.0 Communication controller: Intel Corporation 6 Series/C200 Series Chipset Family MEI Controller #1 (rev 04)
+00:1a.0 USB controller: Intel Corporation 6 Series/C200 Series Chipset Family USB Enhanced Host Controller #2 (rev 04)
+00:1b.0 Audio device: Intel Corporation 6 Series/C200 Series Chipset Family High Definition Audio Controller (rev 04)
+00:1c.0 PCI bridge: Intel Corporation 6 Series/C200 Series Chipset Family PCI Express Root Port 1 (rev b4)
+00:1c.3 PCI bridge: Intel Corporation 6 Series/C200 Series Chipset Family PCI Express Root Port 4 (rev b4)
+00:1d.0 USB controller: Intel Corporation 6 Series/C200 Series Chipset Family USB Enhanced Host Controller #1 (rev 04)
+00:1f.0 ISA bridge: Intel Corporation H61 Express Chipset Family LPC Controller (rev 04)
+00:1f.2 SATA controller: Intel Corporation 6 Series/C200 Series Chipset Family SATA AHCI Controller (rev 04)
+00:1f.3 SMBus: Intel Corporation 6 Series/C200 Series Chipset Family SMBus Controller (rev 04)
+03:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller (rev 06)
+qemu args: =========================================
+/home/div.purohit/tizen-sdk/platforms/tizen-2.3/common/emulator/bin/emulator-x86 -drive file=/home/div.purohit/tizen-sdk-data/emulator/vms/dict/emulimg-dict.x86,if=none,index=1,cache.no-flush=on,id=drive -device virtio-blk-pci,drive=drive -drive file=/home/div.purohit/tizen-sdk-data/emulator/vms/dict/swap-dict.img,if=none,index=2,id=swap -device virtio-blk-pci,drive=swap -m 768 -enable-kvm -enable-vigs -vigs-backend gl -enable-yagl -yagl-backend vigs -device virtio-sensor-pci,sensors=accel&geo&gyro&light&proxi&haptic&uv&press&hrm -device virtio-nfc-pci -device maru-camera -chardev file,path=/home/div.purohit/tizen-sdk-data/emulator/vms/dict/logs/emulator.klog,id=con0 -device isa-serial,chardev=con0 -device virtio-serial -L /home/div.purohit/tizen-sdk/platforms/tizen-2.3/common/emulator/data/bios -kernel /home/div.purohit/tizen-sdk/platforms/tizen-2.3/common/emulator/data/kernel/bzImage.x86 -append vm_name=dict video=LVDS-1:480x800-32@60 dpi=2330 console=ttyS0 host_ip=10.0.2.2 -device virtio-touchscreen-pci,max_point=10 -device AC97 -device virtio-esm-pci -device virtio-hwkey-pci -device virtio-evdi-pci,profile=mobile -device virtio-keyboard-pci -device virtio-vmodem-pci -device codec-pci -device maru-brightness -device virtio-power-pci -netdev user,id=net0,dhcpstart=10.0.2.16 -device virtio-net-pci,netdev=net0 -nodefaults -rtc base=utc -M maru-x86-machine -soundhw all -usb -vga none -device virtio-jack-pci,jacks=earjack&charger&usb 
+====================================================
+skin args: =========================================
+skin.path=/home/div.purohit/tizen-sdk/platforms/tizen-2.3/mobile/emulator-resources/skins/mobile-general-3btn resolution=480x800 vm.path=/home/div.purohit/tizen-sdk-data/emulator/vms/dict 
+====================================================
+18:43:19.187071(23877) [INFO:main] socket initialize...
+18:43:19.187114(23877) [INFO:main] qemu main start...
+18:43:19.218526(23877) [INFO:main] Prepare maru specified feature
+18:43:19.218559(23877) [INFO:main] Prepare_basic_features
+18:43:19.218592(23877) [INFO:sdb] port(26103) listen success
+18:43:19.218612(23877) [INFO:sdb] emulator base port is 26100
+18:43:19.253985(23877) [INFO:osutil] DIRECT PROXY MODE
+18:43:19.254477(23877) [INFO:main] Prepare_opengl_acceleration
+INFO  - Host OpenGL 2.1 - supported
+INFO  - + GL_VENDOR = Intel Open Source Technology Center
+INFO  - + GL_RENDERER = Mesa DRI Intel(R) Sandybridge Desktop x86/MMX/SSE2
+INFO  - + GL_VERSION = 3.0 Mesa 10.1.3
+INFO  - Host OpenGL 3.1 - supported
+INFO  - + GL_VENDOR = Intel Open Source Technology Center
+INFO  - + GL_RENDERER = Mesa DRI Intel(R) Sandybridge Desktop x86/MMX/SSE2
+INFO  - + GL_VERSION = 3.1 (Core Profile) Mesa 10.1.3
+INFO  - Host OpenGL 3.2 - NOT supported
+INFO  - Guest OpenGL ES v1_CM - supported
+INFO  - Guest OpenGL ES 2.0 - supported
+INFO  - Guest OpenGL ES 3.0 - supported
+INFO  - Host has hardware GL acceleration!
+18:43:19.282941(23877) [INFO:main] kernel command : vm_name=dict video=LVDS-1:480x800-32@60 dpi=2330 console=ttyS0 host_ip=10.0.2.2 sdb_port=26100, http_proxy= https_proxy= ftp_proxy= socks_proxy= dns1=10.0.2.3 vm_resolution=480x800 yagl=1
+18:43:19.617136(23877) [INFO:qemu_audio] Host audio out [alsa] is normal.
+18:43:19.753280(23877) [INFO:virtio-sensor] initialize virtio-sensor device
+18:43:19.753338(23877) [INFO:virtio-sensor] initialized sensor type: accel&geo&gyro&light&proxi&haptic&uv&press&hrm
+18:43:19.753372(23877) [INFO:virtio-sensor] sensor device capabilty enabled with 3df
+18:43:19.753772(23877) [INFO:virtio-nfc] initialize nfc device
+18:43:19.754254(23877) [INFO:maru-camera] <WARNING> Cannot identify '/dev/video0': No such file or directory
+18:43:19.754285(23877) [SEVERE:maru-camera] Camera device open failed: /dev/video0
+18:43:19.754299(23877) [SEVERE:maru-camera] Elapsed time: 0:000071
+18:43:19.754311(23877) [SEVERE:maru-camera] Failed to check the camera device, You can *not* use the camera
+18:43:19.756245(23877) [INFO:touchscreen] initialize touchscreen device : 10
+18:43:19.756268(23877) [INFO:emul_state] set max touch point : 10
+18:43:19.769791(23877) [INFO:virtio-esm] initialize virtio-esm device
+18:43:19.770084(23877) [INFO:hwkey] initialize the hwkey device
+18:43:19.770349(23877) [INFO:virtio-evdi] initialize evdi device
+18:43:19.770590(23877) [INFO:virtio-kbd] initialize virtio-keyboard device
+18:43:19.770820(23877) [INFO:virtio-vmodem] finish the vmodem device initialization.
+18:43:19.771057(23877) [INFO:brillcodec] device initialization.
+18:43:19.771502(23877) [INFO:maru-brightness] initialize maru-brightness device
+18:43:19.771734(23877) [INFO:virtio-power] initialize virtio-power device
+18:43:19.783820(23877) [INFO:virtio-jack] initialize virtio-jack device
+18:43:19.783876(23877) [INFO:virtio-jack] initialized jack type: earjack&charger&usb
+18:43:19.783890(23877) [INFO:virtio-jack] jack device capabilty enabled with 13
+18:43:19.783985(23877) [INFO:osutil] shared memory key: 26100 value: /home/div.purohit/tizen-sdk-data/emulator/vms/dict/emulimg-dict.x86
+18:43:19.784077(23877) [INFO:sdb] start sdb noti server thread.
+18:43:19.784088(23899) [INFO:ecs] ecs starts initializing.
+18:43:19.784130(23877) [INFO:sdb] success to bind port[127.0.0.1:26103/udp] for sdb noti server in host 
+18:43:19.784152(23899) [INFO:ecs] ecs port: 26103
+18:43:19.784186(23877) [INFO:sdb] SDBD established on port 26101
+18:43:19.784215(23877) [INFO:sdb] redirect [tcp:26101::26101] success
+18:43:19.784231(23877) [INFO:sdb] Port(26101/tcp) listen for SDB
+18:43:19.784270(23899) [INFO:ecs] Listen fd is 27
+18:43:19 INFO  vigs_gl_backend_glx_check_gl_version:134 - GL_VERSION forces OpenGL version to 2.1
+18:43:19 INFO  vigs_gl_backend_glx_get_config:226 - GLX config ID: 0x65
+18:43:19 INFO  vigs_gl_backend_glx_get_config:233 - GLX visual ID: 0x20
+18:43:19 INFO  vigs_device_init:442 - VIGS initialized
+18:43:19 INFO  [0/0] yagl_egl_glx_get_gl_version:182 - GL_VERSION forces OpenGL version to 2.1
+18:43:19.855351(23877) [INFO:display] init qemu display
+18:43:19.855409(23877) [INFO:maru_sdl] qemu_ds_sdl_switch : (640, 480)
+18:43:19.855419(23877) [INFO:maru_sdl] create blank screen : (480, 800)
+18:43:19.861723(23877) [INFO:main] Start skin
+18:43:19.861744(23877) [INFO:main] construct main window
+18:43:19.861770(23877) [INFO:skin_server] There is no .skinconfig.properties. skin_config_path:/.skinconfig.properties
+18:43:19.861781(23877) [INFO:skin_server] skin parameter key : skin.path, value : /home/div.purohit/tizen-sdk/platforms/tizen-2.3/mobile/emulator-resources/skins/mobile-general-3btn
+18:43:19.861788(23877) [INFO:skin_server] skin parameter key : resolution, value : 480x800
+18:43:19.861795(23877) [INFO:skin_server] skin parameter key : vm.path, value : /home/div.purohit/tizen-sdk-data/emulator/vms/dict
+18:43:19.861801(23877) [INFO:skin_server] ignore_heartbeat : 0
+18:43:19.861839(23877) [INFO:skin_client] sleep for ready. count:1
+18:43:19.861881(23902) [INFO:skin_server] run skin server
+18:43:19.861973(23902) [INFO:skin_server] success to bind port[127.0.0.1:56445/tcp] for skin_server in host
+18:43:19.862002(23902) [INFO:skin_server] skin server start...port : 56445
+18:43:19.862018(23902) [INFO:skin_server] start accepting socket...
+18:43:19.871930(23904) [INFO:skin_client] run skin client
+18:43:19.872024(23904) [INFO:skin_client] [skin args 0] skin.path=/home/div.purohit/tizen-sdk/platforms/tizen-2.3/mobile/emulator-resources/skins/mobile-general-3btn
+18:43:19.872043(23904) [INFO:skin_client] [skin args 1] resolution=480x800
+18:43:19.872058(23904) [INFO:skin_client] [skin args 2] vm.path=/home/div.purohit/tizen-sdk-data/emulator/vms/dict
+18:43:19.872075(23904) [INFO:skin_client] bin directory : /home/div.purohit/tizen-sdk/platforms/tizen-2.3/common/emulator/bin/
+18:43:19.872090(23904) [INFO:skin_client] skin command length : 520
+18:43:19.872111(23904) [INFO:skin_client] command for swt : java -jar -Djava.library.path="/home/div.purohit/tizen-sdk/platforms/tizen-2.3/common/emulator/bin/" "/home/div.purohit/tizen-sdk/platforms/tizen-2.3/common/emulator/bin/emulator-skin.jar" vm.skinport=56445 uid=0 vm.path="" vm.baseport=26100 display.shm=false input.touch=true input.touch.maxpoint=10 proxy.addr= proxy.port= "skin.path=/home/div.purohit/tizen-sdk/platforms/tizen-2.3/mobile/emulator-resources/skins/mobile-general-3btn" "resolution=480x800" "vm.path=/home/div.purohit/tizen-sdk-data/emulator/vms/dict" 
+18:43:19 INFO  vigs_device_reset:484 - VIGS reset
+18:43:19.883498(23877) [INFO:brillcodec] device reset
+18:43:19.883543(23877) [INFO:virtio-vmodem] virtio_vmodem_reset.
+18:43:19.883567(23877) [INFO:virtio-kbd] reset keyboard device
+18:43:19.883595(23877) [INFO:hwkey] reset hwkey device
+18:43:19.883620(23877) [INFO:touchscreen] reset the touchscreen device
+18:43:20.876986(23902) [INFO:skin_server] accept client sock : 32
+18:43:21.225765(23902) [INFO:skin_server] == RECV read_cnt:12 uid:0, req_id:1, cmd:1, length:24 data read_cnt:24 RECV_SKIN_OPENED ==
+18:43:21.225802(23902) [INFO:emul_state] emulator window scale_factor : 0.500000
+18:43:21.225821(23902) [INFO:skin_operation] start display : handle_id=83886131, display size=480x800, scale factor=0.500000, rotation=0, blank guide=1
+18:43:21.225834(23902) [INFO:emul_state] emulator window scale_factor : 0.500000
+18:43:21.225845(23902) [INFO:maru_sdl] maru sdl init
+18:43:21.225867(23902) [INFO:maru_sdl] register SDL environment variable. (SDL_WINDOWID = 83886131)
+18:43:21.225890(23902) [INFO:emul_state] emulator graphic resolution : 480x800
+18:43:21.225902(23902) [INFO:maru_sdl] set PIXMAN_FILTER_FAST filter for image processing
+18:43:21.225913(23902) [INFO:maru_finger] multi-touch state initialization
+18:43:21.225923(23902) [INFO:maru_finger] maxTouchPoint : 10
+18:43:21.225944(23902) [INFO:maru_sdl] blank guide is on
+18:43:21.225985(23877) [INFO:maru_sdl] SDL_Init
+18:43:21.270257(23877) [INFO:maru_sdl] sdl update thread create
+18:43:21.270371(23877) [INFO:maru_sdl] Set up a video mode with the specified width, height and bits-per-pixel
+18:43:21.271655(23877) [INFO:maru_sdl] SDL_SetVideoMode
+18:43:21.273760(23902) [INFO:maru_sdl] maru sdl resize
+18:43:21.273830(23877) [INFO:maru_sdl] Set up a video mode with the specified width, height and bits-per-pixel
+18:43:21.274222(23877) [INFO:maru_sdl] SDL_SetVideoMode
+18:43:21.480962(23902) [INFO:skin_operation] interpolation enable : 1
+18:43:21.481007(23902) [INFO:maru_sdl] set PIXMAN_FILTER_BEST filter for image processing
+18:43:22.030739(23886) [INFO:touchscreen] reset the touchscreen device
+18:43:22.034117(23886) [INFO:hwkey] reset hwkey device
+18:43:22.038784(23886) [INFO:virtio-kbd] reset keyboard device
+18:43:22.041433(23886) [INFO:virtio-vmodem] virtio_vmodem_reset.
+18:43:22.281257(23877) [INFO:maru_sdl] qemu_ds_sdl_switch : (480, 800)
+18:43:22.281391(23877) [INFO:maru_sdl] create SDL screen : (480, 800)
+18:43:22.336900(23886) [INFO:maru-brightness] current brightness level = 100
+
+(SWT:23906): GLib-CRITICAL **: Source ID 696 was not found when attempting to remove it
+
+(SWT:23906): GLib-CRITICAL **: Source ID 752 was not found when attempting to remove it
+
+(SWT:23906): GLib-CRITICAL **: Source ID 892 was not found when attempting to remove it
+18:43:44.815141(23886) [INFO:ecs] emuld connection is 1
+
+(SWT:23906): GLib-CRITICAL **: Source ID 1825 was not found when attempting to remove it
+18:43:48.644016(23877) [INFO:skin_server] notify_sdb_daemon_start
+18:43:48.708971(23877) [INFO:sdb] Added new sdb client. ip: 127.0.0.1, port: 26097, serial: emulator-26101
+18:43:48.709058(23877) [INFO:sdb] send 001ahost:sync:emulator-26101:0 to client 127.0.0.1
+18:43:48.709120(23877) [INFO:skin_server] notify_sdb_daemon_start
+18:43:54.392263(23899) [INFO:ecs] ecs client closed with fd: 101
+
+(SWT:23906): GLib-CRITICAL **: Source ID 2721 was not found when attempting to remove it
+18:49:56.320183(23902) [INFO:skin_operation] HW Key : event_type=1, keycode=139
+keycode=139, event_type=1, event_queue_cnt=1, vqidx=0
+18:49:57.437430(23902) [INFO:skin_operation] HW Key : event_type=2, keycode=139
+keycode=139, event_type=2, event_queue_cnt=1, vqidx=1
+18:49:59.419013(23902) [INFO:skin_operation] HW Key : event_type=1, keycode=116
+keycode=116, event_type=1, event_queue_cnt=1, vqidx=2
+18:50:01.478092(23902) [INFO:skin_operation] HW Key : event_type=2, keycode=116
+keycode=116, event_type=2, event_queue_cnt=1, vqidx=3
+18:50:06.951170(23886) [INFO:maru-brightness] level changes: 100 -> 0
+18:50:06.951221(23886) [INFO:maru-brightness] status changes: OFF
+18:50:07.292238(23877) [INFO:maru_sdl] skipping of the display updating is started
+18:50:07.592219(23877) [INFO:maru_sdl] draw a blank guide image
+18:50:07.621850(23877) [INFO:sdl_processing] === blank guide image was loaded ===============
+18:50:07.621886(23877) [INFO:sdl_processing] file path : /home/div.purohit/tizen-sdk/platforms/tizen-2.3/common/emulator/bin/../images/blank-guide.png
+18:50:07.621894(23877) [INFO:sdl_processing] width : 650, height : 650, stride : 2600
+18:50:07.621901(23877) [INFO:sdl_processing] color type : 6, channels : 4, bit depth : 8
+18:50:07.621908(23877) [INFO:sdl_processing] ================================================
+18:50:09.132085(23877) [INFO:skin_server] shutdown_skin_server
+18:50:09.132130(23877) [INFO:skin_server] send shutdown to skin.
+18:50:09.132421(23902) [INFO:skin_server] == RECV read_cnt:12 uid:0, req_id:481, cmd:999, length:0 RECV_RESPONSE_SHUTDOWN ==
+18:50:09.132439(23902) [INFO:skin_server] stop receiving current client socket.
+18:50:09.132446(23902) [INFO:skin_server] close server socket normally.
+18:50:09.132466(23902) [INFO:skin_server] stop the heart beat signal
+18:50:09.133172(23877) [INFO:skin_server] skin client sent normal shutdown response.
+18:50:09.133239(23877) [INFO:display] fini qemu display
+18:50:09.133269(23877) [INFO:maru_sdl] maru sdl quit
+18:50:09.133319(23877) [INFO:maru_finger] clear multi-touch : 0
+18:50:09.134497(23877) [INFO:maru_sdl] join SDL thread
+18:50:09.137771(23930) [INFO:maru_sdl] make SDL Thread exit
+18:50:09.137815(23930) [INFO:maru_sdl] finish qemu_update routine
+18:50:09.137851(23877) [INFO:maru_sdl] destroy cond and mutex of SDL thread
+18:50:09.137872(23877) [INFO:sdb] shutdown sdb notification server.
+18:50:09.137907(23877) [INFO:ecs] ecs is closing.
+18:50:09.162083(23899) [INFO:ecs] ### Good bye! ECS ###
+18:50:09.162187(23899) [INFO:ecs] close listen_fd: 27
+18:50:09.162528(23877) [INFO:main] Exit emulator...
+18:50:09.162570(23877) [INFO:backtrace] normal exit called
+18:50:09.192231(23904) [INFO:skin_client] child return value : 0
+18:50:09.213746(23877) [SEVERE:backtrace] Backtrace depth is 6.
+/home/div.purohit/tizen-sdk/platforms/tizen-2.3/common/emulator/bin/emulator-x86[0x838f6d7]
+/home/div.purohit/tizen-sdk/platforms/tizen-2.3/common/emulator/bin/emulator-x86[0x838f83b]
+/lib/i386-linux-gnu/libc.so.6(+0x331b1)[0xb693a1b1]
+/lib/i386-linux-gnu/libc.so.6(+0x3320d)[0xb693a20d]
+/lib/i386-linux-gnu/libc.so.6(__libc_start_main+0xfb)[0xb6920a8b]
+/home/div.purohit/tizen-sdk/platforms/tizen-2.3/common/emulator/bin/emulator-x86[0x80562c5]

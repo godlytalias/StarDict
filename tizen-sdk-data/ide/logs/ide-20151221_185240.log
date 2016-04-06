@@ -1,0 +1,91 @@
+[2015.12.22 14:42:05][ERROR] RdsDeployer.java(279) - Cannot partially upload or reinstall
+org.eclipse.core.runtime.CoreException: [RDS] Cannot install application
+	at org.tizen.common.rds.RdsDeployer.newCoreException(RdsDeployer.java:708)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:643)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:575)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:277)
+	at org.tizen.web.zimlaunch.step.RdsStep.runRds(RdsStep.java:225)
+	at org.tizen.web.zimlaunch.step.RdsStep.executeStep(RdsStep.java:139)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:258)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: PACKAGE_INVALID
+Error message: File is missed /opt/usr/apps/WK0EhswaLp/res/wgt/Monocle.wgt
+Command: /usr/bin/pkgcmd -q -r -t wgt -n WK0EhswaLp
+Management: Check package components in Project Explorer.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:638)
+	... 11 more
+[2015.12.22 16:27:52][ERROR] RdsDeployer.java(279) - Cannot partially upload or reinstall
+org.eclipse.core.runtime.CoreException: [RDS] Cannot install application
+	at org.tizen.common.rds.RdsDeployer.newCoreException(RdsDeployer.java:708)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:643)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:575)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:277)
+	at org.tizen.web.zimlaunch.step.RdsStep.runRds(RdsStep.java:225)
+	at org.tizen.web.zimlaunch.step.RdsStep.executeStep(RdsStep.java:139)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:258)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: PACKAGE_INVALID
+Error message: File is missed /opt/usr/apps/WK0EhswaLp/res/wgt/Monocle.wgt
+Command: /usr/bin/pkgcmd -q -r -t wgt -n WK0EhswaLp
+Management: Check package components in Project Explorer.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:638)
+	... 11 more
+[2015.12.23 11:52:23][ERROR] HTMLMarkupTagInfoProvider.java(576) - /home/div.purohit/workspace/Monocle/js/test.js (No such file or directory)
+java.io.FileNotFoundException: /home/div.purohit/workspace/Monocle/js/test.js (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at org.tizen.web.editor.html.hover.HTMLMarkupTagInfoProvider.readFile(HTMLMarkupTagInfoProvider.java:551)
+	at org.tizen.web.editor.html.hover.HTMLMarkupTagInfoProvider.makeLinkedResourceHoverInformation(HTMLMarkupTagInfoProvider.java:284)
+	at org.tizen.web.editor.html.hover.HTMLMarkupTagInfoProvider.getInfo(HTMLMarkupTagInfoProvider.java:112)
+	at org.tizen.web.editor.html.hover.HTMLTagAttributeInfoHoverProcessor.getAdditionalInfo(HTMLTagAttributeInfoHoverProcessor.java:401)
+	at org.tizen.web.editor.html.hover.HTMLTagAttributeInfoHoverProcessor.computeTagAttValueHelp(HTMLTagAttributeInfoHoverProcessor.java:368)
+	at org.tizen.web.editor.html.hover.HTMLTagAttributeInfoHoverProcessor.computeRegionHelp(HTMLTagAttributeInfoHoverProcessor.java:119)
+	at org.tizen.web.editor.html.hover.HTMLTagAttributeInfoHoverProcessor.computeHoverHelp(HTMLTagAttributeInfoHoverProcessor.java:94)
+	at org.tizen.web.editor.html.hover.HTMLTagAttributeInfoHoverProcessor.getHoverInfo(HTMLTagAttributeInfoHoverProcessor.java:268)
+	at org.tizen.web.editor.html.hover.HTMLEditorHoverBestMatchHover.getHoverInfo2(HTMLEditorHoverBestMatchHover.java:102)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+[2015.12.23 11:55:39][ERROR] RdsDeployer.java(279) - Cannot partially upload or reinstall
+org.eclipse.core.runtime.CoreException: [RDS] Cannot install application
+	at org.tizen.common.rds.RdsDeployer.newCoreException(RdsDeployer.java:708)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:643)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:575)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:277)
+	at org.tizen.web.zimlaunch.step.RdsStep.runRds(RdsStep.java:225)
+	at org.tizen.web.zimlaunch.step.RdsStep.executeStep(RdsStep.java:139)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:258)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: PACKAGE_INVALID
+Error message: File is missed /opt/usr/apps/WK0EhswaLp/res/wgt/Monocle.wgt
+Command: /usr/bin/pkgcmd -q -r -t wgt -n WK0EhswaLp
+Management: Check package components in Project Explorer.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:638)
+	... 11 more
