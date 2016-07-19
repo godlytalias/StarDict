@@ -1,0 +1,275 @@
+collections {
+   base_scale: 1.8;
+
+   plugins {
+      plugin {
+         name: "touch_sound";
+         source: feedback;
+         param: "FEEDBACK_TYPE_SOUND FEEDBACK_PATTERN_TAP";
+      }
+   }
+   styles {
+      style {
+         name: "word_main_style";
+         base: "font=Tizen:style=Bold align=left font_size=30 color=#000000FF wrap=mixed ellipsis=1.0";
+         tag: "br" "\n";
+         tag: "ps" "ps";
+         tag: "hilight" "+ font_weight=Bold";
+         tag: "b" "+ font_weight=Bold";
+         tag: "i" "+ font_weight=Light";
+         tag: "tab" "\t";
+      }
+      style {
+         name: "word_style";
+         base: "font=Tizen:style=Regular align=left font_size=25 color=#000000FF wrap=mixed ellipsis=1.0";
+         tag: "br" "\n";
+         tag: "BR" "\n";
+         tag: "LI" "\n";
+         tag: "P" "+ \n";
+         tag: "ps" "ps";
+         tag: "hilight" "+ font_weight=Bold";
+         tag: "b" "+ font_weight=Bold";
+         tag: "B" "+ font_weight=Bold";
+         tag: "i" "+ font_weight=Light";
+         tag: "tab" "\t";
+      }
+   }
+   
+   group { name: "widget_layout";
+      images {
+         image: "dictwidget.png" COMP;
+      }
+      parts {
+         part { name: "preview";
+            type: IMAGE;
+            scale: 1;
+            repeat_events: 1;
+            description { state: "default" 0.0;
+               fixed: 1 1;
+               image.normal: "dictwidget.png";
+               align: 0.5 0.5;
+               min: 480 240;
+               visible: 1;
+            }
+            description { state: "clicked" 0.0;
+               inherit: "default" 0.0;
+               color: 255 255 255 100;
+            }
+         }
+      }
+      programs {
+         program { name: "layout_click";
+            signal: "mouse,clicked,1";
+            source: "preview";
+            action: SIGNAL_EMIT "elm,layout,action,clicked" "elm";
+         }
+         program { name: "layout_click_anim";
+            signal: "mouse,down,1";
+            source: "preview";
+            action: STATE_SET "clicked" 0.0;
+            target: "preview";
+            transition: LINEAR 0.3;
+         }
+         program { name: "layout_reset";
+            signal: "mouse,up,1";
+            source: "preview";
+            action: STATE_SET "default" 0.0;
+            target: "preview";
+            transition: LINEAR 0.3;
+         }
+      }
+   }
+   
+   
+   
+   group { name: "full_widget_layout";
+      images {
+         image: "search.png" COMP;
+         image: "dict.png" COMP;
+      }
+      parts {
+         part { name: "base";
+            type: RECT;
+            scale: 1;
+            description { state: "default" 0.0;
+               fixed: 1 1;
+               min: 480 480;
+               color: 255 255 255 255;
+            }
+         }
+         part { name: "elm.rect.title";
+            type: RECT;
+            scale: 1;
+            description { state: "default" 0.0;
+               fixed: 1 1;
+               rel1.to: "base";
+               rel2.to: "base";
+               rel2.relative: 1.0 0.0;
+               min: 480 80;
+			   align: 0.5 0.0;
+			   color: 0 0 255 255;
+			}
+	     }
+	     part { name: "elm.text.title";
+	        type:TEXT;
+	        scale: 1;
+	        description { state: "default" 0.0;
+	           fixed: 1 1;
+	           min: 0 50;
+	           rel1.to: "elm.rect.title";
+	           rel2.to: "elm.rect.title";
+	           align: 0.5 0.5;
+	           text.text: "WORD OF THE DAY";
+	           text.min: 1 1;
+	           text.font: "Tizen:style=Regular";
+	           text.size: "32";
+	        }
+	     }
+	     part { name: "search_image";
+	        scale: 1;
+	        description { state: "default" 0.0;
+	           fixed: 1 1;
+	           min: 50 50;
+	           max: 50 50;
+	           rel1.to_x: "elm.padding.left.top";
+	           rel1.to_y: "elm.text.title";
+	           rel1.relative: 1.0 0.0;
+	           rel2.to_x: "elm.padding.left.top";
+	           rel2.to_y: "elm.text.title";
+	           rel2.relative: 0.0 1.0;
+	           align: 0.0 0.5;
+	           image.normal: "search.png";
+	        }
+	        description { state: "clicked" 0.0;
+	           inherit: "default" 0.0;
+	           color: 255 0 0 150;
+	        }
+	     }
+         part { name: "elm.padding.left.top";
+            type: SPACER;
+            scale: 1;
+            description{ state: "default" 0.0;
+               fixed: 1 1;
+               min: 24 24;
+               rel1.to: "base";
+               rel2.to: "base";
+               rel2.relative: 0.0 0.0;
+               align: 0.0 0.0;
+            }
+         }
+         part { name: "elm.padding.right.bottom";
+            type: SPACER;
+            scale: 1;
+            description{ state: "default" 0.0;
+               fixed: 1 1;
+               min: 24 24;
+               rel1.to: "base";
+               rel1.relative: 1.0 1.0;
+               rel2.to: "base";
+               align: 1.0 1.0;
+            }
+         }
+         part { name: "elm.widget.swallow";
+            type: SWALLOW;
+            scale: 1;
+            repeat_events: 1;
+            description { state: "default" 0.0;
+               fixed: 1 1;
+               align: 0.5 0.5;
+               rel1.to_x: "elm.padding.left.top";
+               rel1.to_y: "elm.rect.title";
+               rel1.relative: 1.0 1.0;
+               rel2.to: "elm.padding.right.bottom";
+               rel2.relative: 0.0 0.0;
+               min: 442 376;
+            }
+         }
+	     part { name: "app_icon";
+	        scale: 1;
+	        description { state: "default" 0.0;
+	           fixed: 1 1;
+	           min: 32 32;
+	           max: 32 32;
+	           rel1.to_x: "elm.padding.right.bottom";
+	           rel1.to_y: "elm.text.title";
+	           rel1.relative: 0.0 0.0;
+	           rel2.to_x: "elm.padding.right.bottom";
+	           rel2.to_y: "elm.text.title";
+	           rel2.relative: 0.0 1.0;
+	           align: 1.0 0.5;
+	           image.normal: "dict.png";
+	        }
+	     }
+      }
+      programs {
+         program { name: "word_click";
+            signal: "mouse,clicked,1";
+            source: "elm.widget.swallow";
+            action: SIGNAL_EMIT "elm,layout,word,clicked" "elm";
+         }
+         program { name: "layout_click";
+            signal: "mouse,clicked,1";
+            source: "search_image";
+            action: SIGNAL_EMIT "elm,layout,search,clicked" "elm";
+         }
+         program { name: "layout_click_anim";
+            signal: "mouse,down,1";
+            source: "search_image";
+            action: STATE_SET "clicked" 0.0;
+            target: "search_image";
+            transition: LINEAR 0.3;
+         }
+         program { name: "layout_reset";
+            signal: "mouse,up,1";
+            source: "search_image";
+            action: STATE_SET "default" 0.0;
+            target: "search_image";
+            transition: LINEAR 0.3;
+         }
+      }
+   }
+  
+   group { name: "word_layout";
+      parts {
+         part { name: "base";
+            type: SPACER;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 442 376;
+               fixed: 1 1;
+            }
+         }
+         part { name: "elm.text.word";
+            type: TEXTBLOCK;
+            scale: 1;
+            repeat_events: 1;
+            description { state: "default" 0.0;
+               fixed: 1 1;
+               align: 0.5 0.5;
+               min: 442 50;
+               rel1.to: "base";
+               rel2.to: "base";
+               rel2.relative: 1.0 0.0;
+               align: 0.5 0.0;
+               visible: 1;
+               text.style: "word_main_style";
+            }
+         }
+         part { name: "elm.text.definition";
+            type: TEXTBLOCK;
+            scale: 1;
+            repeat_events: 1;
+            description { state: "default" 0.0;
+               fixed: 1 1;
+               align: 0.5 0.0;
+               min: 442 50;
+               rel1.to: "elm.text.word";
+               rel1.relative: 0.0 1.0;
+               rel2.to: "base";
+               visible: 1;
+               text.style: "word_style";
+            }
+         }
+      }
+   }
+}

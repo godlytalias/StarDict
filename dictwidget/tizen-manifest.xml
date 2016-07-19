@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<manifest xmlns="http://tizen.org/ns/packages" api-version="2.4" package="org.widget.dict" version="2.0.0">
+    <author email="godlytalias@yahoo.co.in">Godly T.Alias</author>
+    <description>Widget for Tizen Stardict dictionary application</description>
+    <profile name="mobile"/>
+    <widget-application appid="org.widget.dict" exec="dictwidget" main="true" update-period="0">
+        <label>StarDict</label>
+        <icon>dict.png</icon>
+        <support-size preview="dictwidget_full.png">4x4</support-size>
+        <support-size preview="dictwidget.png">4x2</support-size>
+    </widget-application>
+    <privileges>
+        <privilege>http://tizen.org/privilege/appmanager.launch</privilege>
+    </privileges>
+    <feature name="http://tizen.org/feature/screen.size.normal.480.800">true</feature>
+    <feature name="http://tizen.org/feature/screen.size.normal">true</feature>
+    <feature name="http://tizen.org/feature/screen.size.normal.720.1280">true</feature>
+</manifest>

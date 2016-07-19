@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>dict</name>
+	<name>dictwidget</name>
 	<comment></comment>
 	<projects>
-		<project>dictwidget</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
 			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
-			<triggers>clean,full,incremental,</triggers>
 			<arguments>
 			</arguments>
 		</buildCommand>
@@ -18,22 +16,16 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
-		<buildCommand>
-			<name>org.tizen.nativecore.apichecker.core.builder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
 	</buildSpec>
 	<natures>
 		<nature>org.eclipse.cdt.core.cnature</nature>
 		<nature>org.eclipse.cdt.core.ccnature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
-		<nature>org.tizen.nativecore.apichecker.core.tizenCppNature</nature>
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1445840010918</id>
+			<id>1468566996192</id>
 			<name></name>
 			<type>26</type>
 			<matcher>
@@ -42,7 +34,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1445840010923</id>
+			<id>1468566996194</id>
 			<name></name>
 			<type>6</type>
 			<matcher>

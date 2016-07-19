@@ -8,8 +8,5 @@
     <package>
         <blacklist/>
         <resFallback autoGen="true"/>
-        <subProjects>
-            <tizenProject project="dictwidget"/>
-        </subProjects>
     </package>
 </tproject>
