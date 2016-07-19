@@ -111,7 +111,6 @@ widget_instance_create(widget_context_h context, bundle *content, int w, int h, 
 	char *res_path = app_get_resource_path();
 	sprintf(wid->edj_path, "%s/edje/widget.edj", res_path);
 	free(res_path);
-	_move_word_db();
 	wid->day = -1.0;
 	wid->word = NULL;
 	wid->rowid = -1;
@@ -143,6 +142,7 @@ widget_instance_create(widget_context_h context, bundle *content, int w, int h, 
 		elm_layout_signal_callback_add(layout, "elm,layout,search,clicked", "elm", _launch_stardict, NULL);
 		elm_layout_signal_callback_add(layout, "elm,layout,word,clicked", "elm", _launch_stardict_search, wid);
 
+		_move_word_db();
 		wid->word_layout = elm_layout_add(layout);
 		elm_layout_file_set(wid->word_layout, wid->edj_path, "word_layout");
 		elm_layout_content_set(layout, "elm.widget.swallow", wid->word_layout);
@@ -173,6 +173,11 @@ widget_instance_destroy(widget_context_h context, widget_app_destroy_type_e reas
 
 	if (wid->win)
 		evas_object_del(wid->win);
+
+	if (wid->widget_update_timer) {
+		ecore_timer_del(wid->widget_update_timer);
+		wid->widget_update_timer = NULL;
+	}
 
 	if (wid->word)
 	{
