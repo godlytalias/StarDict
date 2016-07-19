@@ -85,8 +85,31 @@ ctxpopup_item_select_cb(void *data, Evas_Object *obj, void *event_info EINA_UNUS
 		Elm_Object_Item *item;
 		evas_object_size_hint_weight_set(webview, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 		evas_object_size_hint_align_set(webview, EVAS_HINT_FILL, EVAS_HINT_FILL);
-		string about_html = "<!doctype HTML><html><head><script>window.oncontextmenu = function(event) { event.preventDefault(); event.stopPropagation(); return false;}</script><style> a{-webkit-tap-highlight-color: rgba(43 ,130 ,143 , 0.26);} a {text-decoration: none !important;} a:link, a:hover, a:active{color:#1D1FE7} i {color:#B14E27}</style></head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0\"><body>";
-		about_html += "<div data-role=\"page\" id=\"foo5\" data-position=\"fixed\">    <div data-role=\"header\" data-position=\"fixed\" data-tap-toggle=\"false\" data-theme=\"b\">         <h1 style = 'font-size: 1.5em;'>About This App</h1>     </div>    <div data-role=\"content\">        <style>            h3{color:brown}        </style>        <ee style=\"color: brown;font-size: large;font-weight: bold;\">What is this app?</ee>        <p>This app was developed with an aim to provide offline access to the WordWeb dictionary bundled with 280,000 words and phrases. User can also access the Encyclopedia links by clicking on words/phrases under the encyclopedia section of the word.</p>         <h3>Features</h3>         <ol>            <li>Huge Database powered by Wordweb</li>            <li>Noun, Verb, Interjection, Adjectives, Synonyms, Anonyms</li>            <li>Phonetics, Derived forms, Similar sounding words</li>            <li>Seperate sections with Wikipedia links</li>            <li>Scan selection word</li>            <li>Predictions of Keywords</li>            <li>Search History</li>            <p>... and much more to come</p>        </ol>         <h3>Developers</h3>         <ol>            <li style=\"margin-bottom: 3%;\"><a style=\"text-decoration: none;\" href=\"https://www.facebook.com/godly.t.alias\">Godly T.Alias</a>            </li>            <li style=\"margin-bottom: 3%;\"><a style=\"text-decoration: none;\" href=\"https://www.facebook.com/divyesh.purohit.58\">Divyesh Purohit</a>            </li>            <li><a style=\"text-decoration: none;\" href=\"https://www.facebook.com/prasoon.singhsengar\">Prasoon Singh</a>             </li>        </ol>         <h3> Credits </h3> We would like to credit Stardict for their research on dictionaries and an Opensource library containing rich set of APIs , wiihout that making this app would be impossible         <h3> Report the Bugs </h3>         <p>We would love to see what bugs you face and would like to resolve them as soon as we can</p>        <p>please report the bugs to</p> <p><a href='mailto:godlytalias@yahoo.co.in'>godlytalias@yahoo.co.in</a> / <a href='mailto:purohit.div@gmail.com'>purohit.div@gmail.com</a> / <a href='mailto:prasoonsigh16@gmail.com'>prasoonsigh16@gmail.com</a></p>    </div></div>";
+		string about_html = "<!doctype HTML><html><head><script>window.oncontextmenu = function(event) { event.preventDefault(); \
+				    event.stopPropagation(); return false;}</script><style> a{-webkit-tap-highlight-color: rgba(43 ,130 ,143 , 0.26);} \
+				    a {text-decoration: none !important;} a:link, a:hover, a:active{color:#1D1FE7} i {color:#B14E27}</style></head> \
+				    <meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=no, \
+				    minimum-scale=1.0, maximum-scale=1.0\"><body>";
+		about_html += "<div data-role=\"page\" id=\"foo5\" data-position=\"fixed\">    <div data-role=\"header\" data-position=\"fixed\" \
+				data-tap-toggle=\"false\" data-theme=\"b\">         <h1 style = 'font-size: 1.5em;'>About This App</h1>     </div> \
+				<div data-role=\"content\">        <style>            h3{color:brown}        </style>        <ee style=\"color: brown; \
+				font-size: large;font-weight: bold;\">What is this app?</ee>        <p>This app was developed with an aim to provide offline access \
+				to the WordWeb dictionary bundled with 280,000 words and phrases. User can also access the Encyclopedia links by clicking on \
+				words/phrases under the encyclopedia section of the word.</p>         <h3>Features</h3>         <ol>            <li>Huge Database \
+				powered by Wordweb</li>            <li>Noun, Verb, Interjection, Adjectives, Synonyms, Anonyms</li>            <li>Phonetics, \
+				Derived forms, Similar sounding words</li>            <li>Seperate sections with Wikipedia links</li>            <li>Scan selection \
+				word</li>            <li>Predictions of Keywords</li>            <li>Search History</li>                        <li>Word of the day \
+				widget</li>            <p>... and much more to come</p>        </ol>         <h3>Developers</h3>         <ol>            \
+				<li style=\"margin-bottom: 3%;\"><a style=\"text-decoration: none;\" href=\"https://www.facebook.com/godly.t.alias\"> \
+				Godly T.Alias</a>            </li>            <li style=\"margin-bottom: 3%;\"><a style=\"text-decoration: none;\" \
+				href=\"https://www.facebook.com/divyesh.purohit.58\">Divyesh Purohit</a>            </li>            \
+				<li><a style=\"text-decoration: none;\" href=\"https://www.facebook.com/prasoon.singhsengar\">Prasoon Singh</a> \
+				</li>        </ol>         <h3> Credits </h3> We would like to credit Stardict for their research on dictionaries and an \
+				Opensource library containing rich set of APIs , wiihout that making this app would be impossible         <h3> \
+				Report the Bugs </h3>         <p>We would love to see what bugs you face and would like to resolve them as soon as we can</p>  \
+				<p>please report the bugs to</p> <p><a href='mailto:godlytalias@yahoo.co.in'>godlytalias@yahoo.co.in</a> / \
+				<a href='mailto:purohit.div@gmail.com'>purohit.div@gmail.com</a> / \
+				<a href='mailto:prasoonsigh16@gmail.com'>prasoonsigh16@gmail.com</a></p>    </div></div>";
 		about_html += "</body></html>";
 		ewk_view_contents_set(webview, about_html.c_str(), about_html.size(), NULL, NULL, NULL);
 		elm_layout_signal_emit(ad->app_layout, "elm,dict,back,hide", "elm");
@@ -104,7 +127,30 @@ ctxpopup_item_select_cb(void *data, Evas_Object *obj, void *event_info EINA_UNUS
                  Elm_Object_Item *item;
                  evas_object_size_hint_weight_set(webview, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
                  evas_object_size_hint_align_set(webview, EVAS_HINT_FILL, EVAS_HINT_FILL);
-                 string help = "<!doctype HTML><html><head> <style>a{-webkit-tap-highlight-color: rgba(43, 130, 143, 0.26);}a{text-decoration: none !important;}a:link, a:hover, a:active{color: #1D1FE7}i{color: #B14E27}</style></head><meta charset=\ 'utf-8'><meta name=\ 'viewport' content=\ 'width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'><body> <div data-role=\ 'page' id=\ 'foo5' data-position=\ 'fixed'> <div data-role=\ 'header' data-position=\ 'fixed' data-tap-toggle=\ 'false' data-theme=\ 'b'> <h1 style='font-size: 1.5em;'>Help</h1> </div><div data-role=\ 'content'> <style>h3{color: brown}</style> <h3>Search Words</h3> Users can enter the keywords that they want to search in the searchfield, then press the search key in the keyboard to get the results. Users can also navigate through the links in the result text by clicking the links. <h3>Search Preferences</h3> Users will get upto 10 predictions of entered word listed in alphabetical order. Users can toggle the prediction on and off through application menu. 'On clicking the prediction, users can get the meaning of the word. Prediction won't be available in landscape mode. <h3> Encyclopedia search </h3> Stardict dictionary provides links for related words and encyclopedia links for words which need more explanation. If user have the internet access, users can browse the encylopedia by clicking on the links listed against the Encyclopedia heading. Other links for related words can be explored without internet connection. <h3>Word Pronouncing </h3> Users can get the pronunciation of all words contained in the database. You need to adjust the media volume from system settings. The Voice would of a US Male, in future we might provide downloadable voice modules of different accents. <h3>Search History</h3> Users can get the search history from the lookup tab, User can switch to the lookup tab either by swiping on screen or by clicking on the tabs. In the lookup tab the last 50 searched words will be listed. User can select the words from the list to see the meanings of the words. If user wants to clear the search history, it can be done from the clear history option in application menu. <br></div></div></body></html>";
+                 string help = "<!doctype HTML><html><head> <style>a{-webkit-tap-highlight-color: rgba(43, 130, 143, 0.26);} \
+				a{text-decoration: none !important;}a:link, a:hover, a:active{color: #1D1FE7}i{color: #B14E27}</style></head> \
+				<meta charset=\ 'utf-8'><meta name=\ 'viewport' content=\ 'width=device-width, initial-scale=1.0, user-scalable=no, \
+				minimum-scale=1.0, maximum-scale=1.0'><body> <div data-role=\ 'page' id=\ 'foo5' data-position=\ 'fixed'> \
+				<div data-role=\ 'header' data-position=\ 'fixed' data-tap-toggle=\ 'false' data-theme=\ 'b'> \
+				<h1 style='font-size: 1.5em;'>Help</h1> </div><div data-role=\ 'content'> <style>h3{color: brown}</style> \
+				<h3>Search Words</h3> Users can enter the keywords that they want to search in the searchfield, \
+				then press the search key in the keyboard to get the results. Users can also navigate through the links in the result \
+				text by clicking the links. <h3>Search Preferences</h3> Users will get upto 10 predictions of entered word listed in \
+				alphabetical order. Users can toggle the prediction on and off through application menu. 'On clicking the prediction, \
+				users can get the meaning of the word. Prediction won't be available in landscape mode. <h3> Encyclopedia search </h3> \
+				Stardict dictionary provides links for related words and encyclopedia links for words which need more explanation. \
+				If user have the internet access, users can browse the encylopedia by clicking on the links listed against the \
+				Encyclopedia heading. Other links for related words can be explored without internet connection. \
+				<h3>Word Pronouncing </h3> Users can get the pronunciation of all words contained in the database. \
+				You need to adjust the media volume from system settings. The Voice would of a US Male, in future we \
+				might provide downloadable voice modules of different accents. <h3>Word of the Day </h3> This feature helps \
+				users to learn one unfamiliar word daily. Users can add Word of the day widget packaged with this application in \
+				homescreen and it will display words and its definitions which will be updated automatically everyday. Users can click on \
+				the widget to open the application and to navigate to related words.<h3>Search History</h3> Users can get the search \
+				history from the lookup tab, User can switch to the lookup tab either by swiping on screen or by clicking on the tabs. \
+				In the lookup tab the last 50 searched words will be listed. User can select the words from the list to see the \
+				meanings of the words. If user wants to clear the search history, it can be done from the clear history option \
+				in application menu. <br></div></div></body></html>";
                  ewk_view_contents_set(webview, help.c_str(), help.size(), NULL, NULL, NULL);
                  elm_layout_signal_emit(ad->app_layout, "elm,dict,back,hide", "elm");
                  item = elm_naviframe_item_push(ad->naviframe, NULL, NULL, NULL, webview, NULL);

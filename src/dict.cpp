@@ -442,17 +442,20 @@ _mouse_up(void *data,
    }
    eina_list_free(list);
    int x_del, y_del;
+   Evas_Coord y, h;
    Elm_Object_Item *item;
    Evas_Event_Mouse_Up *ev = (Evas_Event_Mouse_Up*)event_info;
    if ((ev->timestamp - ad->mouse_down_time) > 400) return;
    x_del = ev->canvas.x - ad->mouse_x;
    y_del = ev->canvas.y - ad->mouse_y;
+   evas_object_geometry_get(ad->entry, NULL, &y, NULL, &h);
    if (abs(x_del) < (2 * abs(y_del))) return;
    if (abs(x_del) < 100) return;
-   if (x_del < 0)
+   if (x_del < 0 && (ev->canvas.y > (y+h) || ad->mouse_y > (y+h)))
       item = elm_toolbar_last_item_get(ad->title_toolbar);
-   else
+   else if (x_del > 0)
       item = elm_toolbar_first_item_get(ad->title_toolbar);
+   else return;
 
    elm_toolbar_item_selected_set(item, EINA_TRUE);
 }
@@ -562,7 +565,8 @@ static void
 _splash_finished_cb(void *data, Evas_Object *obj, const char *part, const char *emission)
 {
    appdata_s *ad = (appdata_s*)data;
-   ecore_idler_add(_entry_focus_idler, ad);
+   if (!ad->search_word)
+	   ecore_idler_add(_entry_focus_idler, ad);
    evas_object_freeze_events_set(ad->app_layout, EINA_FALSE);
    elm_layout_content_set(ad->layout, "elm.swallow.result", ad->ewk);
    ecore_idler_add(_move_ctxpopup, ad);
@@ -653,6 +657,23 @@ _create_tabbar(appdata_s *ad)
    return ad->title_toolbar;
 }
 
+static Eina_Bool
+_show_win_idler(void *data)
+{
+	   appdata_s *ad = (appdata_s*)data;
+	   evas_object_show(ad->win);
+	   if (!ad->widget_launch)
+		   elm_layout_signal_emit(ad->app_layout, "elm,splash,show", "elm");
+	   else
+		   elm_layout_signal_emit(ad->app_layout, "elm,nosplash,show", "elm");
+	   if (ad->search_word)
+	   {
+		   elm_entry_entry_set(ad->entry, ad->search_word);
+		   evas_object_smart_callback_call(ad->entry, "activated", NULL);
+	   }
+	   return ECORE_CALLBACK_CANCEL;
+}
+
 static void
 create_base_gui(appdata_s *ad)
 {
@@ -735,8 +756,7 @@ create_base_gui(appdata_s *ad)
    elm_object_focus_allow_set(ad->ctxpopup, EINA_FALSE);
    elm_object_content_set(conform, ad->app_layout);
    elm_win_conformant_set(ad->win, EINA_TRUE);
-   evas_object_show(ad->win);
-   elm_layout_signal_emit(ad->app_layout, "elm,splash,show", "elm");
+   ecore_idler_add(_show_win_idler, ad);
 
    //setting default sound type
    sound_manager_set_current_sound_type(SOUND_TYPE_MEDIA);
@@ -752,7 +772,9 @@ app_create(void *data)
    appdata_s *ad = (appdata_s*)data;
 
    _init_tables();
+   ad->search_word = NULL;
    bool exist = false;
+   ad->widget_launch = EINA_FALSE;
    preference_is_existing("prediction", &exist);
    if (!exist) preference_set_int("prediction", 1);
    create_base_gui(ad);
@@ -764,7 +786,12 @@ app_create(void *data)
 static void
 app_control(app_control_h app_control, void *data)
 {
-   /* Handle the launch request. */
+	appdata_s *ad = (appdata_s*)data;
+   char *launch_info;
+   app_control_get_extra_data(app_control, "launch_info", &launch_info);
+   if (strcmp(launch_info, "widget_launch") == 0)
+	   ad->widget_launch = EINA_TRUE;
+   app_control_get_extra_data(app_control, "search", &ad->search_word);
 }
 
 static void

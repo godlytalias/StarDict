@@ -160,6 +160,14 @@ collections {
             target: "splash";
             after: "entry_focus";
          }
+         program { name: "nosplash,show";
+            signal: "elm,nosplash,show";
+            source: "elm";
+            action: STATE_SET "show" 0.0;
+            target: "clipper";
+            target: "splash";
+            after: "entry_focus";
+         }
       }
    }
 
@@ -222,26 +230,50 @@ collections {
                fixed: 1 0;
             }
          }
+         part { name: "elm.padding.left";
+            type: SPACER;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 32 0;
+               rel1.to: "base";
+               rel2.to: "base";
+               rel2.relative: 0.0 1.0;
+               align: 0.0 0.5;
+               fixed: 1 0;
+            }
+         }
+         part { name: "elm.padding.right";
+            type: SPACER;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 32 0;
+               rel1.to: "base";
+               rel1.relative: 1.0 0.0;
+               rel2.to: "base";
+               align: 1.0 0.5;
+               fixed: 1 0;
+            }
+         }
          part { name: "elm.swallow.entry";
             type: SWALLOW;
             scale: 1;
             description { state: "default" 0.0;
-               min: 672 120;
+               min: 656 120;
                fixed: 1 1;
-               rel1.to: "base";
-               rel1.relative: 0.0 0.0;
-               rel1.offset: 24 0;
-               rel2.to: "base";
-               rel2.relative: 1.0 0.0;
-               rel2.offset: -24 0;
-               align: 0.0 0.0;
+               rel1.to_x: "elm.padding.left";
+               rel1.to_y: "base";
+               rel1.relative: 1.0 0.0;
+               rel2.to_x: "elm.padding.right";
+               rel2.to_y: "base";
+               rel2.relative: 0.0 0.0;
+               align: 0.5 0.0;
             }
          }
          part { name: "elm.entry.underline";
             type: RECT;
             scale: 1;
             description { state: "default" 0.0;
-               min: 672 2;
+               min: 656 2;
                fixed: 1 1;
                rel1.to: "elm.swallow.entry";
                rel1.relative: 0.0 1.0;

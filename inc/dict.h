@@ -42,6 +42,11 @@ struct _history_list {
 
 typedef struct appdata {
         clsSDict *StarDict;
+        _history_list *url_list;
+        char **pred;
+        char *search_word;
+        Elm_Object_Item **pred_item;
+        Ecore_Idler *pred_idler;
         Evas_Object *win;
         Evas_Object *label;
         Evas_Object *layout, *app_layout;
@@ -53,15 +58,13 @@ typedef struct appdata {
         Evas_Object *lookup_list;
         Evas_Object *progress_bar;
         Evas_Object *ewk;
-        _history_list *url_list;
         Evas_Coord mouse_x, mouse_y;
         unsigned int mouse_down_time;
         int wav_id;
-        char **pred;
-        Elm_Object_Item **pred_item;
-        Eina_Bool push_flag;
-        Ecore_Idler *pred_idler;
+        Eina_Bool push_flag :1;
+        Eina_Bool widget_launch :1;
 } appdata_s;
+
 #define GROUP_MAIN "main"
 using namespace std;
 
