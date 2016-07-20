@@ -346,6 +346,10 @@ _show_result(void *data, Evas_Object *obj, void *event_info)
 {
    appdata_s *ad = (appdata_s*)data;
    const char *word = elm_entry_entry_get(ad->entry);
+   if (ad->search_word) {
+	   free(ad->search_word);
+	   ad->search_word = NULL;
+   }
    char url[2048];
    strcpy(url, "bword://");
    strcat(url, word);
@@ -804,6 +808,12 @@ static void
 app_resume(void *data)
 {
    /* Take necessary actions when application becomes visible. */
+	   appdata_s *ad = (appdata_s*)data;
+	   if (ad->search_word)
+	   {
+		   elm_entry_entry_set(ad->entry, ad->search_word);
+		   evas_object_smart_callback_call(ad->entry, "activated", NULL);
+	   }
 }
 
 static void

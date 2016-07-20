@@ -25,6 +25,7 @@ collections {
          tag: "br" "\n";
          tag: "BR" "\n";
          tag: "LI" "\n";
+         tag: "/OL" "\n";
          tag: "P" "+ \n";
          tag: "ps" "ps";
          tag: "hilight" "+ font_weight=Bold";
