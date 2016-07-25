@@ -115,6 +115,7 @@ widget_instance_create(widget_context_h context, bundle *content, int w, int h, 
 	wid->word = NULL;
 	wid->rowid = -1;
 	wid->widget_update_timer = NULL;
+	wid->word_layout = NULL;
 	/* Window */
 	ret = widget_app_get_elm_win(context, &wid->win);
 	if (ret != WIDGET_ERROR_NONE) {
@@ -217,12 +218,14 @@ widget_instance_resume(widget_context_h context, void *user_data)
 	/* Take necessary actions when widget instance becomes visible. */
 	widget_instance_data_s *wid = NULL;
 	widget_app_context_get_tag(context,(void**)&wid);
-	_query_word_of_day(wid, EINA_FALSE);
-	if (wid->widget_update_timer) {
-		ecore_timer_del(wid->widget_update_timer);
-		wid->widget_update_timer = NULL;
+	if (wid->wod) {
+		_query_word_of_day(wid, EINA_FALSE);
+		if (wid->widget_update_timer) {
+			ecore_timer_del(wid->widget_update_timer);
+			wid->widget_update_timer = NULL;
+		}
+		wid->widget_update_timer = ecore_timer_add(60, _widget_update, wid);
 	}
-	wid->widget_update_timer = ecore_timer_add(60, _widget_update, wid);
 	return WIDGET_ERROR_NONE;
 }
 

@@ -46,7 +46,7 @@ typedef struct appdata {
         char **pred;
         char *search_word;
         Elm_Object_Item **pred_item;
-        Ecore_Idler *pred_idler;
+        Ecore_Idler *pred_idler, *showinidler;
         Evas_Object *win;
         Evas_Object *label;
         Evas_Object *layout, *app_layout;

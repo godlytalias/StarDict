@@ -571,6 +571,11 @@ _splash_finished_cb(void *data, Evas_Object *obj, const char *part, const char *
    appdata_s *ad = (appdata_s*)data;
    if (!ad->search_word)
 	   ecore_idler_add(_entry_focus_idler, ad);
+   else
+   {
+	   elm_entry_entry_set(ad->entry, ad->search_word);
+	   evas_object_smart_callback_call(ad->entry, "activated", NULL);
+   }
    evas_object_freeze_events_set(ad->app_layout, EINA_FALSE);
    elm_layout_content_set(ad->layout, "elm.swallow.result", ad->ewk);
    ecore_idler_add(_move_ctxpopup, ad);
@@ -670,11 +675,7 @@ _show_win_idler(void *data)
 		   elm_layout_signal_emit(ad->app_layout, "elm,splash,show", "elm");
 	   else
 		   elm_layout_signal_emit(ad->app_layout, "elm,nosplash,show", "elm");
-	   if (ad->search_word)
-	   {
-		   elm_entry_entry_set(ad->entry, ad->search_word);
-		   evas_object_smart_callback_call(ad->entry, "activated", NULL);
-	   }
+	   ad->showinidler = NULL;
 	   return ECORE_CALLBACK_CANCEL;
 }
 
@@ -760,7 +761,7 @@ create_base_gui(appdata_s *ad)
    elm_object_focus_allow_set(ad->ctxpopup, EINA_FALSE);
    elm_object_content_set(conform, ad->app_layout);
    elm_win_conformant_set(ad->win, EINA_TRUE);
-   ecore_idler_add(_show_win_idler, ad);
+   ad->showinidler = ecore_idler_add(_show_win_idler, ad);
 
    //setting default sound type
    sound_manager_set_current_sound_type(SOUND_TYPE_MEDIA);
@@ -809,7 +810,7 @@ app_resume(void *data)
 {
    /* Take necessary actions when application becomes visible. */
 	   appdata_s *ad = (appdata_s*)data;
-	   if (ad->search_word)
+	   if (ad->search_word && !ad->showinidler)
 	   {
 		   elm_entry_entry_set(ad->entry, ad->search_word);
 		   evas_object_smart_callback_call(ad->entry, "activated", NULL);
@@ -835,6 +836,8 @@ app_terminate(void *data)
    }
    if (ad->pred_idler)
 	   ecore_idler_del(ad->pred_idler);
+   if (ad->showinidler)
+	   ecore_idler_del(ad->showinidler);
    delete[] ad->pred;
    delete[] ad->pred_item;
    delete ad->StarDict;

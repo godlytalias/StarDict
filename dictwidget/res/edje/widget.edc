@@ -31,7 +31,8 @@ collections {
          tag: "hilight" "+ font_weight=Bold";
          tag: "b" "+ font_weight=Bold";
          tag: "B" "+ font_weight=Bold";
-         tag: "i" "+ font_weight=Light";
+         tag: "i" "+ font_weight=Light font_style=Oblique";
+         tag: "I" "+ font_weight=Light font_style=Oblique";
          tag: "tab" "\t";
       }
    }
