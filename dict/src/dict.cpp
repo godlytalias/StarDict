@@ -21,8 +21,8 @@ static void
 win_rotate_cb(void *data, Evas_Object *obj, void *event_info)
 {
    appdata_s *ad = (appdata_s*)data;
-   if (evas_object_visible_get(ad->ctxpopup))
-      evas_object_hide(ad->ctxpopup);
+   if (evas_object_visible_get(ad->genlist))
+      evas_object_hide(ad->genlist);
 }
 
 void
@@ -48,11 +48,27 @@ _item_selected(void *data, Evas_Object *obj, void *event_info)
 {
    appdata_s *ad = (appdata_s*)data;
    Elm_Object_Item *item = (Elm_Object_Item*)event_info;
-   elm_entry_entry_set(ad->entry, elm_object_item_text_get(item));
+   char *search = (char*)elm_object_item_data_get(item);
+   elm_entry_entry_set(ad->entry, search);
    elm_entry_cursor_end_set(ad->entry);
-   evas_object_hide(ad->ctxpopup);
-   evas_object_smart_callback_call(ad->entry, "activated", NULL);
-   elm_entry_input_panel_hide(ad->entry);
+   elm_genlist_item_selected_set(item, EINA_FALSE);
+   _show_result(ad, NULL, NULL);
+}
+
+static void
+_prediction_item_del_cb(void *data, Evas_Object *obj)
+{
+	char *s = (char*)data;
+	free(s);
+}
+
+static char*
+_prediction_item_text_get_cb(void *data, Evas_Object *obj, const char *part)
+{
+	char *s = (char*)data;
+	if (!strcmp(part, "elm.text"))
+		return strdup(s);
+	return NULL;
 }
 
 static Eina_Bool
@@ -74,23 +90,27 @@ _show_predictions(void *data)
    ad->StarDict->get_suggestions(query, &ad->pred, count);
 
    if (count > 0)
-	   for(int i = 0; (i < count) && (i < 10); i++) {
+	   for(int i = 0; (i < count) && (i < 49); i++) {
 		   if (!ad->pred_item[i]) {
-			   ad->pred_item[i] = elm_ctxpopup_item_append(ad->ctxpopup, (char*)ad->pred[i], NULL, _item_selected, ad);
+			   ad->pred_item[i] = elm_genlist_item_append(ad->genlist, ad->itc, strdup(ad->pred[i]), NULL, ELM_GENLIST_ITEM_NONE, _item_selected, ad);
 		   }
 		   else {
-			   elm_object_item_text_set(ad->pred_item[i], (char*)ad->pred[i]);
+			   char *s = (char*)elm_object_item_data_get(ad->pred_item[i]);
+			   free(s);
+		       s = strdup(ad->pred[i]);
+		       elm_object_item_data_set(ad->pred_item[i], s);
+			   elm_genlist_item_update(ad->pred_item[i]);
 		   }
 	   }
    if (count == 0)
    {
-	   elm_ctxpopup_clear(ad->ctxpopup);
-	   for (int i = 0; i < 10; i++)
+	   elm_genlist_clear(ad->genlist);
+	   for (int i = 0; i < 50; i++)
 		   ad->pred_item[i] = NULL;
    }
-   else if (count < 10)
+   else if (count < 49)
    {
-	   for (int i = count; i < 10; i++)
+	   for (int i = count; i < 49; i++)
 	   {
 		   elm_object_item_del(ad->pred_item[i]);
 		   ad->pred_item[i] = NULL;
@@ -98,9 +118,15 @@ _show_predictions(void *data)
    }
 
    if (count > 0)
-      evas_object_show(ad->ctxpopup);
+   {
+	  elm_layout_signal_emit(ad->layout, "elm,dict,prediction,show", "elm");
+      evas_object_show(ad->genlist);
+   }
    else
-      evas_object_hide(ad->ctxpopup);
+   {
+	  elm_layout_signal_emit(ad->layout, "elm,dict,prediction,hide", "elm");
+      evas_object_hide(ad->genlist);
+   }
    elm_object_focus_set(ad->entry, EINA_TRUE);
    for (int i = 0; i < count; i++)
 	   free(ad->pred[i]);
@@ -145,6 +171,7 @@ _app_exit_confirm(void *data, Evas_Object *obj, void *event_info)
 {
    appdata_s *ad = (appdata_s*)data;
    Eina_List *list = elm_naviframe_items_get(ad->naviframe);
+   elm_layout_signal_emit(ad->layout, "elm,dict,prediction,hide", "elm");
    if(eina_list_count(list) > 1)
    {
       if (list) eina_list_free(list);
@@ -169,9 +196,8 @@ _app_exit_confirm(void *data, Evas_Object *obj, void *event_info)
        ecore_idler_del(ad->pred_idler);
        ad->pred_idler = NULL;
      }
-   evas_object_hide(ad->ctxpopup);
+   evas_object_hide(ad->genlist);
    elm_object_focus_set(ad->entry, EINA_FALSE);
-   elm_object_focus_set(ad->ctxpopup, EINA_TRUE);
 
    Evas_Object *popup = elm_popup_add(ad->naviframe);
    elm_object_style_set(popup, "toast");
@@ -403,8 +429,9 @@ _show_result_url(void *data)
       ecore_idler_del(ad->pred_idler);
       ad->pred_idler = NULL;
    }
-   evas_object_hide(ad->ctxpopup);
-   ewk_view_contents_set(ad->ewk, result_formatted.c_str(), result_formatted.length(), NULL, NULL, "file:///opt/usr/apps/org.tizen.dict/res/js/");
+   evas_object_hide(ad->genlist);
+   elm_layout_signal_emit(ad->layout, "elm,dict,prediction,hide", "elm");
+   ewk_view_contents_set(ad->ewk, result_formatted.c_str(), result_formatted.length(), NULL, NULL, "file:///opt/usr/apps/org.tizen.dict_hindi/res/js/");
    return;
 }
 
@@ -544,16 +571,6 @@ _entry_focus_idler(void *data)
    return ECORE_CALLBACK_DONE;
 }
 
-static Eina_Bool
-_move_ctxpopup(void *data)
-{
-   appdata_s *ad = (appdata_s*)data;
-   Evas_Coord w, h, x, y;
-   evas_object_geometry_get(ad->entry, &x, &y, &w, &h);
-   evas_object_move(ad->ctxpopup, x + (w/2), y + h - 20);
-   return ECORE_CALLBACK_DONE;
-}
-
 static void
 _show_search_screen(void *data, Evas_Object *obj, void *event_info)
 {
@@ -578,7 +595,6 @@ _splash_finished_cb(void *data, Evas_Object *obj, const char *part, const char *
    }
    evas_object_freeze_events_set(ad->app_layout, EINA_FALSE);
    elm_layout_content_set(ad->layout, "elm.swallow.result", ad->ewk);
-   ecore_idler_add(_move_ctxpopup, ad);
 }
 
 static void
@@ -691,13 +707,13 @@ create_base_gui(appdata_s *ad)
    ad->url_list = NULL;
    ad->push_flag = EINA_TRUE;
 
-   ad->pred = new char*[50];
-   ad->pred_item = new Elm_Object_Item*[10];
-   for (int i=0; i<50; i++)
+   ad->pred = new char*[100];
+   ad->pred_item = new Elm_Object_Item*[50];
+   for (int i=0; i<100; i++)
    {
       ad->pred[i] = NULL;
    }
-   for (int i=0; i<10; i++)
+   for (int i=0; i<50; i++)
    {
 	   ad->pred_item[i] = NULL;
    }
@@ -752,13 +768,17 @@ create_base_gui(appdata_s *ad)
    elm_object_content_set(conform, ad->app_layout);
    evas_object_freeze_events_set(ad->app_layout, EINA_TRUE);
 
-   ad->ctxpopup = elm_ctxpopup_add(ad->naviframe);
-   elm_object_style_set(ad->ctxpopup, "dropdown/list");
-   elm_ctxpopup_direction_priority_set(ad->ctxpopup, ELM_CTXPOPUP_DIRECTION_DOWN, ELM_CTXPOPUP_DIRECTION_UNKNOWN, ELM_CTXPOPUP_DIRECTION_UNKNOWN, ELM_CTXPOPUP_DIRECTION_UNKNOWN);
-   elm_ctxpopup_auto_hide_disabled_set(ad->ctxpopup, EINA_TRUE);
-   evas_object_size_hint_weight_set(ad->ctxpopup, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-   evas_object_size_hint_align_set(ad->ctxpopup, EVAS_HINT_FILL, EVAS_HINT_FILL);
-   elm_object_focus_allow_set(ad->ctxpopup, EINA_FALSE);
+   ad->itc = elm_genlist_item_class_new();
+   ad->itc->func.text_get = _prediction_item_text_get_cb;
+   ad->itc->func.del = _prediction_item_del_cb;
+   ad->genlist = elm_genlist_add(ad->naviframe);
+   elm_genlist_mode_set(ad->genlist, ELM_LIST_COMPRESS);
+   elm_object_focus_allow_set(ad->genlist, EINA_FALSE);
+   elm_genlist_homogeneous_set(ad->genlist, EINA_TRUE);
+   elm_genlist_block_count_set(ad->genlist, 7);
+   evas_object_size_hint_weight_set(ad->genlist, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
+   evas_object_size_hint_align_set(ad->genlist, EVAS_HINT_FILL, EVAS_HINT_FILL);
+   elm_layout_content_set(ad->layout, "elm.swallow.prediction", ad->genlist);
    elm_object_content_set(conform, ad->app_layout);
    elm_win_conformant_set(ad->win, EINA_TRUE);
    ad->showinidler = ecore_idler_add(_show_win_idler, ad);
@@ -784,7 +804,11 @@ app_create(void *data)
    if (!exist) preference_set_int("prediction", 1);
    create_base_gui(ad);
    ad->StarDict = new clsSDict;
-   ad->StarDict->loadDics("/opt/usr/apps/org.tizen.dict/shared/dict");
+   char *path = app_get_shared_resource_path();
+   char dic_path[1024];
+   sprintf(dic_path, "%s/../dict", path);
+   ad->StarDict->loadDics(dic_path);
+   free(path);
    return true;
 }
 

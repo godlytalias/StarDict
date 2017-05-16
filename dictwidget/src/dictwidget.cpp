@@ -55,6 +55,7 @@ static void
 _query_word_of_day(widget_instance_data_s *wid, Eina_Bool force)
 {
 	double prev_day = -2.0;
+	char lib_path[256];
 	bool exist;
 	wid->day = floor(ecore_time_unix_get() / 86400.0);
 	preference_is_existing("word", &exist);
@@ -85,7 +86,9 @@ _query_word_of_day(widget_instance_data_s *wid, Eina_Bool force)
 		string result;
 		clsSDict *StarDict;
 		StarDict = new clsSDict;
-		StarDict->loadDics("/opt/usr/apps/org.tizen.dict/shared/dict");
+		char *app_path = app_get_shared_data_path();
+		sprintf(lib_path, "%s/../dict");
+		tarDict->loadDics(lib_path);
 		result = StarDict->lookupWords(wid->word, false);
 		delete StarDict;
 		str = (char*)malloc(sizeof(char) * result.length());

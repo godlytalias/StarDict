@@ -45,6 +45,7 @@ typedef struct appdata {
         _history_list *url_list;
         char **pred;
         char *search_word;
+        Elm_Genlist_Item_Class *itc;
         Elm_Object_Item **pred_item;
         Ecore_Idler *pred_idler, *showinidler;
         Evas_Object *win;
@@ -53,7 +54,7 @@ typedef struct appdata {
         Evas_Object *entry;
         Evas_Object *button;
         Evas_Object *naviframe;
-        Evas_Object *ctxpopup;
+        Evas_Object *genlist;
         Evas_Object *title_toolbar;
         Evas_Object *lookup_list;
         Evas_Object *progress_bar;

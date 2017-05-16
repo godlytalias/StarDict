@@ -169,7 +169,7 @@ ctxpopup_item_select_cb(void *data, Evas_Object *obj, void *event_info EINA_UNUS
 			ecore_idler_del(ad->pred_idler);
 			ad->pred_idler = NULL;
 		}
-		evas_object_hide(ad->ctxpopup);
+		elm_layout_signal_emit(ad->layout, "elm,dict,prediction,hide", "elm");
 		evas_object_del(popup);
 		return;
 	}
@@ -182,7 +182,7 @@ ctxpopup_item_select_cb(void *data, Evas_Object *obj, void *event_info EINA_UNUS
 			ecore_idler_del(ad->pred_idler);
 			ad->pred_idler = NULL;
 		}
-		evas_object_hide(ad->ctxpopup);
+		elm_layout_signal_emit(ad->layout, "elm,dict,prediction,hide", "elm");
 		evas_object_del(popup);
 		return;
 	}
@@ -263,7 +263,7 @@ create_ctxpopup_more_button_cb(void *data, Evas_Object *obj, void *event_info)
 	appdata_s *ad = (appdata_s*)data;
 	int pred = 0;
 
-	Evas_Object *ctxpopup = elm_ctxpopup_add(ad->naviframe);
+	Evas_Object *ctxpopup = elm_ctxpopup_add(ad->win);
 	elm_ctxpopup_auto_hide_disabled_set(ctxpopup, EINA_TRUE);
 	elm_object_style_set(ctxpopup, "more/default");
 	eext_object_event_callback_add(ctxpopup, EEXT_CALLBACK_BACK, eext_ctxpopup_back_cb, NULL);
@@ -291,5 +291,5 @@ create_ctxpopup_more_button_cb(void *data, Evas_Object *obj, void *event_info)
 	    ecore_idler_del(ad->pred_idler);
 	    ad->pred_idler = NULL;
 	  }
-	evas_object_hide(ad->ctxpopup);
+	elm_layout_signal_emit(ad->layout, "elm,dict,prediction,hide", "elm");
 }

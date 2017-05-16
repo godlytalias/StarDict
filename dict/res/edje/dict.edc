@@ -40,7 +40,7 @@ collections {
             scale: 1;
             description { state: "default" 0.0;
             min: 720 100;
-            color: 43 130 143 255;
+            color:61 185 204 255;
             fixed: 1 1;
             rel1.to: "base";
             rel2.to: "base";
@@ -320,6 +320,100 @@ collections {
                visible: 1;
             }
          }
+         part { name: "elm.padding.top.left";
+            type: SPACER;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 2 0;
+               fixed: 1 1;
+               rel1.to: "elm.entry.underline";
+               rel1.relative: 0.0 1.0;
+               rel2.to: "elm.entry.underline";
+               rel2.relative: 0.0 1.0;
+               align: 0.0 0.0;
+            }
+         }
+         part { name: "elm.padding.bottom.right";
+            type: SPACER;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 2 2;
+               fixed: 1 1;
+               rel1.to_x: "elm.entry.underline";
+               rel1.relative: 1.0 1.0;
+               rel2.to_x: "elm.entry.underline";
+               rel2.relative: 1.0 1.0;
+               align: 1.0 1.0;
+            }
+         }
+         part { name: "elm.clipper.prediction";
+            type: RECT;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 720 120;
+               fixed: 1 0;
+               rel1.to_y: "elm.entry.underline";
+               rel1.relative: 0.0 1.0;
+               color: 255 255 255 0;
+            }
+            description { state: "show" 0.0;
+               inherit: "default" 0.0;
+               color: 255 255 255 255;
+            }
+            description { state: "hide" 0.0;
+               inherit: "default" 0.0;
+               color: 255 255 255 0;
+            }
+         }
+         part { name: "elm.bg.prediction";
+            type: RECT;
+            scale: 1;
+            clip_to: "elm.clipper.prediction";
+            description { state: "default" 0.0;
+               min: 656 120;
+               rel1.to: "elm.entry.underline";
+               rel1.relative: 0.0 1.0;
+               rel2.to: "elm.entry.underline";
+               align: 0.5 1.0;
+               color: 61 185 204 0;
+            }
+            description { state: "show" 0.0;
+               inherit: "default" 0.0;
+               rel2.to_y: "base";
+               align: 0.5 0.0;
+               color: 61 185 204 255;
+            }
+            description { state: "hide" 0.0;
+               inherit: "default" 0.0;
+               visible: 0;
+            }
+         }
+         part { name: "elm.swallow.prediction";
+            type: SWALLOW;
+            scale: 1;
+            clip_to: "elm.clipper.prediction";
+            description { state: "default" 0.0;
+               min: 652 120;
+               fixed: 1 0;
+               rel1.to_x: "elm.padding.top.left";
+               rel1.to_y: "elm.entry.underline";
+               rel1.relative: 0.0 1.0;
+               rel2.to_x: "elm.padding.bottom.right";
+               rel2.to_y: "elm.entry.underline";
+               align: 0.5 1.0;
+            }
+            description { state: "show" 0.0;
+               inherit: "default" 0.0;
+               rel1.to: "elm.padding.top.left";
+               rel1.relative: 1.0 1.0;
+               rel2.to: "elm.padding.bottom.right";
+               rel2.relative: 0.0 0.0;
+            }
+            description { state: "hide" 0.0;
+               inherit: "default" 0.0;
+               visible: 0;
+            }
+         }
       }
       programs{
          program { name: "progress_show";
@@ -334,6 +428,23 @@ collections {
             source: "elm";
             action: STATE_SET "default" 0.0;
             target: "elm.swallow.progress";
+         }
+         program { name: "prediction_show";
+            signal: "elm,dict,prediction,show";
+            source: "elm";
+            action: STATE_SET "show" 0.0;
+            transition: LINEAR 0.3;
+            target: "elm.swallow.prediction";
+            target: "elm.bg.prediction";
+            target: "elm.clipper.prediction";
+         }
+         program { name: "prediction_hide";
+            signal: "elm,dict,prediction,hide";
+            source: "elm";
+            action: STATE_SET "hide" 0.0;
+            target: "elm.swallow.prediction";
+            target: "elm.bg.prediction";
+            target: "elm.clipper.prediction";
          }
          program { name: "entry_focus";
             signal: "elm,dict,focused";
