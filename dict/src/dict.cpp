@@ -310,7 +310,7 @@ _webkit_navigation_start(void *data, Evas_Object *obj, void *event_info)
 	  {
 		  ewk_view_stop(ad->ewk);
 		  Evas_Object *popup = elm_popup_add(ad->ewk);
-		  elm_object_part_text_set(popup, "title,text", "StarDict");
+		  elm_object_part_text_set(popup, "title,text", "शब्दकोश");
 		  elm_object_text_set(popup, "No Network Connection!");
 		  elm_popup_align_set(popup, ELM_NOTIFY_ALIGN_FILL, 1.0);
 		  Evas_Object *ok = elm_button_add(popup);
@@ -382,6 +382,55 @@ _show_result(void *data, Evas_Object *obj, void *event_info)
    ewk_view_url_request_set(ad->ewk, url, EWK_HTTP_METHOD_POST, NULL, NULL);
 }
 
+static string
+_result_format(const char *result)
+{
+	int i;
+	int len = strlen(result);
+    string formatted_result;
+	bool hindi_mode = false;
+	bool non_usage_mode = true;
+	for(i = 0; i < len; i++)
+	{
+		if (!hindi_mode && !(result[i] <= 127))
+		{
+			hindi_mode = true;
+			formatted_result += "<font color='red'><b>";
+			formatted_result += result[i];
+		}
+		else if (hindi_mode && (result[i] <= 127))
+		{
+			hindi_mode = false;
+			non_usage_mode = false;
+			formatted_result += "</b></font>";
+			formatted_result += result[i];
+		}
+		else if (!non_usage_mode && ((result[i] >= 'a' && result[i] <= 'z') || (result[i] >= 'A' && result[i] <= 'Z')))
+		{
+			non_usage_mode = true;
+			formatted_result += "<br/><i>";
+			formatted_result += result[i];
+		}
+		else if (result[i] == '\n')
+		{
+			if (non_usage_mode)
+			{
+				formatted_result += "</i>";
+			}
+			formatted_result += "<br/>";
+		}
+		else if (((i + 4 < len) && (result[i+3] > 127 || result[i+4] > 127)) && result[i] >= '1' && result[i] <= '9')
+		{
+			if (result[i-1] != '"')
+				formatted_result += "&nbsp;&nbsp;";
+			if (result[i+1] == '.')
+				i++;
+		}
+		else formatted_result += result[i];
+	}
+	return formatted_result;
+}
+
 static void
 _show_result_url(void *data)
 {
@@ -411,9 +460,13 @@ _show_result_url(void *data)
 
    string result_formatted = "<!doctype HTML><html><head><style> a{-webkit-tap-highlight-color: rgba(43 ,130 ,143 , 0.26);} a {text-decoration: none !important;} a:link, a:hover, a:active{color:#1D1FE7} i {color:#B14E27}</style></head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0\"><body>";
    string result = test(query_trimmed, ad);
+   string formatted_result;
    if (result.length())
+   {
+	   formatted_result = _result_format(result.c_str());
        result_formatted += "<ol style='padding-left:0px;' id='pronounce'><b>Pronounce:</b>&nbsp;<a href='stardict:pronounce'><img src='speaker.png' alt='Pronounce it' style='vertical-align:middle;'></a></ol>";
-   if (!result.length()) result = "<br/>Sorry, We don't have data of <font color='red'><i> " + query_trimmed + " </i></font> in our offline database. <a href='http://en.wikipedia.org/wiki/" + query_trimmed + "'><br/>Click Here </a> to search it online.";
+   }
+   if (!result.length()) result_formatted += "<br/>Sorry, We don't have data of <font color='red'><i> " + query_trimmed + " </i></font> in our offline database. <a href='http://en.wikipedia.org/wiki/" + query_trimmed + "'><br/>Click Here </a> to search it online.";
    else
    {
 	   _store_keyword(query_dup);
@@ -423,7 +476,7 @@ _show_result_url(void *data)
 	   else
 		   ad->push_flag = EINA_TRUE;
    }
-    result_formatted += result + "<script>var a = document.getElementsByTagName('a'); for (var idx = 0; idx < a.length; ++idx) { a[idx].setAttribute('oncontextmenu', 'return false;');}</script></body></html>";
+    result_formatted += formatted_result + "<script>var a = document.getElementsByTagName('a'); for (var idx = 0; idx < a.length; ++idx) { a[idx].setAttribute('oncontextmenu', 'return false;');}</script></body></html>";
    if (ad->pred_idler)
    {
       ecore_idler_del(ad->pred_idler);
@@ -529,7 +582,7 @@ _search_screen(appdata_s *ad)
    elm_entry_single_line_set(ad->entry, EINA_TRUE);
    elm_entry_prediction_allow_set(ad->entry, EINA_FALSE);
    elm_object_part_content_set(ad->layout, "elm.swallow.entry", ad->entry);
-   elm_object_part_text_set(ad->entry, "elm.guide", " Search");
+   elm_object_part_text_set(ad->entry, "elm.guide", " Enter English Keyword");
    elm_entry_input_panel_return_key_type_set(ad->entry, ELM_INPUT_PANEL_RETURN_KEY_TYPE_SEARCH);
    evas_object_smart_callback_add(ad->entry, "activated", _show_result, ad);
    evas_object_smart_callback_add(ad->entry, "clicked", _entry_clicked, ad);
@@ -673,8 +726,8 @@ _create_tabbar(appdata_s *ad)
    elm_toolbar_transverse_expanded_set(ad->title_toolbar, EINA_TRUE);
 
    _search_screen(ad);
-   item = elm_toolbar_item_append(ad->title_toolbar, NULL, "Search", _show_search_screen, ad);
-   elm_toolbar_item_append(ad->title_toolbar, NULL, "Lookup", _show_lookup_results, ad);
+   item = elm_toolbar_item_append(ad->title_toolbar, NULL, "खोज", _show_search_screen, ad);
+   elm_toolbar_item_append(ad->title_toolbar, NULL, "लुक अप", _show_lookup_results, ad);
    elm_toolbar_select_mode_set(ad->title_toolbar, ELM_OBJECT_SELECT_MODE_ALWAYS);
    elm_toolbar_item_selected_set(item, EINA_TRUE);
    evas_object_smart_callback_add(ad->title_toolbar, "item,focused", _tab_focused, ad);
@@ -735,7 +788,7 @@ create_base_gui(appdata_s *ad)
    evas_object_smart_callback_add(ad->win, "rotation,changed", win_rotate_cb, ad);
    ad->app_layout = elm_layout_add(ad->win);
    elm_layout_file_set(ad->app_layout, edj_path, "applayout");
-   elm_layout_text_set(ad->app_layout, "elm.app.name", "StarDict");
+   elm_layout_text_set(ad->app_layout, "elm.app.name", "शब्दकोश");
    elm_layout_signal_callback_add(ad->app_layout, "elm,dict,splash,finish", "elm", _splash_finished_cb, ad);
 
    ad->naviframe = elm_naviframe_add(ad->app_layout);
